@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *       								     *
+ * A Personal Website made by Mystic Devloper (Surya).			     *
+ *									     *	
+ * File: _rootsizes.scss						     *
+ * Info: SCSS File for Rootsizes.	           		             *
+ *****************************************************************************/
+
+/****************************
+ * Responsive Rootsizes.    *
+ ****************************/
+$rootsizes: (
+    rootsize-0: 12px,  // 12px 24px line-height body text.
+    rootsize-1: 14px,  // 14px 28px line-height body text.
+    rootsize-2: 15px,  // 15px 30px line-height body text.
+    rootsize-3: 17px,  // 17px 34px line-height body text.
+    rootsize-4: 19px,  // 19px 38px line-height body text.
+    rootsize-5: 20px,  // 20px 40px line-height body text.
+    rootsize-6: 22px   // 22px 44px line-height body text.
+) !default;
