@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *       								     *
+ * A Personal Website made by Mystic Devloper (Surya).			     *
+ *									     *	
+ * File: _breakpoints.scss						     *
+ * Info: SCSS File for Breakpoints.			                     *
+ *****************************************************************************/
+
+/****************************
+ * Responsive Breakpoints.  *
+ ****************************/
+$breakpoints: (
+    break-0: 0px,     // 0px    Mobile First.
+    break-1: 640px,   // 640px  Small Tablets up.
+    break-2: 768px,   // 768px  Medium Tablets / Small Desktops up.
+    break-3: 1024px,  // 1024px Desktops up.
+    break-4: 1440px,  // 1440px Large Desktops up.
+    break-5: 1600px,  // 1600px Wide Desktops up.
+    break-6: 1920px   // 1920px Ultra Wide Desktops up.
+) !default;
