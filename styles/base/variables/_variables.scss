@@ -1,0 +1,25 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _variables.scss                                                     *
+ * Info: SCSS File for All Variables.                                        *
+ *****************************************************************************/
+
+// Typefaces
+@use 'body-typeface'
+@use 'heading-typeface'
+@use 'monospace-typeface'
+
+// Color Themes
+@use 'light-theme'
+@use 'dark-theme'
+@use 'root-theme'
+
+// Typography Varibales
+@use 'breakpoints'
+@use 'rootsizes'
+@use 'measures'
+@use 'maxwidths'
+@use 'gutterwidths'

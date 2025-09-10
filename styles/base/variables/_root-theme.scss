@@ -1,0 +1,27 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _root-theme.scss                                                    *
+ * Info: SCSS File for Root Theme.                                           *
+ *****************************************************************************/
+
+@use './light-theme'
+@use './dark-theme'
+
+@use '../functions/theme.scss'
+@use '../mixins/export-theme'
+
+/****************************
+ * Root Theme.              *
+ ****************************/
+:root {
+    $current-theme: $theme-light;
+    @include export-theme($current-theme);
+}
+
+[data-theme="dark"] {
+    $current-theme: $theme-dark;
+    @include export-theme($current-theme);
+}

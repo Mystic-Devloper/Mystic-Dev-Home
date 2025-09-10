@@ -1,0 +1,19 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _heading-typeface.scss                                              *
+ * Info: SCSS File for Heading Typeface.                                     *
+ *****************************************************************************/
+
+/****************************
+ * Heading Typeface.        *
+ ****************************/
+$headingtype: (
+    font-family: "Poppins", sans-serif;
+    regular: 400;
+    bold: 700;
+    italic: italic;
+    cap-height: 0.7;
+) !default;

@@ -1,0 +1,19 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _body-typeface.scss                                                 *
+ * Info: SCSS File for Body Typeface.                                        *
+ *****************************************************************************/
+
+/****************************
+ * Body Typeface.           *
+ ****************************/
+$bodytype: (
+    font-family: "Open Sans", sans-serif;
+    regular: 400;
+    bold: 700;
+    italic: italic;
+    cap-height: 0.68;
+) !default;

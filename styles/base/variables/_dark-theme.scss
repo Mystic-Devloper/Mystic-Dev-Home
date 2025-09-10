@@ -1,0 +1,28 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _light-theme.scss                                                   *
+ * Info: SCSS File for Light Theme.                                          *
+ *****************************************************************************/
+
+/****************************
+ * Light Theme.             *
+ ****************************/
+$theme-dark: (
+  background: #0F1917,
+  code-bg: #282828,
+  feature-bg: #162422,
+  accent: #4FB3B3,
+  banner: #1C2E2B,
+
+  heading: #E6F1F3,
+  body: #E0E0E0,
+  paragraph: #C4C4C4,
+  link: #4FB3B3,
+  hover: #7FD9D9,
+  focus: #4FB3B3,
+  caption: #9A9A9A,
+  white: #FFFFFF
+);

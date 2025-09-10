@@ -1,0 +1,17 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _export-theme.scss                                                  *
+ * Info: SCSS File for Export Theme Mixin.                                   *
+ *****************************************************************************/
+
+/****************************
+ * Export Theme Mixin.      *
+ ****************************/
+@mixin export-theme($theme-map) {
+    @each $key, $value in $theme-map {
+        --#{$key}: #{$value};
+    }
+}
