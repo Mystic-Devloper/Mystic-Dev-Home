@@ -1,0 +1,20 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _poppins-thin-italic.scss                                           *
+ * Info: SCSS File for Thin Italics Poppins Font Face.                       *
+ *****************************************************************************/
+
+/***********************************
+ * Poppins Thin Italic Font (100). *
+ ***********************************/
+@font-face {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/poppins/poppins-v23-latin-100italic.woff2") format("woff2");
+}

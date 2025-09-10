@@ -1,0 +1,17 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _gutterwidths.scss                                                  *
+ * Info: SCSS File for Gutter Widths.                                        *
+ *****************************************************************************/
+
+/****************************
+ * Gutter Widths.           *
+ ****************************/
+$gutterwidths: (
+  small: 1rem,
+  medium: 2rem,
+  large: 4rem
+) !default;

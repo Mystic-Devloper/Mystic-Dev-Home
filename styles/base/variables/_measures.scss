@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _measures.scss                                                      *
+ * Info: SCSS File for Measures.                                             *
+ *****************************************************************************/
+
+/****************************
+ * Responsive Measures.     *
+ ****************************/
+$measures: (
+  measure-0: 500px,  // 500px wide
+  measure-1: 550px,  // 550px wide
+  measure-2: 600px,  // 600px wide
+  measure-3: 680px,  // 680px wide
+  measure-4: 750px,  // 750px wide
+  measure-5: 800px,  // 800px wide
+  measure-6: 850px   // 850px wide
+) !default;

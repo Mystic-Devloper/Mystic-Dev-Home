@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _maxwidths.scss                                                     *
+ * Info: SCSS File for Max Widths.                                           *
+ *****************************************************************************/
+
+/****************************
+ * Responsive Max Widths.   *
+ ****************************/
+$maxwidths: (
+  width-0: 500px,  // 500px wide
+  width-1: 600px,  // 600px wide
+  width-2: 800px,  // 800px wide
+  width-3: 1100px, // 1100px wide
+  width-4: 1300px, // 1300px wide
+  width-5: 1500px, // 1500px wide
+  width-6: 1700px  // 1700px wide
+) !default;

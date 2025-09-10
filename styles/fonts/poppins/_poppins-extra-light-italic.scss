@@ -1,0 +1,20 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _poppins-extra-light-italic.scss                                    *
+ * Info: SCSS File for Extra Light Italics Poppins Font Face.                *
+ *****************************************************************************/
+
+/******************************************
+ * Poppins Extra Light Italic Font (200). *
+ ******************************************/
+@font-face {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/poppins/poppins-v23-latin-200italic.woff2") format("woff2");
+}
