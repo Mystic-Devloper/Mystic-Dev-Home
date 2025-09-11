@@ -9,9 +9,6 @@
 
 /**
  * @brief Navigation bar.
- *
- * This class creates a navivation bar inspired by
- * ReponsiveNav plugin.
  */
 class NavBar {
     /**
@@ -137,12 +134,12 @@ class NavBar {
     _createToggle() {
         if (this.options.custom_toggle) {
             this.toggle_btn = document.querySelector(this.options.custom_toggle);
-	    if (!toggle_btn) {
+	    if (!this.toggle_btn) {
                 throw new Error('Custom toggle element not found.');
 	    }
 	} else {
             this.toggle_btn = document.createElement('button');
-	    this.toggle_btn.text_content = this.options.label;
+	    this.toggle_btn.textContent = this.options.label;
 	    this.toggle_btn.class_name = 'nav-toggle');
             this.toggle_btn.setAttribute('aria-expanded', 'false');
             
@@ -153,4 +150,41 @@ class NavBar {
 	    }
 	}
     }
+
+    /**
+     * @brief Function to bind events.
+     */
+    _bindEvents() {
+        this._toggleHandler = (e) => {
+            e.preventDefault();
+	    this.toggle();
+	};
+	
+	this.toggle_btn.addEventListener('click', this._toggleHandler);
+
+	if (this.options.close_on_nav_click) {
+            this.wrapper.querySelectorAll('a').forEach((link) => {
+		link.addEventListener('click', () => {
+		    if (window.getComputedStyle(this.toggle_btn).display !== 'none') {
+			this.close();
+		    }
+		});
+	    });
+	}
+    }
+
+    _resize() {
+        if (window.getComputedStyle(this.toggle_btn).display !== 'none') {
+            this.wrapper.setAttribute("aria-hidden", this.nav_open ? "false" : "true");
+        } else {
+            this.wrapper.setAttribute("aria-hidden", "false");
+            this.wrapper.style.position = this.options.open_position;
+        }
+    }
 }
+
+/**
+ * Usage:
+ *
+ * const nav = NavBar('#my-navbar', { close_on_nav_click: true });
+ */
