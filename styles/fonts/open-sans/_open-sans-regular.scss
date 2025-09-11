@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *
+ * File: _open-sans-regular.scss                                             *
+ * Info: SCSS File for Regular Open Sans Font Face.                          *
+ *****************************************************************************/
+
+/*******************************
+ * Open Sans Regular Font (400). *
+ *******************************/
+@font-face {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/open-sans/open-sans-v43-latin-regular.woff2") format("woff2");
+}
+

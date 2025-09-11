@@ -7,9 +7,11 @@
  * Info: SCSS File for Root Theme.                                           *
  *****************************************************************************/
 
-@use './light-theme' as *;
-@use './dark-theme' as *;
+// Themes
+@use 'light-theme' as *;
+@use 'dark-theme' as *;
 
+// Function for themes
 @use '../functions/theme.scss' as *;
 @use '../mixins/export-theme' as *;
 

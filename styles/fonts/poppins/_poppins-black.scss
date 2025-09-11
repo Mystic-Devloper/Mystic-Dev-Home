@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *
+ * File: _poppins-black.scss                                                 *
+ * Info: SCSS File for Black Poppins Font Face.                              *
+ *****************************************************************************/
+
+/***************************
+ * Poppins Black Font (900). *
+ ***************************/
+@font-face {
+    font-family: "Poppins";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/poppins/poppins-v23-latin-900.woff2") format("woff2");
+}
+

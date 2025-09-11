@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *
+ * File: _poppins-semi-bold.scss                                             *
+ * Info: SCSS File for Semi-Bold Poppins Font Face.                          *
+ *****************************************************************************/
+
+/*******************************
+ * Poppins Semi-Bold Font (600). *
+ *******************************/
+@font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/poppins/poppins-v23-latin-600.woff2") format("woff2");
+}
+

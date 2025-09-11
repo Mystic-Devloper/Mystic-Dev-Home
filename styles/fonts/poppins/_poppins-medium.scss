@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *
+ * File: _poppins-medium.scss                                                *
+ * Info: SCSS File for Medium Poppins Font Face.                             *
+ *****************************************************************************/
+
+/*****************************
+ * Poppins Medium Font (500). *
+ *****************************/
+@font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/poppins/poppins-v23-latin-500.woff2") format("woff2");
+}
+

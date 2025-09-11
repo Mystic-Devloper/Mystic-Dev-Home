@@ -8,18 +8,18 @@
  *****************************************************************************/
 
 // Typefaces
-@use 'body-typeface' as *;
-@use 'heading-typeface' as *;
-@use 'monospace-typeface' as *;
+@forward 'body-typeface';
+@forward 'heading-typeface';
+@forward 'monospace-typeface';
 
 // Color Themes
-@use 'light-theme' as *;
-@use 'dark-theme' as *;
-@use 'root-theme' as *;
+@forward 'light-theme';
+@forward 'dark-theme';
+@forward 'root-theme';
 
 // Typography Varibales
-@use 'breakpoints' as *;
-@use 'rootsizes' as *;
-@use 'measures' as *;
-@use 'maxwidths' as *;
-@use 'gutterwidths' as *;
+@forward 'breakpoints';
+@forward 'rootsizes';
+@forward 'measures';
+@forward 'maxwidths';
+@forward 'gutterwidths';
