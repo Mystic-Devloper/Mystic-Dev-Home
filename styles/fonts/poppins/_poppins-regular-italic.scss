@@ -1,0 +1,20 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _poppins-regular-italic.scss                                        *
+ * Info: SCSS File for Regular Italic Poppins Font Face.                     *
+ *****************************************************************************/
+
+/*******************************
+ * Poppins Regular Font (400). *
+ *******************************/
+@font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/poppins/poppins-v23-latin-400italic.woff2") format("woff2");
+}
