@@ -1,21 +1,22 @@
-/*****************************************************************************
+/****************************************************************************
  * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
  *                                                                           *
  * A Personal Website made by Mystic Devloper (Surya).                       *
  *                                                                           *	
- * File: _monospace-typeface.scss                                            *
- * Info: SCSS File for Monospace Typeface.                                   *
+ * File: _export-theme.scss                                                  *
+ * Info: SCSS File for Export Theme Mixin.                                   *
  *****************************************************************************/
 
-@use '../../fonts/fonts' as *;
-
 /****************************
- * Monospace Typeface.      *
+ * Clear Fix.               *
  ****************************/
-$bodytype: (
-    font-family: "JetBrains Mono", monospace;
-    regular: 400;
-    bold: 700;
-    italic: italic;
-    cap-height: 0.7;
-) !default;
+@mixin clearfix {
+    &:before, &:after{
+        display: table;
+        content: "";
+    }
+  
+    &:after{
+        clear: both;
+    }
+}

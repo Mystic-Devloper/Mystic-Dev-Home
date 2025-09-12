@@ -1,0 +1,24 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *
+ * File: _fonts.scss                                                         *
+ * Info: Master SCSS File for All Font Families                              *
+ *       (Poppins, Open Sans, JetBrains Mono).                               *
+ *****************************************************************************/
+
+/*********************
+ * Poppins (Heading) *
+ *********************/
+@forward 'poppins/poppins'
+
+/********************
+ * Open Sans (Body) *
+ ********************/
+@forward 'open-sans/open-sans'
+
+/*************************
+ * JetBrains Mono (Code) *
+ *************************/
+@forward 'jetbrains-mono/jetbrains-mono'

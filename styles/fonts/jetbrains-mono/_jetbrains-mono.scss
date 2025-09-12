@@ -1,0 +1,25 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *
+ * File: _jetbrains-mono.scss                                                *
+ * Info: Master SCSS File for All JetBrains Mono Font Faces.                 *
+ *****************************************************************************/
+
+/* Light (300) */
+@forward 'jetbrains-mono-light';
+@forward 'jetbrains-mono-light-italic';
+
+/* Regular (400) */
+@forward 'jetbrains-mono-regular';
+@forward 'jetbrains-mono-regular-italic';
+
+/* Medium (500) */
+@forward 'jetbrains-mono-medium';
+@forward 'jetbrains-mono-medium-italic';
+
+/* Bold (700) */
+@forward 'jetbrains-mono-bold';
+@forward 'jetbrains-mono-bold-italic';
+

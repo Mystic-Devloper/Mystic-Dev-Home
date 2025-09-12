@@ -3,19 +3,19 @@
  *                                                                           *
  * A Personal Website made by Mystic Devloper (Surya).                       *
  *                                                                           *
- * File: _poppins-black-italic.scss                                          *
- * Info: SCSS File for Black Italic Poppins Font Face.                       *
+ * File: _jetbrains-mono-bold.scss                                           *
+ * Info: SCSS File for Bold JetBrains Mono Font Face.                        *
  *****************************************************************************/
 
-/********************************
- * Poppins Black Italic Font (900).
- ********************************/
+/***************************
+ * JetBrains Mono Bold (700).
+ ***************************/
 @font-face {
-    font-family: "Poppins";
-    font-weight: 900;
-    font-style: italic;
+    font-family: "JetBrains Mono";
+    font-weight: 700;
+    font-style: normal;
     font-display: swap;
 
-    src: url("../../../assets/fonts/poppins/poppins-v23-latin-900italic.woff2") format("woff2");
+    src: url("../../../assets/fonts/jetbrains-mono/jetbrains-mono-v2-latin-700.woff2") format("woff2");
 }
 

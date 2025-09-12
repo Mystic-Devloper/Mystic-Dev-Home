@@ -7,6 +7,8 @@
  * Info: SCSS File for Heading Typeface.                                     *
  *****************************************************************************/
 
+@use '../../fonts/fonts' as *;
+
 /****************************
  * Heading Typeface.        *
  ****************************/
@@ -15,5 +17,5 @@ $headingtype: (
     regular: 400;
     bold: 700;
     italic: italic;
-    cap-height: 0.7;
+    cap-height: 0.73;
 ) !default;

@@ -1,0 +1,21 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *
+ * File: _jetbrains-mono-regular-italic.scss                                 *
+ * Info: SCSS File for Regular Italic JetBrains Mono Font Face.              *
+ *****************************************************************************/
+
+/****************************************
+ * JetBrains Mono Regular Italic (400). *
+ ****************************************/
+@font-face {
+    font-family: "JetBrains Mono";
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/jetbrains-mono/jetbrains-mono-v2-latin-400italic.woff2") format("woff2");
+}
+

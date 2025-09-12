@@ -1,0 +1,45 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _export-theme.scss                                                  *
+ * Info: SCSS File for Export Theme Mixin.                                   *
+ *****************************************************************************/
+
+@use '../variables/variables'
+@use 'mixin-variables'
+
+/****************************
+ * Breakpoint Mixin.        *
+ ****************************/
+// Either set one to one of the breakpoint variables,
+// or use a custom value for minor breakpoints.
+// Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7a
+@mixin breakpoint($break: 0, $max: 0) {
+    // Type of break variable, either string or number
+    $value = type-of($break);
+
+    // If break variable is a string (i.e., breakpoints variable)
+    @if $value == string {
+        // If using break-0, break-1, etc. output correct breakpoint from the map.
+        @if map-has-key($breakpoints, $break) {
+            @media screen and (min-width: #{map-get($breakpoints, $break) / 16 * 1em} ) { @content; }
+        } @else {
+            @warn '[SASS WARN] - #{$break} is not a set breakpoint variable.';
+        }
+    
+    // If break variable is a number, use it as a breakpoint.
+    } @else if $value == number {
+        // If using other numbers output value in ems either for min, min & max or max width breakpoints.
+        $query: "all" !default;
+        @if      $break != 0 and $max != 0 { $query: "(min-width: #{$break / 16 * 1em}) and (max-width: #{$max / 16 * 1em})"; }
+        @else if $break != 0 and $max == 0 { $query: "(min-width: #{$break / 16 * 1em})"; }
+        @else if $break == 0 and $max != 0 { $query: "(max-width: #{$max / 16 * 1em})"; }
+        @media #{$query} { @content; }
+
+    // If neither, it is an error.
+    } @else {
+        @warn '[SASS WARN] - #{$break} is not valid to use as a breakpoint.';
+    }
+}

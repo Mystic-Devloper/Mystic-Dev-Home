@@ -11,39 +11,27 @@
  * Imports all Poppins font weights & styles. *
  **********************************************/
 
-/* Thin (100) */
-@forward "poppins-thin";
-@forward "poppins-thin-italic";
-
-/* Extra-Light (200) */
-@forward "poppins-extra-light";
-@forward "poppins-extra-light-italic";
-
 /* Light (300) */
-@forward "poppins-light";
-@forward "poppins-light-italic";
+@forward 'poppins-light';
+@forward 'poppins-light-italic';
 
 /* Regular (400) */
-@forward "poppins-regular";
-@forward "poppins-regular-italic";
+@forward 'poppins-regular';
+@forward 'poppins-regular-italic';
 
 /* Medium (500) */
-@forward "poppins-medium";
-@forward "poppins-medium-italic";
+@forward 'poppins-medium';
+@forward 'poppins-medium-italic';
 
 /* Semi-Bold (600) */
-@forward "poppins-semi-bold";
-@forward "poppins-semi-bold-italic";
+@forward 'poppins-semi-bold';
+@forward 'poppins-semi-bold-italic';
 
 /* Bold (700) */
-@forward "poppins-bold";
-@forward "poppins-bold-italic";
+@forward 'poppins-bold';
+@forward 'poppins-bold-italic';
 
 /* Extra-Bold (800) */
-@forward "poppins-extra-bold";
-@forward "poppins-extra-bold-italic";
-
-/* Black (900) */
-@forward "poppins-black";
-@forward "poppins-black-italic";
+@forward 'poppins-extra-bold';
+@forward 'poppins-extra-bold-italic';
 

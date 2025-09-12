@@ -7,6 +7,8 @@
  * Info: SCSS File for Body Typeface.                                        *
  *****************************************************************************/
 
+@use '../../fonts/fonts' as *;
+
 /****************************
  * Body Typeface.           *
  ****************************/
@@ -15,5 +17,5 @@ $bodytype: (
     regular: 400;
     bold: 700;
     italic: italic;
-    cap-height: 0.68;
+    cap-height: 0.71;
 ) !default;
