@@ -1,0 +1,19 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * File: _open-sans-light-italic.scss                                        *
+ * Info: SCSS File for Light Italic Open Sans Font Face.                     *
+ *****************************************************************************/
+
+/************************************
+ * Open Sans Light Italic (300).    *
+ ************************************/
+@font-face {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/open-sans/open-sans-v43-latin-300italic.woff2") format("woff2");
+}
+

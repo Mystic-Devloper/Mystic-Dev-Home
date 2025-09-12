@@ -1,0 +1,19 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * File: _open-sans-medium-italic.scss                                       *
+ * Info: SCSS File for Medium Italic Open Sans Font Face.                    *
+ *****************************************************************************/
+
+/*********************************
+ * Open Sans Medium Italic (500). *
+ *********************************/
+@font-face {
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/open-sans/open-sans-v43-latin-500italic.woff2") format("woff2");
+}
+
