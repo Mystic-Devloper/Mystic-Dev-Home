@@ -1,0 +1,19 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * File: _open-sans-extra-bold-italic.scss                                   *
+ * Info: SCSS File for Extra-Bold Italic Open Sans Font Face.                *
+ *****************************************************************************/
+
+/****************************************
+ * Open Sans Extra-Bold Italic (800).   *
+ ****************************************/
+@font-face {
+    font-family: "Open Sans";
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/open-sans/open-sans-v43-latin-800italic.woff2") format("woff2");
+}
+

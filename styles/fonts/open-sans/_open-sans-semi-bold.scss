@@ -1,0 +1,19 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * File: _open-sans-semi-bold.scss                                           *
+ * Info: SCSS File for Semi-Bold Open Sans Font Face.                        *
+ *****************************************************************************/
+
+/**********************************
+ * Open Sans Semi-Bold (600).     *
+ **********************************/
+@font-face {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../../../assets/fonts/open-sans/open-sans-v43-latin-600.woff2") format("woff2");
+}
+
