@@ -1,0 +1,27 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _rootsize.scss                                                    *
+ * Info: SCSS File for Rootsize Mixin.                                     *
+ *****************************************************************************/
+
+@use '../variables/variables'
+@use 'mixin-variables'
+
+/****************************
+ * Rootsize Mixin.          *
+ ****************************/
+// Root font-size in %, outputted 
+// in correct breakpoints.
+@mixin rootsize {
+    font-size: nth($sizes, 1) / 16 * 100%;
+
+    // Loop through breakpoints.
+    @for $i from 2 through $breakpoints-limit {
+        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+            font-size: nth($sizes, $i) / 16 * 100%;
+	}
+    }
+}
