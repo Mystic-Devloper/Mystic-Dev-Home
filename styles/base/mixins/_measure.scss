@@ -3,35 +3,35 @@
  *                                                                           *
  * A Personal Website made by Mystic Devloper (Surya).                       *
  *                                                                           *	
- * File: _maxwidth.scss                                                      *
- * Info: SCSS File for Maxwidth Mixin.                                       *
+ * File: _measure.scss                                                       *
+ * Info: SCSS File for Measure Mixin.                                        *
  *****************************************************************************/
 
 @use '../variables/variables'
 @use 'mixin-variables'
 
 /****************************
- * Maxwidth Mixin.          *
+ * Measure Mixin.           *
  ****************************/
-// Max-widths for typeset containers, outputted
+// Set the measure for single columns, outputted 
 // in correct breakpoints.
-@mixin maxwidth($breakpoint: 0) {
+@mixin measure($breakpoint: 0) {
     // Type of chosen variables.
     $break-value: type-of($breakpoint);
 
     // If specifying a breakpoint to use (and breakpoint exists).
     @if $break-value == number and $breakpoint <= ($breakpoints-limit - 1) and $breakpoint >= 0 {
 
-        max-width: #{nth($max-widths, ($breakpoint + 1)) / nth($sizes, ($breakpoint + 1))}rem;
+      max-width: #{nth($line-widths, ($breakpoint + 1)) / nth($sizes, ($breakpoint + 1))}rem;
 
     } @else if $breakpoint == all {
-
-        max-width: #{nth($max-widths, 1) / nth($sizes, 1)}rem;
+    
+        max-width: #{nth($line-widths, 1) / nth($sizes, 1)}rem;
 
         // Loop through breakpoints.
         @for $i from 2 through $breakpoints-limit {
             @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
-                max-width: #{nth($max-widths, $i) / nth($sizes, $i)}rem;
+                max-width: #{nth($line-widths, $i) / nth($sizes, $i)}rem;
             }
         }
     }

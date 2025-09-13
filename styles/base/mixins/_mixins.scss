@@ -3,20 +3,20 @@
  *                                                                           *
  * A Personal Website made by Mystic Devloper (Surya).                       *
  *                                                                           *	
- * File: _clearfix.scss                                                      *
- * Info: SCSS File for Clear Fix Mixin.                                      *
+ * File: _mixins.scss                                                        *
+ * Info: SCSS File for All Mixins.                                           *
  *****************************************************************************/
 
-/****************************
- * Clear Fix.               *
- ****************************/
-@mixin clearfix {
-    &:before, &:after{
-        display: table;
-        content: "";
-    }
-  
-    &:after{
-        clear: both;
-    }
-}
+@forward 'mixins-variables'
+@forward 'breakpoint'
+@forward 'rootsize'
+@forward 'maxwidth'
+@forward 'measure'
+@forward 'ideal-measure'
+@forward 'modular-scale'
+@forward 'fontsize'
+@forward 'baseline'
+@forward 'sassline'
+@forward 'clearfix'
+
+@forward 'export-theme'

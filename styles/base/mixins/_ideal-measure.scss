@@ -1,0 +1,55 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _ideal-measure.scss                                                 *
+ * Info: SCSS File for Ideal Measure Mixin.                                  *
+ *****************************************************************************/
+
+@use '../variables/variables'
+@use 'mixin-variables'
+
+/****************************
+ * Ideal Measure Mixin.     *
+ ****************************/
+// Calculate percentage width of container to get optimal measure for main text columns.
+// Defaults to all breakpoints.
+// Note: will not output for base breakpoint as this comes from the 'measure' mixin.
+@mixin ideal-measure($breakpoint: 0, $gutter: 0, $main: true, $output: max-width) {
+    // Type of chosen variables.
+    $break-value: type-of($breakpoint);
+
+    // If specifying a breakpoint to use (and breakpoint exists and is larger than 0).
+    @if $break-value == number and $breakpoint <= ($breakpoints-limit - 1) and $breakpoint > 0 {
+
+        @if $gutter == small {
+            $gutter: map-get($gutterwidths, small) * 2 / 1rem;
+        } @else if $gutter == medium {
+            $gutter: map-get($gutterwidths, medium) * 2 / 1rem;
+        } @else if $gutter == large {
+            $gutter: map-get($gutterwidths, large) * 2 / 1rem;
+        } @else {
+            $gutter: 0;
+        }
+
+        $rootsize: map-get($rootsizes, rootsize-#{$breakpoint});
+        $ideal-measure: map-get($measures, measure-#{$breakpoint});
+        $gutter-size: ($gutter * $rootsize);
+        $container-width: map-get($maxwidths, width-#{$breakpoint});
+
+        $percentage: percentage(($ideal-measure + $gutter-size) / $container-width);
+
+        @if $percentage < 55 {
+            $percentage: 55%;
+        } @else if $percentage > 65 {
+            $percentage: 65%;
+        }
+
+        @if $main == false {
+            $percentage: 100 - $percentage;
+        }
+
+        #{$output}: $percentage;
+    }
+}

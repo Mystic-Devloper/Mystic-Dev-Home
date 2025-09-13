@@ -1,0 +1,22 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _modular-scale.scss                                                 *
+ * Info: SCSS File for Modular Scale Mixin.                                  *
+ *****************************************************************************/
+
+@use '../variables/variables'
+@use 'mixin-variables'
+
+/****************************
+ * Modular Scale Mixin.     *
+ ****************************/
+// Value in scale in $modular-scale?
+// Used in following fontsize mixin.
+@function in-modular-scale($scale, $key) {
+    $map: map-get($modular-scale, $scale);
+    $output: map-has-key($map, $key);
+    @return $output;
+}
