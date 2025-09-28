@@ -4,8 +4,6 @@
  *
  * @file search.ts
  *
- * @brief Search Utility.
- *
  * This file implements regexp based fuzzy search and 
  * highlighting search utility.
  ***/
@@ -42,5 +40,8 @@ export function extractTags(rawInput: SearchQuery): Array<Tag> {
 
   for (const match of matches) {
     let expr: Tag = (match[1] ?? "").trim();
+
+    // Strip surrounding quotes (if any)
+    const stripQuotes = s => s(
   }
 }
