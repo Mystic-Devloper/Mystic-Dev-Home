@@ -7,8 +7,8 @@
  * Info: SCSS File for Modular Scale Mixin.                                  *
  *****************************************************************************/
 
-@use '../variables/variables'
-@use 'mixin-variables'
+@use '../variables/variables' as *;
+@use 'mixin-variables' as *;
 
 /****************************
  * Modular Scale Mixin.     *

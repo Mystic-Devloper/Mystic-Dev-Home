@@ -12,10 +12,10 @@
 /****************************
  * Monospace Typeface.      *
  ****************************/
-$bodytype: (
-    font-family: "JetBrains Mono", monospace;
-    regular: 400;
-    bold: 700;
-    italic: italic;
-    cap-height: 0.7;
+$monospacetype: (
+    font-family: '"JetBrains Mono", monospace',
+    regular: 400,
+    bold: 700,
+    italic: italic,
+    cap-height: 0.70
 ) !default;

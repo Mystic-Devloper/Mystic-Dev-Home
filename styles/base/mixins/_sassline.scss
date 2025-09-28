@@ -7,15 +7,16 @@
  * Info: SCSS File for Sassline Mixin.                                       *
  *****************************************************************************/
 
-@use '../variables/variables'
-@use 'mixin-variables'
-@use 'breakpoint'
-@use 'rootsize'
-@use 'maxwidth'
-@use 'measure'
-@use 'ideal-measure'
-@use 'modular-scale'
-@use 'fontsize'
+@use '../variables/variables' as *;
+@use 'mixin-variables' as *;
+@use 'breakpoint' as *;
+@use 'rootsize' as *;
+@use 'maxwidth' as *;
+@use 'measure' as *;
+@use 'ideal-measure' as *;
+@use 'modular-scale' as *;
+@use 'fontsize' as *;
+
 
 /****************************
  * Sassline Mixin.          *

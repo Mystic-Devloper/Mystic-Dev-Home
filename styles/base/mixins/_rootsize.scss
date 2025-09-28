@@ -7,8 +7,9 @@
  * Info: SCSS File for Rootsize Mixin.                                     *
  *****************************************************************************/
 
-@use '../variables/variables'
-@use 'mixin-variables'
+@use '../variables/variables' as *;
+@use 'mixin-variables' as *;
+@use 'sass:list';
 
 /****************************
  * Rootsize Mixin.          *
@@ -16,12 +17,12 @@
 // Root font-size in %, outputted 
 // in correct breakpoints.
 @mixin rootsize {
-    font-size: nth($sizes, 1) / 16 * 100%;
+    font-size: calc(list.nth($sizes, 1) / 16 * 100%);
 
     // Loop through breakpoints.
     @for $i from 2 through $breakpoints-limit {
-        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
-            font-size: nth($sizes, $i) / 16 * 100%;
+        @media screen and (min-width: calc(list.nth($points, $i) / 16) * 1em ) {
+            font-size: calc(list.nth($sizes, $i) / 16 * 100%);
 	}
     }
 }

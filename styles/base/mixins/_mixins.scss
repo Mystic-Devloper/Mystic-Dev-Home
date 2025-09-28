@@ -7,16 +7,16 @@
  * Info: SCSS File for All Mixins.                                           *
  *****************************************************************************/
 
-@forward 'mixins-variables'
-@forward 'breakpoint'
-@forward 'rootsize'
-@forward 'maxwidth'
-@forward 'measure'
-@forward 'ideal-measure'
-@forward 'modular-scale'
-@forward 'fontsize'
-@forward 'baseline'
-@forward 'sassline'
-@forward 'clearfix'
+@forward 'mixin-variables';
+@forward 'breakpoint';
+@forward 'rootsize';
+@forward 'maxwidth';
+@forward 'measure';
+@forward 'ideal-measure';
+@forward 'modular-scale';
+@forward 'fontsize';
+@forward 'baseline';
+@forward 'sassline';
+@forward 'clearfix';
 
-@forward 'export-theme'
+@forward 'export-theme';
