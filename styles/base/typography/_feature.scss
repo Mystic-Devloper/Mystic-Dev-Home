@@ -1,0 +1,28 @@
+// _feature.scss
+
+@use '../variables/variables' as *;
+
+.feature {
+  padding: 2rem 1rem; // vertical rhythm block, replaces min-height
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: var(--feature-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--feature-bg-image, none);
+
+  .container {
+    max-width: 60%;
+    margin: 0 auto;
+    @include flex-direction(column);
+    @include justify-content(center);
+    gap: 1rem; // adds breathing space between children
+  }
+
+  @include breakpoint(break-3) {
+    padding: 4rem 2rem; // scale feature section on large viewports
+  }
+}
+

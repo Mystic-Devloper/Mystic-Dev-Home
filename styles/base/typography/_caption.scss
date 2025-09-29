@@ -1,0 +1,49 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _Caption.scss                                                       *
+ * Info: SCSS File for Caption container.                                    *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+
+/********************
+ * Caption Styling. *
+ ********************/
+.typeset {
+  small, .caption {
+    @include fontsize(theta, all);
+
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+    line-height: 2rem; // grid-safe
+  }
+
+  // Inline small text (inside paragraphs etc.)
+  small {
+    font-size: 0.875em; // still scales, but keeps rhythm
+  }
+
+  // Captions
+  .caption {
+    @include baseline(theta, $headingtype, 2, 1, all);
+    color: var(--caption);
+  }
+
+  // Adjusted spacing for captions after headings
+  h1 + .caption, .alpha + .caption,
+  h2 + .caption, .beta + .caption,
+  h3 + .caption, .gamma + .caption {
+    margin-top: -1rem; // half-step tuck, still aligns to grid
+  }
+
+  h4 + .caption, .delta + .caption,
+  h5 + .caption, .epsilon + .caption,
+  h6 + .caption, .zeta + .caption {
+    margin-top: 0; // smaller headings don’t need a tuck
+  }
+}

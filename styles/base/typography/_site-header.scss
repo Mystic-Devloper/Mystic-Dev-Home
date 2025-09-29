@@ -1,0 +1,82 @@
+// Site Header
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+
+.site-header {
+  background-color: var(--banner);
+  align-items: center;
+  padding: 0.5rem 1rem; // small horizontal breathing space
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+
+  @include breakpoint(break-1) {
+    @include flexbox;
+    @include justify-content(space-between);
+  }
+
+  a {
+    position: relative;
+    max-width: 350px;
+
+    @include breakpoint(break-1) {
+      width: auto;
+      max-width: none;
+    }
+  }
+}
+
+.logo-container {
+  background: transparent;
+  position: relative;
+  max-width: 300px;
+  margin: 1rem 0 1rem 3%;
+}
+
+.logo-name {
+  text-decoration: none;
+  @include flexbox;
+  @include align-item(center);
+  gap: 0.5rem;
+  transition: opacity 0.2s ease; // moved here
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  @include flexbox;
+  @include flex-direction(column);
+  gap: 0.1rem;
+}
+
+.profile-text {
+  @include fontsize(eta, all);
+  font-family: unquote(map-get($headingtype, font-family));
+  font-style: normal;
+  font-weight: map-get($headingtype, regular);
+  color: var(--paragraph);
+  line-height: 1.2;
+  padding: 0;
+
+  strong {
+    color: var(--body);
+  }
+}
+
+.username {
+  @include fontsize(eta, all);
+  color: var(--paragraph);
+  font-family: unquote(map-get($headingtype, font-family));
+  font-style: italic;
+  font-weight: map-get($headingtype, regular);
+  line-height: 1.2;
+  padding: 0;
+}
+

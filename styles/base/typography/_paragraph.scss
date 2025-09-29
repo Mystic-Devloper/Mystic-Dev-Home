@@ -1,0 +1,37 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _paragraph.scss                                                     *
+ * Info: SCSS File for Paragraph container.                                  *
+ *****************************************************************************/
+
+@use '../mixins/mixins'
+@use '../variables/variables'
+
+/**********************
+ * Paragraph Styling. *
+ **********************/
+.typeset {
+    p, .zeta {
+        @include sassline(zeta, $bodytype, 2, 1, all);
+
+        color: var(--paragraph);
+        font-feature-settings: 'onum', 'kern', 'liga';
+
+        max-width: 70ch;
+    }
+    
+    .small, .eta {
+        @include sassline(eta, $bodytype, 2, 1, all);
+    }
+
+    .tiny, .theta { 
+        @include sassline(theta,  $bodytype, 2, 0, all);
+    }
+
+    .micro, .iota {
+        @include sassline(iota,   $bodytype, 1.5, 0, all);
+    }
+}

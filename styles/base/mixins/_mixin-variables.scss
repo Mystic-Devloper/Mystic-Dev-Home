@@ -1,0 +1,27 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _mixins-variables.scss                                              *
+ * Info: SCSS File for Global Mixin Variables.                               *
+ *****************************************************************************/
+
+@use '../variables/variables' as *;
+@use "sass:list";
+@use "sass:map";
+
+/**************************
+ * Breakpoint Limit.      *
+ * Number of breakpoints. *
+ **************************/
+$breakpoints-limit: list.length($breakpoints);
+
+/***********************************
+ * List of rootsizes, breakpoints, *
+ * max widths and measures.        *
+ ***********************************/
+$sizes: map.values($rootsizes);
+$points: map.values($breakpoints);
+$line-widths: map.values($measures);
+$max-widths: map.values($maxwidths);

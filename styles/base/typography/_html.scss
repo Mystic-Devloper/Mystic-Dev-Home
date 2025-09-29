@@ -1,0 +1,56 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _html.scss                                                          *
+ * Info: SCSS File for Main HTML container.                                  *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+
+/********************
+ * HTML Styling.    *
+ ********************/
+html {
+    @include rootsize;
+    
+    // Stops browsers from auto resizing.
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    box-sizing: border-box;
+
+    line-height: 2rem; // Fallback if mixins fails.
+
+    // Smoothing for better rendering.
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // Smooth scroll behaviour.
+    scroll-behavior: smooth;
+
+    // Removes grey highlight on tap (iOS Safari).
+
+    -webkit-tap-highlight-color: transparent;
+    
+    // For consistent typography (handled in body too).
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+// Gotta think about assessblity!
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/********************
+ * Root Styling.    *
+ ********************/
+*, *::before, *::after {
+    box-sizing: inherit;
+}

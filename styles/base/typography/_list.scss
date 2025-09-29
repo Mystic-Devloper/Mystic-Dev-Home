@@ -1,0 +1,135 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _list.scss                                                          *
+ * Info: SCSS File for List container.                                       *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+
+/********************
+ * List Styling.    *
+ ********************/
+.typeset {
+  // Unordered & ordered lists
+  ul,
+  ol {
+    @include baseline(zeta, $bodytype, 2, 2, all);
+
+    margin: 0 0 2rem 0; // full grid unit at bottom
+    padding: 0;
+
+    li {
+      font-feature-settings: 'kern', 'onum', 'liga';
+      margin-left: 2rem; // one baseline unit for bullets/markers
+      line-height: 2rem; // lock each item to grid
+      position: relative;
+
+      @include breakpoint(break-1) {
+        margin-left: 0;
+      }
+
+      // Nested lists
+      ul,
+      ol {
+        margin: 2rem 0;    // vertical spacing in baseline unit
+        margin-left: 2rem; // indent another unit
+        padding: 0;
+      }
+    }
+  }
+
+  // Ordered lists
+  ol {
+    list-style-type: none;
+    counter-reset: top-level;
+
+    li {
+      counter-increment: top-level;
+
+      &:before {
+        content: counter(top-level) '.';
+        font-feature-settings: 'lnum', 'tnum';
+        position: absolute;
+        left: -2rem;      // aligns numbers in margin
+        width: 2rem;      // fixed slot for numbers
+        text-align: right;
+        line-height: 2rem;
+      }
+
+      // Nested UL inside OL
+      ul li:before {
+        content: '';
+      }
+
+      // Nested OL
+      ol {
+        counter-reset: sub-level;
+
+        li {
+          counter-increment: sub-level;
+
+          &:before {
+            content: counter(top-level) '.' counter(sub-level);
+          }
+
+          // Nested UL inside nested OL
+          ul li:before {
+            content: '';
+          }
+
+          // Deeper nested OL
+          ol {
+            counter-reset: sub-sub-level;
+
+            li {
+              counter-increment: sub-sub-level;
+
+              &:before {
+                content: counter(top-level) '.' counter(sub-level) '.' counter(sub-sub-level);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// UL Update!!
+.typeset {
+  // Unordered lists
+  ul {
+    list-style: none; // remove browser bullets
+    margin: 0 0 2rem 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      margin-left: 2rem;   // reserve space for bullet
+      line-height: 2rem;   // lock to baseline
+
+      &::before {
+        content: '•'; // or use \2022 for bullet
+        position: absolute;
+        left: -2rem;     // same offset as numbers
+        width: 2rem;     // fixed slot
+        text-align: right;
+        line-height: 2rem;
+        font-size: 0.9em; // slightly smaller than text
+      }
+
+      // Nested lists
+      ul,
+      ol {
+        margin: 2rem 0;    // one baseline unit spacing
+        margin-left: 2rem; // indent another unit
+        padding: 0;
+      }
+    }
+  }
+}
+

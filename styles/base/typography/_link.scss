@@ -1,0 +1,51 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _link.scss                                                          *
+ * Info: SCSS File for Link container.                                       *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+
+/********************
+ * Link Styling.    *
+ ********************/
+a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color .3s, background-color .3s;
+
+    &:hover, &:active, &:focus {
+        color: var(--hover);
+        text-decoration: none;
+    }
+}
+
+// Styling for typeset links.
+.typeset {
+    // Nice underline for better readiblity.
+    p a, li a {
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten(var(--link),20%) 50%);
+        background-position: 0 1.05em;
+        background-repeat: repeat-x;
+        background-size: 100% 0.1em;
+        text-shadow: 0.1em 0 var(--bg),
+                     0.15em 0 var(--bg),
+                    -0.1em 0 var(--bg),
+                    -0.15em 0 var(--bg);
+        transition: color .3s, background-image .3s ease;
+
+        &:hover, &:active, &:focus {
+            background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten(var(--hover),20%) 50%);
+        }
+
+
+        &:focus-visible {
+            outline: 2px solid var(--hover);
+            outline-offset: 2px;
+        }
+    }
+}
