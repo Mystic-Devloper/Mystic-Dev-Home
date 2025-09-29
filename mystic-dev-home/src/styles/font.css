@@ -1,0 +1,23 @@
+/**
+ * Mystic Dev Website (https://thedevmystic.github.io
+ *                     && https://mystic-dev.eu org)
+ *
+ * @file font.css
+ *
+ * This file declares font faces of Open Sans, Montserrat, JetBrains Mono,
+ * and their corresponding fallback fonts.
+ */
+
+/** 
+ * Open Sans Font.
+ */
+
+/* Regular */
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+
+  src: 
+}
