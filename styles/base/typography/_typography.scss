@@ -1,0 +1,27 @@
+// _typography.scss
+
+// Base & Global Styles
+@forward 'html';
+@forward 'body';
+@forward 'hr';
+@forward 'etc';
+
+// Typography & Text
+@forward 'blockquote';
+@forward 'caption';
+@forward 'code-typography';
+@forward 'heading';
+@forward 'link';
+@forward 'list';
+@forward 'paragraph';
+
+// Layout & Structure
+@forward 'content-wrappers';
+@forward 'flex';
+@forward 'layouts';
+@forward 'site-header';
+@forward 'site-footer';
+
+// Other Components
+@forward 'feature';
+@forward 'table';

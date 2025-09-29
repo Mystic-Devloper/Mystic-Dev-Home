@@ -1,0 +1,35 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _blockquote.scss                                                    *
+ * Info: SCSS File for Blockquote container.                                 *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+
+/***********************
+ * Blockquote Styling. *
+ ***********************/
+.typeset {
+  blockquote {
+    margin: 0 0 2rem; // ends clean on baseline
+    padding-left: 1rem;
+    border-left: 0.15rem solid var(--link);
+
+    p {
+      @include sassline(zeta, $bodytype, 2, 1, all);
+      font-style: map-get($bodytype, italic);
+      margin: 0 0 2rem;   // spacing after each para = 1 baseline unit
+      line-height: 2rem;  // grid lock
+    }
+
+    // Tighten on smaller screens
+    @include breakpoint(break-1) {
+      margin-left: -1rem;
+    }
+  }
+}
+

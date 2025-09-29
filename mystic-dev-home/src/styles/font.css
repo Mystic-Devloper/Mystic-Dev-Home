@@ -4,20 +4,187 @@
  *
  * @file font.css
  *
- * This file declares font faces of Open Sans, Montserrat, JetBrains Mono,
- * and their corresponding fallback fonts.
+ * @desc This file declares font faces of Open Sans, Montserrat, JetBrains Mono,
+ *       and their corresponding fallback fonts.
  */
+
+/**
+ * Structure:
+ * 1. Heading => Montserrat     (Geometric Sans Font)
+ * 2. Body    => Open Sans      (Humanist Sans Font)
+ * 3. Code    => JetBrains Mono (Ligatures Monospace Font)
+ */
+
+/** 
+ * Montserrat Font.
+ */
+
+/* Normal */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+
+  src: url("/fonts/montserrat/montserrat-normal-vf.woff2") format("woff2-variations"),
+       url("/fonts/montserrat/montserrat-normal-vf.woff")  format("woff-variations"),
+       url("/fonts/montserrat/montserrat-normal-vf.ttf")   format("truetype-variations");
+}
+
+/* Italic */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+
+  src: url("/fonts/montserrat/montserrat-italic-vf.woff2") format("woff2-variations"),
+       url("/fonts/montserrat/montserrat-italic-vf.woff")  format("woff-variations"),
+       url("/fonts/montserrat/montserrat-italic-vf.ttf")   format("truetype-variations");
+}
+
+/** 
+ * Montserrat Fallback Font.
+ */
+
+/* Normal */
+@font-face {
+  font-family: "Montserrat Fallback";
+  font-style: normal;
+  font-display: swap;
+  src: local("Arial");
+
+  size-adjust: 61.0%;
+  ascent-override: 96.8%;
+  descent-override: 25.1%;
+  line-gap-override: 0%;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Montserrat Fallback";
+  font-style: italic;
+  font-display: swap;
+  src: local("Arial Italic"), local("Arial");
+
+  size-adjust: 61.0%;
+  ascent-override: 96.8%;
+  descent-override: 25.1%;
+  line-gap-override: 0%;
+}
 
 /** 
  * Open Sans Font.
  */
 
-/* Regular */
+/* Normal */
 @font-face {
   font-family: "Open Sans";
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 
-  src: 
+  src: url("/fonts/open-sans/open-sans-normal-vf.woff2") format("woff2-variations"),
+       url("/fonts/open-sans/open-sans-normal-vf.woff")  format("woff-variations"),
+       url("/fonts/open-sans/open-sans-normal-vf.ttf")   format("truetype-variations");
+}
+
+/* Italic */
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+
+  src: url("/fonts/open-sans/open-sans-italic-vf.woff2") format("woff2-variations"),
+       url("/fonts/open-sans/open-sans-italic-vf.woff")  format("woff-variations"),
+       url("/fonts/open-sans/open-sans-italic-vf.ttf")   format("truetype-variations");
+}
+
+/** 
+ * Open Sans Fallback Font.
+ */
+
+/* Normal */
+@font-face {
+  font-family: "Open Sans Fallback";
+  font-style: normal;
+  font-display: swap;
+  src: local("Arial");
+
+  size-adjust: 119.7%;
+  ascent-override: 106.9%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Open Sans Fallback";
+  font-style: italic;
+  font-display: swap;
+  src: local("Arial Italic"), local("Arial");
+
+  size-adjust: 119.7%;
+  ascent-override: 106.9%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+}
+
+/** 
+ * JetBrains Mono Font.
+ */
+
+/* Normal */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+
+  src: url("/fonts/jetbrains-mono/jetbrains-mono-normal-vf.woff2") format("woff2-variations"),
+       url("/fonts/jetbrains-mono/jetbrains-mono-normal-vf.woff")  format("woff-variations"),
+       url("/fonts/jetbrains-mono/jetbrains-mono-normal-vf.ttf")   format("truetype-variations");
+}
+
+/* Italic */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+
+  src: url("/fonts/jetbrains-mono/jetbrains-mono-italic-vf.woff2") format("woff2-variations"),
+       url("/fonts/jetbrains-mono/jetbrains-mono-italic-vf.woff")  format("woff-variations"),
+       url("/fonts/jetbrains-mono/jetbrains-mono-italic-vf.ttf")   format("truetype-variations");
+}
+
+/** 
+ * JetBrains Mono Fallback Font.
+ */
+
+/* Normal */
+@font-face {
+  font-family: "JetBrains Mono Fallback";
+  font-style: normal;
+  font-display: swap;
+  src: local("Courier New");
+
+  size-adjust: 48.8%;
+  ascent-override: 102%;
+  descent-override: 30%;
+  line-gap-override: 0%;
+}
+
+/* Italic */
+@font-face {
+  font-family: "JetBrains Mono Fallback";
+  font-style: italic;
+  font-display: swap;
+  src: local("Courier New Italic"), local("Courier New");
+
+  size-adjust: 48.8%;
+  ascent-override: 102%;
+  descent-override: 30%;
+  line-gap-override: 0%;
 }

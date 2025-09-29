@@ -1,0 +1,54 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _heading.scss                                                       *
+ * Info: SCSS File for Heading container.                                    *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+
+/********************
+ * Heading Styling. *
+ ********************/
+.typeset {
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--heading);
+        font-family: unquote(map-get($headingtype, font-family));
+        font-feature-settings: 'lnum', 'kern', 'liga';
+        font-style: normal;
+        font-weight: unquote(map-get($headingtype, bold));
+    }
+    
+    // Heading Level 1.
+    h1, .alpha {
+        @include sassline(alpha, $headingtype, 6, 2, all)
+    }
+
+    // Heading Level 2.
+    h2, .beta {
+        @include sassline(beta, $headingtype, 4, 2, all)
+    }
+
+    // Heading Level 3.
+    h3, .gamma {
+        @include sassline(gamma, $headingtype, 3, 1, all)
+    }
+
+    // Heading Level 4.
+    h4, .delta {
+        @include sassline(delta, $headingtype, 2, 1, all)
+    }
+
+    // Heading Level 5.
+    h5, .epsilon {
+        @include sassline(epsilon, $headingtype, 2, 0, all)
+    }
+
+    // Heading Level 6.
+    h6, .zeta {
+        @include sassline(zeta, $headingtype, 2, 0, all)
+    }
+}

@@ -1,0 +1,214 @@
+// Layouts
+// ---------------------------------------
+
+@use '../mixins/mixins' as *;
+
+.section {
+  margin: 0 auto;
+  position: relative;
+  width: 94%;
+
+  @include breakpoint(break-3) {
+    @include maxwidth(3);
+  }
+
+  @include breakpoint(break-4) {
+    @include maxwidth(4);
+  }
+
+  @include breakpoint(break-5) {
+    @include maxwidth(5);
+  }
+
+  @include breakpoint(break-6) {
+    @include maxwidth(6);
+  }
+
+  @include flexbox;
+  @include flex-wrap(wrap);
+}
+
+.single-measure {
+  @include measure(all);
+  margin: 0 auto;
+}
+
+.column {
+  margin: 0 auto;
+  width: 100%;
+
+  @include breakpoint(break-1) {
+    @include flex-grow(1);
+    @include flex-shrink(1);
+    @include flex-basis(auto);
+
+    padding-left: map-get($gutterwidths, small);
+    padding-right: map-get($gutterwidths, small);
+  }
+
+  @include breakpoint(break-3) {
+    padding-left: map-get($gutterwidths, medium);
+    padding-right: map-get($gutterwidths, medium);
+  }
+}
+
+.column--duo {
+  @include breakpoint(break-1) {
+    @include flex-basis(50%);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+
+    &:nth-of-type(n+3) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.column--trio {
+  @include breakpoint(break-1) {
+    @include flex-basis(33.333%);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+
+    &:nth-of-type(n+4) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.column--quad {
+  @include breakpoint(break-1) {
+    @include flex-basis(50%);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+  }
+
+  @include breakpoint(break-2) {
+    @include flex-basis(25%);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+  }
+}
+
+.column--main {
+  @include breakpoint(break-1) {
+    @include ideal-measure(1, small);
+    flex-basis: auto;
+    @include flex-grow(1);
+    @include flex-shrink(1);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small);
+  }
+
+  @include breakpoint(break-3) {
+    @include ideal-measure(3, medium);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium);
+  }
+
+  @include breakpoint(break-5) {
+    @include ideal-measure(5, medium);
+  }
+
+  @include breakpoint(break-6) {
+    @include ideal-measure(6, medium);
+  }
+}
+
+.column--sidebar {
+  @include breakpoint(break-1) {
+    @include ideal-measure(1, small, false);
+    flex-basis: auto;
+    @include flex-grow(0);
+    @include flex-shrink(0);
+
+    padding-right: map-get($gutterwidths, medium);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small, false);
+  }
+
+  @include breakpoint(break-3) {
+    @include ideal-measure(3, medium, false);
+    padding-right: map-get($gutterwidths, large);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium, false);
+  }
+
+  @include breakpoint(break-5) {
+    @include ideal-measure(5, medium, false);
+  }
+
+  @include breakpoint(break-6) {
+    @include ideal-measure(6, medium, false);
+  }
+}
+
+.column--main + .column--sidebar {
+  @include breakpoint(break-1) {
+    padding-left: map-get($gutterwidths, medium);
+    padding-right: map-get($gutterwidths, small);
+  }
+
+  @include breakpoint(break-3) {
+    padding-left: map-get($gutterwidths, large);
+    padding-right: map-get($gutterwidths, medium);
+  }
+
+  @include breakpoint(break-5) {
+    padding-left: map-get($gutterwidths, large);
+    padding-right: map-get($gutterwidths, medium);
+  }
+}
+
+.column--trio,
+.column--quad,
+.column--sidebar {
+  @include breakpoint(break-3) {
+    p {
+      @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 3);
+    }
+
+    li {
+      @include fontsize(eta, 3);
+    }
+  }
+
+  @include breakpoint(break-4) {
+    p {
+      @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 4);
+    }
+
+    li {
+      @include fontsize(eta, 4);
+    }
+  }
+
+  @include breakpoint(break-5) {
+    p {
+      @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 5);
+    }
+
+    li {
+      @include fontsize(eta, 5);
+    }
+  }
+
+  @include breakpoint(break-6) {
+    p {
+      @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 6);
+    }
+
+    li {
+      @include fontsize(eta, 6);
+    }
+  }
+}
+

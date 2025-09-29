@@ -1,0 +1,117 @@
+// _navbar.scss
+// Navbar styles
+
+.nav {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  li {
+    display: block;
+    width: 100%;
+
+    a, span {
+      display: block;
+      padding: 1rem 3%;
+      border-bottom: 0.1rem solid darken($white, 15%);
+      color: $linkColour;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $linkColour;
+        color: $white;
+      }
+    }
+  }
+
+  // Collapsed state
+  &.collapse {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  // Opened state
+  &.opened {
+    max-height: 9999px;
+    position: relative;
+  }
+
+  @include breakpoint(break-1) {
+    display: inline-block;
+    position: relative;
+    max-height: none;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      border: 0;
+      background: transparent;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 2rem;
+      padding: 1rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      a, span {
+        border: 0;
+        color: $captionColour;
+        padding: 0;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          color: $linkColour;
+        }
+      }
+    }
+  }
+}
+
+// Toggle button
+.nav-toggle {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  position: absolute;
+  right: 3%;
+  top: 1.7rem;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../assets/images/menu.svg);
+    background-size: 30px 60px;
+    background-position: 0 0;
+  }
+
+  &.active:after {
+    background-position: 0 30px;
+  }
+
+  @include breakpoint(break-1) {
+    display: none;
+  }
+}
+

@@ -1,0 +1,46 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _table.scss                                                         *
+ * Info: SCSS File for Table typography.                                     *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+
+// Table
+.typeset {
+  table {
+    @include sassline(eta, $headingtype, 2, 0, all);
+
+    font-family: unquote(map-get($headingtype, font-family));
+    font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 2rem; // baseline gap after table
+
+    thead {
+      th {
+        @include sassline(zeta, $headingtype, 2, 0, all);
+        line-height: 2rem;   // lock to baseline
+        padding: 0 1rem;     // horizontal only
+        text-align: left;
+        vertical-align: bottom; // aligns header to baseline
+      }
+    }
+
+    tbody {
+      td {
+        @include sassline(eta, $headingtype, 2, 0, all);
+        line-height: 2rem;
+        padding: 0 1rem;    // only horizontal padding
+        vertical-align: top; // so multi-line cells follow the grid
+      }
+    }
+  }
+}
+

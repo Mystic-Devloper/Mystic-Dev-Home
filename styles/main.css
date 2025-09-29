@@ -1,0 +1,21 @@
+/* Error: calc(40px * 1em) isn't a valid CSS value.
+ *    ,
+ * 24 |         @media screen and (min-width: calc(list.nth($points, $i) / 16) * 1em ) {
+ *    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   base/mixins/_rootsize.scss 24:39      rootsize()
+ *   base/typography/_html.scss 16:5       @forward
+ *   base/typography/_typography.scss 4:1  @forward
+ *   base/_base.scss 14:1                  @use
+ *   main.scss 1:1                         root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: calc(40px * 1em) isn't a valid CSS value.\a    \2577 \a 24 \2502          @media screen and (min-width: calc(list.nth($points, $i) / 16) * 1em ) {\a    \2502                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   base/mixins/_rootsize.scss 24:39      rootsize()\a   base/typography/_html.scss 16:5       @forward\a   base/typography/_typography.scss 4:1  @forward\a   base/_base.scss 14:1                  @use\a   main.scss 1:1                         root stylesheet";
+}

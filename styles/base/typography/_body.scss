@@ -1,0 +1,35 @@
+/*****************************************************************************
+ * Mystic Dev Website (mystic-dev.eu.org & mystic-devloper.github.io)        *
+ *                                                                           *
+ * A Personal Website made by Mystic Devloper (Surya).                       *
+ *                                                                           *	
+ * File: _body.scss                                                          *
+ * Info: SCSS File for Body container.                                       *
+ *****************************************************************************/
+
+@use '../mixins/mixins' as *;
+@use '../variables/variables' as *;
+@use 'flex' as *;
+
+/********************
+ * Body Styling.    *
+ ********************/
+body {
+    @include fontsize(zeta, all);
+
+    font-family: unquote(map-get($bodytype, font-family));     font-style: normal;
+    font-weight: map-get($bodytype, regular);
+    line-height: 2rem;
+    
+    background-color: var(--bg);
+    color: var(--body);
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    @include flexbox;
+    @include flex-direction(column);
+    overflow-x: hidden;
+}

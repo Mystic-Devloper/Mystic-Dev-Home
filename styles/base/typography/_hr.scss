@@ -1,0 +1,22 @@
+// HR SCSS
+
+@use '../variables/variables' as *;
+
+// Horizontal rule.
+.typeset {
+  hr {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      var(--caption) 50%
+    );
+    background-position: 0 50%;
+    background-repeat: repeat-x;
+    background-size: 100% 0.15rem;
+
+    border: 0;
+    height: 0.15rem; // matches line thickness
+
+    margin: 4rem 0; // two baseline units top & bottom
+  }
+}
