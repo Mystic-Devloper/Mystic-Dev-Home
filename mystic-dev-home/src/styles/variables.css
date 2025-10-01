@@ -7,4 +7,31 @@
  * @desc This CSS file declare all variables.
  */
 
+/* Light Theme */
+:root {
+  /* Backgrounds */
+  /* Background: off white greenish */
+  --color-background: #f9fbf9;
+  /* Code background: light beige */
+  --color-code-background: #f9f5d7;
+  /* Feature background: off white cyanish */
+  --color-feature-background: #f1f8f5;
 
+  /* Theming */
+  /* Accent: deep teal */
+  --color--accent: #2c6975;
+  /* Banner: pale blue-green */
+  --color-banner:  #d6ece7;
+
+  /* Texts */
+  /* Heading: blueish gray */
+  --color-heading: #1f3b4d;
+  /* Body: dark charcoal */
+  --color-body: #2e2e2e;
+  /* Paragraph: dark gray */
+  --color-paragraph: #4a4a4a;
+  /* Link: deep teal */
+  --color-link: #2c6975;
+  /* Hover: */
+
+}
