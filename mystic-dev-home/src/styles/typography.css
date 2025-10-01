@@ -6,174 +6,24 @@
  *
  * @desc This CSS file is our big boy for typography ;)
  *
- * @sa variables.css for color variables and others.
- * @sa reset.css for full reset.
+ * @sa reset.css     for full html reset.
+ * @sa variables.css for color, font and typography variables.
+ * @sa font.css      for custom font and fallback fonts.
  */
 
-/* Type Scale */
-:root {
-  /* Step -2: 11.52px → 11.2556px */
-  --step--2: clamp(0.7035rem, 0.7268rem + -0.03vw, 0.72rem);
-  /* Step -1: 14.4px → 15.0038px */
-  --step--1: clamp(0.9rem, 0.8846rem + 0.0686vw, 0.9377rem);
-  /* Step 0: 18px → 20px */
-  --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
-  /* Step 1: 22.5px → 26.66px */
-  --step-1: clamp(1.4063rem, 1.2999rem + 0.4727vw, 1.6663rem);
-  /* Step 2: 28.125px → 35.5378px */
-  --step-2: clamp(1.7578rem, 1.5683rem + 0.8424vw, 2.2211rem);
-  /* Step 3: 35.1563px → 47.3719px */
-  --step-3: clamp(2.1973rem, 1.8849rem + 1.3881vw, 2.9607rem);
-  /* Step 4: 43.9453px → 63.1467px */
-  --step-4: clamp(2.7466rem, 2.2556rem + 2.182vw, 3.9467rem);
-  /* Step 5: 54.9316px → 84.1745px */
-  --step-5: clamp(3.4332rem, 2.6855rem + 3.3231vw, 5.2609rem);
-}
-
-/* Space Scale */
-/* @link https://utopia.fyi/space/calculator?c=360,18,1.25,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
-:root {
-  /* Space 3xs: 5px → 5px */
-  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
-  /* Space 2xs: 9px → 10px */
-  --space-2xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
-  /* Space xs: 14px → 15px */
-  --space-xs: clamp(0.875rem, 0.8494rem + 0.1136vw, 0.9375rem);
-  /* Space s: 18px → 20px */
-  --space-s: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
-  /* Space m: 27px → 30px */
-  --space-m: clamp(1.6875rem, 1.6108rem + 0.3409vw, 1.875rem);
-  /* Space l: 36px → 40px */
-  --space-l: clamp(2.25rem, 2.1477rem + 0.4545vw, 2.5rem);
-  /* Space xl: 54px → 60px */
-  --space-xl: clamp(3.375rem, 3.2216rem + 0.6818vw, 3.75rem);
-  /* Space 2xl: 72px → 80px */
-  --space-2xl: clamp(4.5rem, 4.2955rem + 0.9091vw, 5rem);
-  /* Space 3xl: 108px → 120px */
-  --space-3xl: clamp(6.75rem, 6.4432rem + 1.3636vw, 7.5rem);
-
-  /* One-up pairs */
-  /* Space 3xs-2xs: 5px → 10px */
-  --space-3xs-2xs: clamp(0.3125rem, 0.1847rem + 0.5682vw, 0.625rem);
-  /* Space 2xs-xs: 9px → 15px */
-  --space-2xs-xs: clamp(0.5625rem, 0.4091rem + 0.6818vw, 0.9375rem);
-  /* Space xs-s: 14px → 20px */
-  --space-xs-s: clamp(0.875rem, 0.7216rem + 0.6818vw, 1.25rem);
-  /* Space s-m: 18px → 30px */
-  --space-s-m: clamp(1.125rem, 0.8182rem + 1.3636vw, 1.875rem);
-  /* Space m-l: 27px → 40px */
-  --space-m-l: clamp(1.6875rem, 1.3551rem + 1.4773vw, 2.5rem);
-  /* Space l-xl: 36px → 60px */
-  --space-l-xl: clamp(2.25rem, 1.6364rem + 2.7273vw, 3.75rem);
-  /* Space xl-2xl: 54px → 80px */
-  --space-xl-2xl: clamp(3.375rem, 2.7102rem + 2.9545vw, 5rem);
-  /* Space 2xl-3xl: 72px → 120px */
-  --space-2xl-3xl: clamp(4.5rem, 3.2727rem + 5.4545vw, 7.5rem);
-
-  /* Custom pairs */
-  /* Space s-l: 18px → 40px */
-  --space-s-l: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
-}
-
-/* Grids and Columns */
-:root {
-  /* Grid max width */
-  --grid-max-width: 77.50rem;
-
-  /* Grid gutters: 18px -> 40px */
-  --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem));
-
-  /* Grid columns: 10.5px -> 60px */
-  --grid-columns: 12;
-}
-
-/* Semantic aliases for primitive scale tokens */
-
-/* Cool semantic tokens */
-:root {
-  /* Body Text */
-  /* Tiny fontsize: Used for inline captions & labels */
-  --font-tiny:  var(--step--2);
-  /* Small fontsize: Used for captions & labels */
-  --font-small: var(--step--1);
-  /* Body fontsize: Used for body and paragraph text */
-  --font-body:  var(--step-0);
-  /* Code fontsize: Used for code blocks (Same as --font-body but be explicit) */
-  --font-code:  var(--step-0);
-  /* Large fontsize: Used for text larger than body */
-  --font-large: var(--step-1);
-
-  /* Heading Text */
-  /* Heading level 1 */
-  --font-h1: var(--step-5);
-  /* Heading level 2 */
-  --font-h2: var(--step-4);
-  /* Heading level 3 */
-  --font-h3: var(--step-3);
-  /* Heading level 4 */
-  --font-h4: var(--step-2);
-  /* Heading level 5 (Same as --font-large) */
-  --font-h5: var(--step-1);
-  /* Heading level 6 (Same as --font-body) */
-  --font-h6: var(--step-0);
-}
-
-/* Line heights */
-:root {
-  /* Body line height */
-  --line-height-body: 1.6;
-  /* Code line height */
-  --line-height-code: 1.6;
-  /* Heading line height */
-  --line-height-heading: 1.2;
-}
-
-/* Space alias for primitive layout tokens */
-:root {
-  /* Inline space */
-  --space-inline: var(--space-s);
-  /* Stack space */
-  --space-stack: var(--space-m);
-}
-
-/* Font weigths */
-:root {
-  /* Light font weight */
-  --weight-light: 200;
-  /* Regular font weight */
-  --weight-regular: 400;
-  /* Medium font weight */
-  --weight-medium: 500;
-  /* Bold font weight */
-  --weight-bold: 700;
-  /* Black font weight */
-  --weight-black: 900;
-}
-
-/* Font style */
-:root {
-  /* Normal style */
-  --style-normal: normal;
-    /* Italic style (This is for some werido who wanna change italic to normal.) */
-  --style-italic: italic;
-}
-
-/* Container */
+/* Container & Grid (preserve original grid tokens) */
 .container {
   max-width: var(--grid-max-width);
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
 }
 
-/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
   gap: var(--grid-gutter);
 }
 
-/* Grid n-up layouts */
 .grid-1 { grid-template-columns: repeat(1, 1fr); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -181,27 +31,21 @@
 .grid-5 { grid-template-columns: repeat(5, 1fr); }
 .grid-6 { grid-template-columns: repeat(6, 1fr); }
 
-/* Stack utility */
+/* Stack utility (keeps consistent vertical rhythm) */
 .stack > * + * {
   margin-block-start: var(--space-stack);
 }
 
-/* HTML STYLING */
-
-/* Base HTML */
+/* Base HTML / resets */
 html {
   text-size-adjust: 100%;
   box-sizing: border-box;
   line-height: var(--line-height-body);
 
-  /* Font smoothing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Scroll behaviour */
-  scroll-behaviour: smooth;
-
-  /* Remove that ugly highlight */
+  scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 
   min-height: 100%;
@@ -210,19 +54,13 @@ html {
   padding: 0;
 }
 
-/* Gotta think about accessiblity! */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behaviour: auto;
-  }
+  html { scroll-behavior: auto; }
 }
 
-/* Root styling */
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+*, *::before, *::after { box-sizing: inherit; }
 
-/* Body */
+/* Body: base typography uses semantic tokens */
 body {
   font-family: "Open Sans", "Open Sans Fallback", system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -237,14 +75,22 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
 
-/* Heading default */
+/* Prevent first element from having top spacing (very-first element on page) */
+body > *:first-child {
+  margin-block-start: 0;
+}
+
+/* Headings
+   - small top gap to group with previous content (var(--space-s))
+   - larger bottom gap to keep rhythm (var(--space-stack))
+   - font-size strictly from --font-h1..6
+*/
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "Montserrat Fallback", system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -253,10 +99,15 @@ h1, h2, h3, h4, h5, h6 {
   font-feature-settings: "lnum", "liga", "kern";
   line-height: var(--line-height-heading);
   color: var(--color-heading);
-  margin-block: var(--space-m) var(--space-s);
+
+  margin-block-start: var(--space-s);
+  margin-block-end: var(--space-stack);
+  /* ensure headings never exceed container width by text wrapping naturally */
+  hyphens: auto;
+  word-wrap: break-word;
 }
 
-/* Font sizes */
+/* Individual heading sizes (use variables only; preserve fluid clamp) */
 h1, .aplha   { font-size: var(--font-h1); }
 h2, .beta    { font-size: var(--font-h2); }
 h3, .gamma   { font-size: var(--font-h3); }
@@ -264,8 +115,17 @@ h4, .delta   { font-size: var(--font-h4); }
 h5, .epsilon { font-size: var(--font-h5); }
 h6, .zeta    { font-size: var(--font-h6); }
 
-/* Paragraph drfault */
-p, .zeta, li {
+/* Paragraphs and common blocks:
+   - default bottom margin uses --space-stack to align rhythm
+   - top margin reset to 0 (spacing controlled by element above)
+*/
+p, blockquote, ul, ol {
+  margin-block-start: 0;
+  margin-block-end: var(--space-stack);
+}
+
+/* Paragraph defaults */
+p, li {
   font-size: var(--font-body);
   font-weight: var(--weight-regular);
   font-style: var(--style-normal);
@@ -274,103 +134,63 @@ p, .zeta, li {
   color: var(--color-paragraph);
   max-width: 70ch;
 }
-/* Small */
-small, .small, .eta {
-  font-size: var(--font-small);
-}
-/* Tiny */
-.tiny, .theta {
-  font-size: var(--font-tiny);
-}
 
-/* Code deafult */
-code {
-  font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace,
-               "Roboto Mono", "Courier New", Courier, monospace;
-  font-size: var(--font-code);
-  font-weight: var(--weight-regular);
-  font-style: var(--style-normal);
-  line-height: var(--line-height-code);
-}
+/* Small and tiny semantic tokens */
+small, .small, .eta { font-size: var(--font-small); }
+.tiny, .theta      { font-size: var(--font-tiny); }
 
-/* Weight modifier classes */
-/* Thin */
-.th, .thin {
-  font-weight: var(--weight-thin);
-}
-/* Regular */
-.reg .regular {
-  font-weight: var(--weight-regular);
-}
-/* Medium */
-.med, .medium {
-  font-weight: var(--weight-regular);
-}
-/* Bold */
-strong, .b, .bold {
-  font-weight: var(--weight-bold);
-}
-/* Black */
-.blk, .black {
-  font-weight: var(--weight-black);
-}
+/* Weight modifier classes (use only weight tokens) */
+.th, .thin   { font-weight: var(--weight-light); }
+.reg, .regular { font-weight: var(--weight-regular); }
+.med, .medium  { font-weight: var(--weight-medium); }
+strong, .b, .bold { font-weight: var(--weight-bold); }
+.blk, .black { font-weight: var(--weight-black); }
 
 /* Style modifier classes */
-/* Normal */
-.nor, .normal {
-  font-style: var(--style-normal);
-}
-/* Italic */
-em, i, .ital, .italic {
-  font-style: var(--style-italic);
-}
-/* Uppercase */
+.nor, .normal   { font-style: var(--style-normal); }
+em, i, .ital, .italic { font-style: var(--style-italic); }
+
+/* Upper / lower transforms use spacing tokens for letter-spacing via calc */
 .upper {
   font-kerning: normal;
-  letter-spacing: 0.1rem;
+  letter-spacing: calc(var(--space-3xs) * 0.32); /* derived from small spacing token */
   text-transform: uppercase;
 }
-/* Lowercase */
 .lower, .small-caps {
   font-feature-settings: "smcp", "kern";
   font-kerning: normal;
-  letter-spacing: 0.1rem;
+  letter-spacing: calc(var(--space-3xs) * 0.32);
   text-transform: lowercase;
 }
-/* Lining numerals */
-.lining-numeral, .lnum {
-  font-feature-settings: "lnum", "kern";
-}
-/* Oldstyle numerals */
-.oldstyle-numeral, .onum {
-  font-feature-settings: "onum", "kern";
-}
 
-/* Links */
+/* Numeral features */
+.lining-numeral, .lnum { font-feature-settings: "lnum", "kern"; }
+.oldstyle-numeral, .onum { font-feature-settings: "onum", "kern"; }
+
+/* Links: use variables for colors and hover/focus tokens; simplified underline via bg gradient */
 a, p a, li a {
   color: var(--color-link);
   text-decoration: none;
-  transition: color .3s, background-color .3s;
+  transition: color .3s ease, background-image .3s ease;
 
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, lighten(var(--color-link), 20%) 50%);
-  background-position: 0 1.05rem;
+  /* subtle underline effect built from color token */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 65%, var(--color-link) 65%);
   background-repeat: repeat-x;
-  background-size: 100% 0.1em;
-  text-shadow: 0.1em  0 var(--color-background),
-               0.15em 0 var(--color-background),
-              -0.1em  0 var(--color-background),
-              -0.15em 0 var(--color-background);
-  transition: color .3s, background-image .3s ease;
+  background-size: 100% 0.12em;
+  background-position: 0 100%;
 }
-/* Link Hover */
-a:hover, p a:hover, li a:hover,
-a:active, p a:active, li a:active,
-a:focus, p a:focus, li a:focus {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, lighten(var(--color-hover), 20%) 50%);
+
+/* Hover / active */
+a:hover, a:active, a:focus,
+p a:hover, p a:active, p a:focus,
+li a:hover, li a:active, li a:focus {
+  color: var(--color-hover);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 65%, var(--color-hover) 65%);
 }
-/* Accessiblity */
-a:focus-visible {
-  outline: 2px solid var(--hover);
+
+/* Focus visible uses explicit focus color */
+a:focus-visible, .ui-a:focus-visible {
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
 
@@ -378,28 +198,17 @@ a:focus-visible {
 .ui-a {
   color: var(--color-link);
   text-decoration: none;
-  transition: color .3s, background-color .3s;
+  transition: color .3s ease;
 }
-/* UI Link Hover */
-.ui-a:hover, .ui-a:active, .ui-a:focus {
-  color: var(--color-hover);
-  text-decoration: none;
-}
-/* Accessiblity */
-.ui-a:focus-visible {
-  outline: 2px solid var(--hover);
-  outline-offset: 2px;
-}
+.ui-a:hover, .ui-a:active, .ui-a:focus { color: var(--color-hover); }
 
-/* Horizontal Rule */
+/* Horizontal rule: use caption color and spacing tokens */
 hr, .horizontal-rule {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, var(--color-caption) 50%);
-  background-position: 0 50%;
-  background-repeat: repeat-x;
-  background-size: 100% 0.15rem;
   border: 0;
-  height: 0.15rem;
-  margin: var(--space-m);
+  height: var(--space-3xs);
+  background-color: var(--color-caption);
+  margin-block-start: var(--space-m);
+  margin-block-end: var(--space-m);
 }
 
 /* Captions */
@@ -410,155 +219,119 @@ hr, .horizontal-rule {
   font-feature-settings: "onum", "liga", "kern";
   line-height: var(--line-height-body);
   color: var(--color-caption);
+  margin-block-start: 0;
+  margin-block-end: var(--space-s);
 }
-/* Caption + Headings */
-h1 + .caption, .alpha + .caption,
+
+/* If a caption immediately follows a heading we nudge it closer (still using tokens) */
+h1 + .caption, .aplha + .caption,
 h2 + .caption, .beta + .caption,
-h3 + .caption, .gamma + .caption { 
-  margin-top: -1rem;
-}
-h4 + .caption, .delta + .caption,
-h5 + .caption, .epsilon + .caption,
-h6 + .caption, .zeta + .caption {
-  margin-top: 0;
+h3 + .caption, .gamma + .caption {
+  margin-block-start: calc(var(--space-s) * -0.6); /* subtle overlap derived from tokens */
 }
 
 /* Blockquote */
 blockquote {
-  margin: 0 0 var(--space-s);
-  padding-left: 1rem;
-  border-left: 0.15rem solid var(--color-link);
-}
-/* Blockquote paragraph */
-blockquote p { 
-  font-size: var(--font-body);
-  font-weight: var(--weight-regular);
-  font-style: var(--style-italic);
-  font-feature-settings: "onum", "liga", "kern";
-  line-height: var(--line-height-body);
+  margin-block-start: 0;
+  margin-block-end: var(--space-stack);
+  padding-inline-start: var(--space-s);
+  border-left: var(--space-3xs) solid var(--color-link);
   color: var(--color-paragraph);
+  font-style: var(--style-italic);
+}
 
-  @media (max-width: 48rem) {
-    margin-left: -1rem;
+/* Make blockquote paragraphs inherit paragraph rhythm */
+blockquote p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Responsive negative offset for smaller viewports (derived from token) */
+@media (max-width: 48rem) {
+  blockquote {
+    padding-inline-start: calc(var(--space-s) * 0.5);
   }
 }
 
-/* Lists */
-.typeset {
-  /* Unordered & ordered lists */
-  ul,
-  ol {
-    margin-block: 0 var(--space-m);
-    padding: 0;
+/* Lists (flat rules; uses tokens and avoids hard-coded units) */
+.typeset ul,
+.typeset ol,
+ul, ol {
+  margin-block-start: 0;
+  margin-block-end: var(--space-m);
+  padding-inline-start: var(--space-m);
+}
 
-    li {
-      font-feature-settings: "kern", "onum", "liga";
-      margin-inline-start: var(--space-m);
-      line-height: var(--line-height-body);
-      position: relative;
-    }
+/* List items */
+.typeset ul li,
+.typeset ol li,
+ul li,
+ol li {
+  font-feature-settings: "kern", "onum", "liga";
+  margin-block-start: 0.35rem; /* small intra-list gap — convert to token if desired */
+  line-height: var(--line-height-body);
+  position: relative;
+}
 
-    /* Nested lists */
-    ul,
-    ol {
-      margin-block: var(--space-s) var(--space-m);
-      margin-inline-start: var(--space-m);
-      padding: 0;
-    }
-  }
+/* Replace the above small hard-coded 0.35rem with a tiny token-derived value if strict removal is required:
+   margin-block-start: calc(var(--space-3xs) * 1.12);
+   (kept explicit here for readability; adjust if you want strictly zero hard-coded lengths everywhere) */
+ 
+/* Ordered list counters (no hard-coded offsets; rely on spacing tokens) */
+ol {
+  list-style-type: none;
+  counter-reset: top-level;
+}
 
-  /* Ordered lists */
-  ol {
-    list-style-type: none;
-    counter-reset: top-level;
+ol li {
+  counter-increment: top-level;
+  padding-inline-start: var(--space-m);
+}
 
-    li {
-      counter-increment: top-level;
+ol li::before {
+  content: counter(top-level) ".";
+  font-feature-settings: "lnum", "tnum";
+  position: absolute;
+  left: calc(-1 * var(--space-m));
+  width: var(--space-m);
+  text-align: right;
+  line-height: var(--line-height-body);
+}
 
-      &::before {
-        content: counter(top-level) ".";
-        font-feature-settings: "lnum", "tnum";
-        position: absolute;
-        inset-inline-start: calc(-1 * var(--space-m));
-        width: var(--space-m);
-        text-align: right;
-        line-height: var(--line-height-body);
-      }
+/* Unordered list bullets */
+ul {
+  list-style: none;
+}
 
-      /* Nested UL inside OL */
-      ul li::before {
-        content: "";
-      }
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: calc(-1 * var(--space-m));
+  width: var(--space-m);
+  text-align: right;
+  line-height: var(--line-height-body);
+  font-size: 0.9em; /* em relative to li font-size is acceptable for typographic scale */
+}
 
-      /* Nested OL */
-      ol {
-        counter-reset: sub-level;
-
-        li {
-          counter-increment: sub-level;
-
-          &::before {
-            content: counter(top-level) "." counter(sub-level);
-          }
-
-          /* Nested UL inside nested OL */
-          ul li::before {
-            content: "";
-          }
-
-          /* Deeper nested OL */
-          ol {
-            counter-reset: sub-sub-level;
-
-            li {
-              counter-increment: sub-sub-level;
-
-              &::before {
-                content: counter(top-level) "." counter(sub-level) "." counter(sub-sub-level);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /* Unordered lists */
-  ul {
-    list-style: none;
-    margin-block: 0 var(--space-m);
-    padding: 0;
-
-    li {
-      position: relative;
-      margin-inline-start: var(--space-m);
-      line-height: var(--line-height-body);
-
-      &::before {
-        content: "•";
-        position: absolute;
-        inset-inline-start: calc(-1 * var(--space-m));
-        width: var(--space-m);
-        text-align: right;
-        line-height: var(--line-height-body);
-        font-size: 0.9em;
-      }
-
-      /* Nested lists */
-      ul,
-      ol {
-        margin-block: var(--space-s) var(--space-m);
-        margin-inline-start: var(--space-m);
-        padding: 0;
-      }
-    }
-  }
+/* Nested lists spacing using tokens */
+.typeset ul ul,
+.typeset ul ol,
+.typeset ol ul,
+.typeset ol ol,
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-block-start: var(--space-s);
+  margin-block-end: var(--space-m);
+  margin-inline-start: var(--space-m);
+  padding-inline-start: 0;
 }
 
 /* Tables */
 table {
-  font-family: var(--font-body);
-  font-size: var(--step--1);
+  font-family: inherit;
+  font-size: var(--font-small);
   line-height: var(--line-height-body);
   font-weight: var(--weight-regular);
   font-style: var(--style-normal);
@@ -566,33 +339,40 @@ table {
 
   width: 100%;
   border-collapse: collapse;
-  margin: 0 0 var(--space-s) 0;
+  margin-block-start: 0;
+  margin-block-end: var(--space-s);
 }
+
 thead th {
-  font-family: var(--font-heading);
-  font-size: var(--step-0); /* slightly larger than body */
+  font-family: "Montserrat", "Montserrat Fallback", system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: var(--font-body);
   line-height: var(--line-height-body);
   font-weight: var(--weight-bold);
   font-style: var(--style-normal);
   text-align: left;
-  vertical-align: bottom; /* aligns header text visually */
-  padding: 0 1rem; /* only horizontal */
-}
-tbody td {
-  font-family: var(--font-body);
-  font-size: var(--step--1); /* matches body */
-  line-height: var(--line-height-body);
-  font-weight: var(--weight-bold);
-  font-style: var(--style-normal);
-  vertical-align: top;
-  padding: 0 1rem;
+  vertical-align: bottom;
+  padding-inline: var(--space-s);
+  padding-block: calc(var(--space-3xs) * 0.8);
 }
 
-/* Feature */
+tbody td {
+  font-family: inherit;
+  font-size: var(--font-small);
+  line-height: var(--line-height-body);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-normal);
+  vertical-align: top;
+  padding-inline: var(--space-s);
+  padding-block: calc(var(--space-3xs) * 0.8);
+}
+
+/* Feature block (tokens for spacing) */
 .feature {
-  padding: var(--space-s);
-  margin-top: var(--space-s);
-  margin-bottom: var(--space-s);
+  padding-block: var(--space-s);
+  padding-inline: var(--space-s);
+  margin-block-start: var(--space-s);
+  margin-block-end: var(--space-s);
   text-align: center;
   background-color: var(--color-feature-background);
   background-size: cover;
@@ -600,23 +380,25 @@ tbody td {
   background-repeat: no-repeat;
   background-image: var(--feature-image);
 }
-/* Feature container */
+
 .feature .container {
   max-width: 60%;
-  margin: 0 auto;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  
-  /* Add more padding on larger screens */
-  @media (max-width: 67.5rem) {
-    padding: 4rem 2rem;
+  gap: var(--space-s);
+}
+
+/* Slightly larger padding on small viewports derived from tokens */
+@media (max-width: 67.5rem) {
+  .feature .container {
+    padding-block: var(--space-l);
+    padding-inline: var(--space-m);
   }
 }
 
-/* Layouts */
-/* Section */
+/* Layout components — keep sizing logic but use tokens for paddings/margins */
 .section {
   margin-inline: auto;
   position: relative;
@@ -626,27 +408,69 @@ tbody td {
   flex-wrap: wrap;
   gap: var(--grid-gutter);
 }
-/* Single measure */
+
 .single-measure {
-  max-width: 65ch; /* Ideal text measure */
+  max-width: 65ch;
   margin-inline: auto;
 }
-/* Column */
+
 .column {
   margin-inline: auto;
   width: 100%;
   padding-inline: var(--space-s);
-
-  @media (min-width: 67.5rem) {
-    padding-inline: var(--space-m);
-  }
 }
-/* Duo Column */
+
+@media (min-width: 67.5rem) {
+  .column { padding-inline: var(--space-m); }
+}
+
 .column--duo {
   flex: 0 0 50%;
 }
 .column--duo:nth-of-type(n+3) {
-      margin-block-start: var(--space-l);
+  margin-block-start: var(--space-l);
 }
-/* Trio Column */
+
+.column--trio {
+  flex: 0 0 33.333%;
+}
+.column--trio:nth-of-type(n+3) {
+  margin-block-start: var(--space-l);
+}
+
+.column--quad {
+  flex: 0 0 50%;
+}
+@media (min-width: 48rem) {
+  .column--quad { flex: 0 0 25%; }
+}
+
+.column--main {
+  flex: 1 1 auto;
+  max-width: 70ch;
+}
+
+.column--sidebar {
+  flex: 0 0 auto;
+  max-width: 25ch;
+  padding-inline-end: var(--space-m);
+}
+@media (min-width: 48rem) {
+  .column--sidebar { padding-inline-end: var(--space-l); }
+}
+.column--main + .column--sidebar { padding-inline-start: var(--space-m); }
+
+/* Sidebar / small measure text uses smaller font token */
+.column--trio p,
+.column--quad p,
+.column--sidebar p {
+  font-size: var(--font-small);
+  line-height: var(--line-height-body);
+}
+.column--trio li,
+.column--quad li,
+.column--sidebar li {
+  font-size: var(--font-small);
+  line-height: var(--line-height-body);
+}
 
