@@ -32,6 +32,56 @@
   --color-paragraph: #4a4a4a;
   /* Link: deep teal */
   --color-link: #2c6975;
-  /* Hover: */
+  /* Hover: aqua */
+  --color-hover: #4fb3b3;
+  /* Focus: deep teal */
+  --color-focus: #2c6975;
+  /* Caption: dim gray */
+  --color-caption: #6b6b6b;
 
+  /* Pure colors */
+  /* White */
+  --color-white: #ffffff;
+  /* Black */
+  --color-black: #000000;
 }
+
+/* Dark Theme */
+:root .dark {
+  /* Backgrounds */
+  /* Background: jungle green (dark teal) */
+  --color-background: #0f1917;
+  /* Code background: dire wolf (dark gray) */
+  --color-code-background: #282828;
+  /* Feature background: pine green (dark teal) */
+  --color-feature-background: #162422;
+
+  /* Theming */
+  /* Accent: aqua */
+  --color--accent: #4fb3b3;
+  /* Banner: muted cyan/teal */
+  --color-banner:  #1c2e2b;
+
+  /* Texts */
+  /* Heading: pale light blue-gray */
+  --color-heading: #e6f1f3;
+  /* Body: light gray */
+  --color-body: #e0e0e0;
+  /* Paragraph: medium light gray */
+  --color-paragraph: #c4c4c4;
+  /* Link: aqua */
+  --color-link: #4fb3b3;
+  /* Hover: aquamarine */
+  --color-hover: #7fd9d9;
+  /* Focus: aqua */
+  --color-focus: #4fb3b3;
+  /* Caption: medium gray */
+  --color-caption: #9a9a9a;
+
+  /* Pure colors */
+  /* White */
+  --color-white: #ffffff;
+  /* Black */
+  --color-black: #000000;
+}
+
