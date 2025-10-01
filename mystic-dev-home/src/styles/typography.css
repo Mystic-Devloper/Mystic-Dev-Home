@@ -4,7 +4,10 @@
  *
  * @file typography.css
  *
- * @desc This CSS file is our big boy for typography ;).
+ * @desc This CSS file is our big boy for typography ;)
+ *
+ * @sa variables.css for color variables and others.
+ * @sa reset.css for full reset.
  */
 
 /* Type Scale */
@@ -90,8 +93,8 @@
 /* Cool semantic tokens */
 :root {
   /* Body Text */
-  /* Mini fontsize: Used for inline captions & labels */
-  --font-mini:  var(--step--2);
+  /* Tiny fontsize: Used for inline captions & labels */
+  --font-tiny:  var(--step--2);
   /* Small fontsize: Used for captions & labels */
   --font-small: var(--step--1);
   /* Body fontsize: Used for body and paragraph text */
@@ -134,6 +137,28 @@
   --space-stack: var(--space-m);
 }
 
+/* Font weigths */
+:root {
+  /* Light font weight */
+  --weight-light: 200;
+  /* Regular font weight */
+  --weight-regular: 400;
+  /* Medium font weight */
+  --weight-medium: 500;
+  /* Bold font weight */
+  --weight-bold: 700;
+  /* Black font weight */
+  --weight-black: 900;
+}
+
+/* Font style */
+:root {
+  /* Normal style */
+  --style-normal: normal;
+    /* Italic style (This is for some werido who wanna change italic to normal.) */
+  --style-italic: italic;
+}
+
 /* Container */
 .container {
   max-width: var(--grid-max-width);
@@ -155,9 +180,473 @@
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 .grid-5 { grid-template-columns: repeat(5, 1fr); }
 .grid-6 { grid-template-columns: repeat(6, 1fr); }
-.grid-7 { grid-template-columns: repeat(7, 1fr); }
-.grid-8 { grid-template-columns: repeat(8, 1fr); }
-.grid-9 { grid-template-columns: repeat(9, 1fr); }
-.grid-10 { grid-template-columns: repeat(10, 1fr); }
-.grid-11 { grid-template-columns: repeat(11, 1fr); }
-.grid-12 { grid-template-columns: repeat(12, 1fr); }
+
+/* Stack utility */
+.stack > * + * {
+  margin-block-start: var(--space-stack);
+}
+
+/* HTML STYLING */
+
+/* Base HTML */
+html {
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  line-height: var(--line-height-body);
+
+  /* Font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Scroll behaviour */
+  scroll-behaviour: smooth;
+
+  /* Remove that ugly highlight */
+  -webkit-tap-highlight-color: transparent;
+
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gotta think about accessiblity! */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behaviour: auto;
+  }
+}
+
+/* Root styling */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", "Open Sans Fallback", system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-normal);
+  line-height: var(--line-height-body);
+
+  background-color: var(--color-background);
+  color: var(--color-body);
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Heading default */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Montserrat Fallback", system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: var(--weight-bold);
+  font-style: var(--style-normal);
+  font-feature-settings: "lnum", "liga", "kern";
+  line-height: var(--line-height-heading);
+  color: var(--color-heading);
+  margin-block: var(--space-m) var(--space-s);
+}
+
+/* Font sizes */
+h1, .aplha   { font-size: var(--font-h1); }
+h2, .beta    { font-size: var(--font-h2); }
+h3, .gamma   { font-size: var(--font-h3); }
+h4, .delta   { font-size: var(--font-h4); }
+h5, .epsilon { font-size: var(--font-h5); }
+h6, .zeta    { font-size: var(--font-h6); }
+
+/* Paragraph drfault */
+p, .zeta, li {
+  font-size: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-normal);
+  font-feature-settings: "onum", "liga", "kern";
+  line-height: var(--line-height-body);
+  color: var(--color-paragraph);
+  max-width: 70ch;
+}
+/* Small */
+small, .small, .eta {
+  font-size: var(--font-small);
+}
+/* Tiny */
+.tiny, .theta {
+  font-size: var(--font-tiny);
+}
+
+/* Code deafult */
+code {
+  font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace,
+               "Roboto Mono", "Courier New", Courier, monospace;
+  font-size: var(--font-code);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-normal);
+  line-height: var(--line-height-code);
+}
+
+/* Weight modifier classes */
+/* Thin */
+.th, .thin {
+  font-weight: var(--weight-thin);
+}
+/* Regular */
+.reg .regular {
+  font-weight: var(--weight-regular);
+}
+/* Medium */
+.med, .medium {
+  font-weight: var(--weight-regular);
+}
+/* Bold */
+strong, .b, .bold {
+  font-weight: var(--weight-bold);
+}
+/* Black */
+.blk, .black {
+  font-weight: var(--weight-black);
+}
+
+/* Style modifier classes */
+/* Normal */
+.nor, .normal {
+  font-style: var(--style-normal);
+}
+/* Italic */
+em, i, .ital, .italic {
+  font-style: var(--style-italic);
+}
+/* Uppercase */
+.upper {
+  font-kerning: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+/* Lowercase */
+.lower, .small-caps {
+  font-feature-settings: "smcp", "kern";
+  font-kerning: normal;
+  letter-spacing: 0.1rem;
+  text-transform: lowercase;
+}
+/* Lining numerals */
+.lining-numeral, .lnum {
+  font-feature-settings: "lnum", "kern";
+}
+/* Oldstyle numerals */
+.oldstyle-numeral, .onum {
+  font-feature-settings: "onum", "kern";
+}
+
+/* Links */
+a, p a, li a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color .3s, background-color .3s;
+
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, lighten(var(--color-link), 20%) 50%);
+  background-position: 0 1.05rem;
+  background-repeat: repeat-x;
+  background-size: 100% 0.1em;
+  text-shadow: 0.1em  0 var(--color-background),
+               0.15em 0 var(--color-background),
+              -0.1em  0 var(--color-background),
+              -0.15em 0 var(--color-background);
+  transition: color .3s, background-image .3s ease;
+}
+/* Link Hover */
+a:hover, p a:hover, li a:hover,
+a:active, p a:active, li a:active,
+a:focus, p a:focus, li a:focus {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, lighten(var(--color-hover), 20%) 50%);
+}
+/* Accessiblity */
+a:focus-visible {
+  outline: 2px solid var(--hover);
+  outline-offset: 2px;
+}
+
+/* UI Links */
+.ui-a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color .3s, background-color .3s;
+}
+/* UI Link Hover */
+.ui-a:hover, .ui-a:active, .ui-a:focus {
+  color: var(--color-hover);
+  text-decoration: none;
+}
+/* Accessiblity */
+.ui-a:focus-visible {
+  outline: 2px solid var(--hover);
+  outline-offset: 2px;
+}
+
+/* Horizontal Rule */
+hr, .horizontal-rule {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, var(--color-caption) 50%);
+  background-position: 0 50%;
+  background-repeat: repeat-x;
+  background-size: 100% 0.15rem;
+  border: 0;
+  height: 0.15rem;
+  margin: var(--space-m);
+}
+
+/* Captions */
+.caption, .cap {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-normal);
+  font-feature-settings: "onum", "liga", "kern";
+  line-height: var(--line-height-body);
+  color: var(--color-caption);
+}
+/* Caption + Headings */
+h1 + .caption, .alpha + .caption,
+h2 + .caption, .beta + .caption,
+h3 + .caption, .gamma + .caption { 
+  margin-top: -1rem;
+}
+h4 + .caption, .delta + .caption,
+h5 + .caption, .epsilon + .caption,
+h6 + .caption, .zeta + .caption {
+  margin-top: 0;
+}
+
+/* Blockquote */
+blockquote {
+  margin: 0 0 var(--space-s);
+  padding-left: 1rem;
+  border-left: 0.15rem solid var(--color-link);
+}
+/* Blockquote paragraph */
+blockquote p { 
+  font-size: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-italic);
+  font-feature-settings: "onum", "liga", "kern";
+  line-height: var(--line-height-body);
+  color: var(--color-paragraph);
+
+  @media (max-width: 48rem) {
+    margin-left: -1rem;
+  }
+}
+
+/* Lists */
+.typeset {
+  /* Unordered & ordered lists */
+  ul,
+  ol {
+    margin-block: 0 var(--space-m);
+    padding: 0;
+
+    li {
+      font-feature-settings: "kern", "onum", "liga";
+      margin-inline-start: var(--space-m);
+      line-height: var(--line-height-body);
+      position: relative;
+    }
+
+    /* Nested lists */
+    ul,
+    ol {
+      margin-block: var(--space-s) var(--space-m);
+      margin-inline-start: var(--space-m);
+      padding: 0;
+    }
+  }
+
+  /* Ordered lists */
+  ol {
+    list-style-type: none;
+    counter-reset: top-level;
+
+    li {
+      counter-increment: top-level;
+
+      &::before {
+        content: counter(top-level) ".";
+        font-feature-settings: "lnum", "tnum";
+        position: absolute;
+        inset-inline-start: calc(-1 * var(--space-m));
+        width: var(--space-m);
+        text-align: right;
+        line-height: var(--line-height-body);
+      }
+
+      /* Nested UL inside OL */
+      ul li::before {
+        content: "";
+      }
+
+      /* Nested OL */
+      ol {
+        counter-reset: sub-level;
+
+        li {
+          counter-increment: sub-level;
+
+          &::before {
+            content: counter(top-level) "." counter(sub-level);
+          }
+
+          /* Nested UL inside nested OL */
+          ul li::before {
+            content: "";
+          }
+
+          /* Deeper nested OL */
+          ol {
+            counter-reset: sub-sub-level;
+
+            li {
+              counter-increment: sub-sub-level;
+
+              &::before {
+                content: counter(top-level) "." counter(sub-level) "." counter(sub-sub-level);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Unordered lists */
+  ul {
+    list-style: none;
+    margin-block: 0 var(--space-m);
+    padding: 0;
+
+    li {
+      position: relative;
+      margin-inline-start: var(--space-m);
+      line-height: var(--line-height-body);
+
+      &::before {
+        content: "•";
+        position: absolute;
+        inset-inline-start: calc(-1 * var(--space-m));
+        width: var(--space-m);
+        text-align: right;
+        line-height: var(--line-height-body);
+        font-size: 0.9em;
+      }
+
+      /* Nested lists */
+      ul,
+      ol {
+        margin-block: var(--space-s) var(--space-m);
+        margin-inline-start: var(--space-m);
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* Tables */
+table {
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  line-height: var(--line-height-body);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-normal);
+  font-feature-settings: "liga", "lnum", "tnum", "kern";
+
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 var(--space-s) 0;
+}
+thead th {
+  font-family: var(--font-heading);
+  font-size: var(--step-0); /* slightly larger than body */
+  line-height: var(--line-height-body);
+  font-weight: var(--weight-bold);
+  font-style: var(--style-normal);
+  text-align: left;
+  vertical-align: bottom; /* aligns header text visually */
+  padding: 0 1rem; /* only horizontal */
+}
+tbody td {
+  font-family: var(--font-body);
+  font-size: var(--step--1); /* matches body */
+  line-height: var(--line-height-body);
+  font-weight: var(--weight-bold);
+  font-style: var(--style-normal);
+  vertical-align: top;
+  padding: 0 1rem;
+}
+
+/* Feature */
+.feature {
+  padding: var(--space-s);
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
+  text-align: center;
+  background-color: var(--color-feature-background);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--feature-image);
+}
+/* Feature container */
+.feature .container {
+  max-width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  
+  /* Add more padding on larger screens */
+  @media (max-width: 67.5rem) {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Layouts */
+/* Section */
+.section {
+  margin-inline: auto;
+  position: relative;
+  width: 94%;
+  max-width: var(--grid-max-width);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gutter);
+}
+/* Single measure */
+.single-measure {
+  max-width: 65ch; /* Ideal text measure */
+  margin-inline: auto;
+}
+/* Column */
+.column {
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: var(--space-s);
+
+  @media (min-width: 67.5rem) {
+    padding-inline: var(--space-m);
+  }
+}
+/* Duo Column */
+.column--duo {
+  flex: 0 0 50%;
+}
+.column--duo:nth-of-type(n+3) {
+      margin-block-start: var(--space-l);
+}
+/* Trio Column */
+
