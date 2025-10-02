@@ -38,6 +38,39 @@
   --color-focus: #2c6975;
   /* Caption: dim gray */
   --color-caption: #6b6b6b;
+  
+  /* Code Styling */
+  /* Comments: warm gray */
+  --color-comment: #7c6f64;
+  /* Punctuations: brown gray */
+  --color-punctuations: #665c54;
+  /* Tags: dark cyan */
+  --color-tag: #458588;
+  /* Selectors: dark green */
+  --color-selector: #689d6a;
+  /* Property: dark red */
+  --color-property: #9d0006;
+  /* Attribute: dark yellow */
+  --color-attribute: #b57614;
+  /* Numeric/boolean values: dark purple */
+  --color-numeric: #8f3f71;
+  /* String/char other related values: dark yellow */
+  --color-string: #b57614;
+  /* Keywords: dark red */
+  --color-keyword: #9d0006;
+  /* Operator: dark yellow */
+  --color-operator: #b57614;
+  /* Function: dark aqua */
+  --color-function: #458588;
+  /* Classes/pre defs: dark purple */
+  --color-class: #8f3f71;
+
+  /* Line highlight: slight dark beige */
+  --color-line-hightlight: #fbf1c7;
+  /* Line number text and seperator: warm gray */
+  --color-line-number: #7c6f64;
+  /* Language label: warm gray */
+  --color-language-label: #7c6f64;
 
   /* Pure colors */
   /* White */
@@ -77,6 +110,40 @@
   --color-focus: #4fb3b3;
   /* Caption: medium gray */
   --color-caption: #9a9a9a;
+
+  /* Code Styling */
+  /* Comments: cool gray */
+  --color-comment: #928374;
+  /* Punctuations: off white */
+  --color-punctuations: #ebdbb2;
+  /* Tags: bright cyan */
+  --color-tag: #83a598;
+  /* Selectors: bright green */
+  --color-selector: #b8bb26;
+  /* Property: bright red */
+  --color-property: #fb4934;
+  /* Attribute: bright yellow */
+  --color-attribute: #d65d0e;
+  /* Numeric/boolean values: bright purple */
+  --color-numeric: #d3869b;
+  /* String/char other related values: bright yellow */
+  --color-string: #fabd2f;
+  /* Keywords: bright red */
+  --color-keyword: #fb4934;
+  /* Operator: bright yellow */
+  --color-operator: #fe8019;
+  /* Function: bright aqua */
+  --color-function: #83a598;
+  /* Classes/pre defs: light purple */
+  --color-class: #d3869b;
+
+
+  /* Line highlight: slight light dire wolf */
+  --color-line-hightlight: #3c3836;
+  /* Line number text and seperator: cool gray */
+  --color-line-number: #928374;
+  /* Language label: cool gray */
+  --color-language-label: #928374;
 
   /* Pure colors */
   /* White */
