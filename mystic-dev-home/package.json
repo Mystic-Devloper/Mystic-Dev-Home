@@ -24,6 +24,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "@eslint/eslintrc": "^3",
-    "rimraf": "^6" 
+    "rimraf": "^6",
+    "prismjs": "1.30.0"
   }
 }

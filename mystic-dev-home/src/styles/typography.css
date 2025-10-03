@@ -74,7 +74,7 @@ body {
 
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: var(--space-m);
 
   display: flex;
   flex-direction: column;
@@ -84,6 +84,13 @@ body {
 /* Prevent first element from having top spacing (very-first element on page) */
 body > *:first-child {
   margin-block-start: 0;
+}
+
+/* Sections */
+section {
+  margin-block: var(--space-l);
+  padding-block: var(--space-m);
+  border-block-start: 2px solid var(--color-accent);
 }
 
 /* Headings
@@ -475,4 +482,204 @@ tbody td {
 }
 
 /* Code Styling: Uses Prism.js */
+/* Pre block */
+pre[class*="language-"], pre[class*="lang-"] {
+  background: var(--color-code-background);
+  padding-inline: var(--space-s);
+  padding-block: calc(var(--space-3xs) * 0.8);
+  margin-block-start: var(--space-s);
+  margin-block-end: var(--space-s);
+  overflow: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  line-height: var(--line-height-code);
+  font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "Ubuntu Mono", "Consolas", 
+               "Monaco", "Melno", "Roboto Mono", "Courier New", "Courier", monospace;
+  font-size: var(--font-code);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-regular);
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
 
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Code block */
+code[class*="language-"], code[class*="lang-"] {
+  background: none;
+  color: var(--color-body);
+}
+
+/* Comments */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-comment);
+  font-style: var(--style-italic);
+}
+
+/* Punctuations */
+.token.punctuation {
+  color: var(--color-punctuations);
+}
+
+/* Tags */
+.token.tag {
+  color: var(--color-tag);
+}
+
+/* Selectors */
+.token.selector {
+  color: var(--color-selector);
+}
+
+/* Properties */
+.token.property {
+  color: var(--color-property);
+}
+
+/* Attributes */
+.token.attr-name {
+  color: var(--color-attribute);
+}
+
+/* Boolean and numerics */
+.token.boolean,
+.token.number {
+  color: var(--color-numeric);
+}
+
+/* Strings and chars */
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex {
+  color: var(--color-string);
+}
+
+/* Keywords */
+.token.keyword,
+.token.important {
+  color: var(--color-keyword);
+}
+
+/* Operators */
+.token.operator {
+  color: var(--color-operator);
+}
+
+/* Functions */
+.token.function {
+  color: var(--color-function);
+}
+
+/* Classes and builtins */
+.token.class-name,
+.token.builtin {
+  color: var(--color-class);
+}
+
+/* Line number */
+pre[class*="language-"].line-numbers,
+pre[class*="lang-"].line-numbers {
+  padding-left: var(--space-s);
+}
+
+/* Line number and rows */
+.line-numbers .line-numbers-rows {
+  border-right: 1px solid var(--color-line-number);
+}
+
+/* Line rows spaning */
+.line-numbers-rows > span:before {
+  color: var(--color-line-number);
+  font-size: var(--font-small);
+}
+
+/* Line highlight */
+pre[class*="language-"] > code .line-highlight {
+  background: var(--color-line-hightlight);
+  border-left: 3px solid var(--color--accent);
+  margin-left: -var(--space-s);
+  margin-right: -var(--space-s);
+  padding-left: var(--space-s);
+}
+
+/* Toolbar */
+div.code-toolbar > .toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between; /* left + right split */
+  align-items: center;
+
+  padding: var(--space-xs);
+  background: var(--color-banner);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  z-index: 2;
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
+
+  border-bottom: 1px solid color-mix(in srgb, var(--color-black) 15%, transparent);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+/* Left side: language label */
+div.code-toolbar > .toolbar .toolbar-item.language-label {
+  color: var(--color-language-label);
+  font-kerning: normal;
+  letter-spacing: calc(var(--space-3xs) * 0.32); /* derived from small spacing token */
+  text-transform: uppercase;
+}
+
+/* Right side: buttons */
+/* Reset the default Prism copy button */
+div.code-toolbar > .toolbar .toolbar-item button {
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.35rem;
+  transition: background 0.2s ease, opacity 0.2s ease;
+  color: inherit; /* remove default text color */
+  font-size: 0;   /* hide any text fallback */
+}
+
+/* Icon inside the button */
+div.code-toolbar > .toolbar .toolbar-item button::before {
+  content: url("/images/copy-to-clipboard.svg");
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Hover effect */
+div.code-toolbar > .toolbar .toolbar-item button:hover {
+  background: var(--color--accent);
+}
+
+div.code-toolbar > .toolbar .toolbar-item button:hover::before {
+  filter: brightness(10); /* makes icon look white-ish if SVG is dark */
+}
+
+div.code-toolbar > .toolbar .toolbar-item button.copied::before {
+  content: url("/images/copied.svg");
+  filter: none;
+}
+
+/* Add spacing between multiple right-side buttons if any */
+div.code-toolbar > .toolbar .toolbar-item + .toolbar-item {
+  margin-left: var(--space-2xs);
+}

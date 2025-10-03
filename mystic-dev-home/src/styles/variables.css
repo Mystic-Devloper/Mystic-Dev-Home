@@ -69,8 +69,10 @@
   --color-line-hightlight: #fbf1c7;
   /* Line number text and seperator: warm gray */
   --color-line-number: #7c6f64;
-  /* Language label: warm gray */
-  --color-language-label: #7c6f64;
+  /* Toolbar background: blue-green */
+  --color-toolbar-background: #d6ece7;
+  /* Language label: dark charcoal */
+  --color-language-label: #2e2e2e;
 
   /* Pure colors */
   /* White */
@@ -137,13 +139,14 @@
   /* Classes/pre defs: light purple */
   --color-class: #d3869b;
 
-
   /* Line highlight: slight light dire wolf */
   --color-line-hightlight: #3c3836;
   /* Line number text and seperator: cool gray */
   --color-line-number: #928374;
-  /* Language label: cool gray */
-  --color-language-label: #928374;
+  /* Toolbar background: muted cyan */
+  --color-toolbar-background: #1c2e2b;
+  /* Language label: light gray */
+  --color-language-label: #e0e0e0;
 
   /* Pure colors */
   /* White */
