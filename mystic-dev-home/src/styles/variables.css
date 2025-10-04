@@ -19,7 +19,7 @@
 
   /* Theming */
   /* Accent: deep teal */
-  --color--accent: #2c6975;
+  --color-accent: #2c6975;
   /* Banner: pale blue-green */
   --color-banner:  #d6ece7;
 
@@ -82,7 +82,7 @@
 }
 
 /* Dark Theme */
-:root .dark {
+:root.dark {
   /* Backgrounds */
   /* Background: jungle green (dark teal) */
   --color-background: #0f1917;
@@ -93,7 +93,7 @@
 
   /* Theming */
   /* Accent: aqua */
-  --color--accent: #4fb3b3;
+  --color-accent: #4fb3b3;
   /* Banner: muted cyan/teal */
   --color-banner:  #1c2e2b;
 
@@ -155,78 +155,83 @@
   --color-black: #000000;
 }
 
-/* Type Scale */
+/* Our typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/* Type scale */
 :root {
-  /* Step -2: 11.52px → 11.2556px */
-  --step--2: clamp(0.7035rem, 0.7268rem + -0.03vw, 0.72rem);
-  /* Step -1: 14.4px → 15.0038px */
-  --step--1: clamp(0.9rem, 0.8846rem + 0.0686vw, 0.9377rem);
-  /* Step 0: 18px → 20px */
-  --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
-  /* Step 1: 22.5px → 26.66px */
-  --step-1: clamp(1.4063rem, 1.2999rem + 0.4727vw, 1.6663rem);
-  /* Step 2: 28.125px → 35.5378px */
-  --step-2: clamp(1.7578rem, 1.5683rem + 0.8424vw, 2.2211rem);
-  /* Step 3: 35.1563px → 47.3719px */
-  --step-3: clamp(2.1973rem, 1.8849rem + 1.3881vw, 2.9607rem);
-  /* Step 4: 43.9453px → 63.1467px */
-  --step-4: clamp(2.7466rem, 2.2556rem + 2.182vw, 3.9467rem);
-  /* Step 5: 54.9316px → 84.1745px */
-  --step-5: clamp(3.4332rem, 2.6855rem + 3.3231vw, 5.2609rem);
+  /* Step -2: 11.1111px → 11.2556px */
+  --step--2: clamp(0.6944rem, 0.6919rem + 0.0129vw, 0.7035rem);
+  /* Step -1: 13.3333px → 15.0038px */
+  --step--1: clamp(0.8333rem, 0.8035rem + 0.1491vw, 0.9377rem);
+  /* Step 0: 16px → 20px */
+  --step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+  /* Step 1: 19.2px → 26.66px */
+  --step-1: clamp(1.2rem, 1.0668rem + 0.6661vw, 1.6663rem);
+  /* Step 2: 23.04px → 35.5378px */
+  --step-2: clamp(1.44rem, 1.2168rem + 1.1159vw, 2.2211rem);
+  /* Step 3: 27.648px → 47.3719px */
+  --step-3: clamp(1.728rem, 1.3758rem + 1.7611vw, 2.9607rem);
+  /* Step 4: 33.1776px → 63.1467px */
+  --step-4: clamp(2.0736rem, 1.5384rem + 2.6758vw, 3.9467rem);
+  /* Step 5: 39.8131px → 84.1745px */
+  --step-5: clamp(2.4883rem, 1.6962rem + 3.9608vw, 5.2609rem);
 }
 
-/* Space Scale */
-
+/* Space scale */
 :root {
-  /* Space 3xs: 5px → 5px */
-  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
-  /* Space 2xs: 9px → 10px */
-  --space-2xs: clamp(0.5625rem, 0.5369rem + 0.1136vw, 0.625rem);
-  /* Space xs: 14px → 15px */
-  --space-xs: clamp(0.875rem, 0.8494rem + 0.1136vw, 0.9375rem);
-  /* Space s: 18px → 20px */
-  --space-s: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
-  /* Space m: 27px → 30px */
-  --space-m: clamp(1.6875rem, 1.6108rem + 0.3409vw, 1.875rem);
-  /* Space l: 36px → 40px */
-  --space-l: clamp(2.25rem, 2.1477rem + 0.4545vw, 2.5rem);
-  /* Space xl: 54px → 60px */
-  --space-xl: clamp(3.375rem, 3.2216rem + 0.6818vw, 3.75rem);
-  /* Space 2xl: 72px → 80px */
-  --space-2xl: clamp(4.5rem, 4.2955rem + 0.9091vw, 5rem);
-  /* Space 3xl: 108px → 120px */
-  --space-3xl: clamp(6.75rem, 6.4432rem + 1.3636vw, 7.5rem);
+  /* Space 3xs: 4px → 5px */
+  --space-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);
+  /* Space 2xs: 8px → 10px */
+  --space-2xs: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
+  /* Space xs: 12px → 15px */
+  --space-xs: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
+  /* Space s: 16px → 20px */
+  --space-s: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+  /* Space m: 24px → 30px */
+  --space-m: clamp(1.5rem, 1.3929rem + 0.5357vw, 1.875rem);
+  /* Space l: 32px → 40px */
+  --space-l: clamp(2rem, 1.8571rem + 0.7143vw, 2.5rem);
+  /* Space xl: 48px → 60px */
+  --space-xl: clamp(3rem, 2.7857rem + 1.0714vw, 3.75rem);
+  /* Space 2xl: 64px → 80px */
+  --space-2xl: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
+  /* Space 3xl: 96px → 120px */
+  --space-3xl: clamp(6rem, 5.5714rem + 2.1429vw, 7.5rem);
 
   /* One-up pairs */
-  /* Space 3xs-2xs: 5px → 10px */
-  --space-3xs-2xs: clamp(0.3125rem, 0.1847rem + 0.5682vw, 0.625rem);
-  /* Space 2xs-xs: 9px → 15px */
-  --space-2xs-xs: clamp(0.5625rem, 0.4091rem + 0.6818vw, 0.9375rem);
-  /* Space xs-s: 14px → 20px */
-  --space-xs-s: clamp(0.875rem, 0.7216rem + 0.6818vw, 1.25rem);
-  /* Space s-m: 18px → 30px */
-  --space-s-m: clamp(1.125rem, 0.8182rem + 1.3636vw, 1.875rem);
-  /* Space m-l: 27px → 40px */
-  --space-m-l: clamp(1.6875rem, 1.3551rem + 1.4773vw, 2.5rem);
-  /* Space l-xl: 36px → 60px */
-  --space-l-xl: clamp(2.25rem, 1.6364rem + 2.7273vw, 3.75rem);
-  /* Space xl-2xl: 54px → 80px */
-  --space-xl-2xl: clamp(3.375rem, 2.7102rem + 2.9545vw, 5rem);
-  /* Space 2xl-3xl: 72px → 120px */
-  --space-2xl-3xl: clamp(4.5rem, 3.2727rem + 5.4545vw, 7.5rem);
+  /* Space 3xs-2xs: 4px → 10px */
+  --space-3xs-2xs: clamp(0.25rem, 0.1429rem + 0.5357vw, 0.625rem);
+  /* Space 2xs-xs: 8px → 15px */
+  --space-2xs-xs: clamp(0.5rem, 0.375rem + 0.625vw, 0.9375rem);
+  /* Space xs-s: 12px → 20px */
+  --space-xs-s: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+  /* Space s-m: 16px → 30px */
+  --space-s-m: clamp(1rem, 0.75rem + 1.25vw, 1.875rem);
+  /* Space m-l: 24px → 40px */
+  --space-m-l: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
+  /* Space l-xl: 32px → 60px */
+  --space-l-xl: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+  /* Space xl-2xl: 48px → 80px */
+  --space-xl-2xl: clamp(3rem, 2.4286rem + 2.8571vw, 5rem);
+  /* Space 2xl-3xl: 64px → 120px */
+  --space-2xl-3xl: clamp(4rem, 3rem + 5vw, 7.5rem);
 
   /* Custom pairs */
-  /* Space s-l: 18px → 40px */
-  --space-s-l: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
+  /* Space s-l: 16px → 40px */
+  --space-s-l: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
 }
 
-/* Grids and Columns */
+/* Grid */
 :root {
-  /* Grid max width */
-  --grid-max-width: 77.50rem;
-  /* Grid gutters: 18px -> 40px */
-  --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem));
-  /* Grid columns: 10.5px -> 60px */
+  /* Max grid width: 1440px / 16 = 90rem */
+  --grid-max-width: 90rem;
+  /* Gutter width: 16px -> 40px */
+  --grid-width: var(--space-s-l, clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem));
+  /* Number of columns: 12 */
   --grid-columns: 12;
 }
 
@@ -264,9 +269,9 @@
 /* Line heights */
 :root {
   /* Body line height */
-  --line-height-body: 1.6;
+  --line-height-body: 1.55;
   /* Code line height */
-  --line-height-code: 1.6;
+  --line-height-code: 1.4;
   /* Heading line height */
   --line-height-heading: 1.2;
 }

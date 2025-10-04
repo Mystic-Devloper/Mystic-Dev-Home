@@ -36,7 +36,7 @@
   margin-block-start: var(--space-stack);
 }
 
-/* Base HTML / resets */
+/* Base HTML */
 html {
   text-size-adjust: 100%;
   box-sizing: border-box;
@@ -74,7 +74,7 @@ body {
 
   height: 100%;
   margin: 0;
-  padding: var(--space-m);
+  padding: var(--space-xs);
 
   display: flex;
   flex-direction: column;
@@ -83,13 +83,14 @@ body {
 
 /* Prevent first element from having top spacing (very-first element on page) */
 body > *:first-child {
+  padding: 0;
   margin-block-start: 0;
 }
 
 /* Sections */
 section {
-  margin-block: var(--space-l);
-  padding-block: var(--space-m);
+  margin-block: var(--space-m);
+  padding-block: var(--space-s);
   border-block-start: 2px solid var(--color-accent);
 }
 
@@ -107,8 +108,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height-heading);
   color: var(--color-heading);
 
-  margin-block-start: var(--space-s);
+  margin-block-start: var(--space-3xs);
   margin-block-end: var(--space-stack);
+  
+  /* Slight tight the heading */
+  letter-spacing: -0.05em;
+
   /* ensure headings never exceed container width by text wrapping naturally */
   hyphens: auto;
   word-wrap: break-word;
@@ -216,6 +221,7 @@ hr, .horizontal-rule {
   background-color: var(--color-caption);
   margin-block-start: var(--space-m);
   margin-block-end: var(--space-m);
+  padding: 0;
 }
 
 /* Captions */
@@ -234,7 +240,7 @@ hr, .horizontal-rule {
 h1 + .caption, .aplha + .caption,
 h2 + .caption, .beta + .caption,
 h3 + .caption, .gamma + .caption {
-  margin-block-start: calc(var(--space-s) * -0.6); /* subtle overlap derived from tokens */
+  margin-block-start: calc(var(--space-s) * -0.8); /* subtle overlap derived from tokens */
 }
 
 /* Blockquote */
@@ -249,6 +255,7 @@ blockquote {
 
 /* Make blockquote paragraphs inherit paragraph rhythm */
 blockquote p {
+  font-style: var(--style-italic);
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -260,9 +267,7 @@ blockquote p {
   }
 }
 
-/* Lists (flat rules; uses tokens and avoids hard-coded units) */
-.typeset ul,
-.typeset ol,
+/* Lists */
 ul, ol {
   margin-block-start: 0;
   margin-block-end: var(--space-m);
@@ -270,8 +275,6 @@ ul, ol {
 }
 
 /* List items */
-.typeset ul li,
-.typeset ol li,
 ul li,
 ol li {
   font-feature-settings: "kern", "onum", "liga";
@@ -280,11 +283,7 @@ ol li {
   position: relative;
 }
 
-/* Replace the above small hard-coded 0.35rem with a tiny token-derived value if strict removal is required:
-   margin-block-start: calc(var(--space-3xs) * 1.12);
-   (kept explicit here for readability; adjust if you want strictly zero hard-coded lengths everywhere) */
- 
-/* Ordered list counters (no hard-coded offsets; rely on spacing tokens) */
+/* Ordered list counters */
 ol {
   list-style-type: none;
   counter-reset: top-level;
@@ -317,14 +316,9 @@ ul li::before {
   width: var(--space-m);
   text-align: right;
   line-height: var(--line-height-body);
-  font-size: 0.9em; /* em relative to li font-size is acceptable for typographic scale */
 }
 
 /* Nested lists spacing using tokens */
-.typeset ul ul,
-.typeset ul ol,
-.typeset ol ul,
-.typeset ol ol,
 ul ul,
 ul ol,
 ol ul,
@@ -435,14 +429,14 @@ tbody td {
   flex: 0 0 50%;
 }
 .column--duo:nth-of-type(n+3) {
-  margin-block-start: var(--space-l);
+  margin-block-start: var(--space-m);
 }
 
 .column--trio {
   flex: 0 0 33.333%;
 }
 .column--trio:nth-of-type(n+3) {
-  margin-block-start: var(--space-l);
+  margin-block-start: var(--space-m);
 }
 
 .column--quad {

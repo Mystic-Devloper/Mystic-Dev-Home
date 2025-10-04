@@ -1,21 +1,22 @@
-/***
- * Mystic Dev Website (https://thedevmystic.github.io 
- *                     && https://mystic-dev.eu.org)
- *
+/**
  * @file theme.ts
- * 
- * This file implements theming and theme toggling.
- ***/
+ * @description Theme helper function for useTheme react hook.
+ *
+ * @author TheDevMystic (Surya)
+ */
 
 /**
- * Type aliases.
+ * @description Type aliases.
  */
 export type Theme = "light" | "dark";
 
 /**
- * This function gets user's preferred theme.
+ * @function getPreferredTheme
+ * @description Retrives user's preferred theme.
+ * Uses local storage for old visitor and,
+ * Uses media query for new visitor.
  *
- * @returns Preferred theme.
+ * @returns {Theme} - Preferred theme.
  */
 export function getPreferredTheme(): Theme {
   // If window is undefined, return light theme.
@@ -33,7 +34,8 @@ export function getPreferredTheme(): Theme {
 }
 
 /**
- * This function applies theme to the site.
+ * @function applyTheme
+ * @description Applies theme to the site.
  * 
  * @param {Theme} theme - Theme to be applied.
  *
@@ -41,8 +43,21 @@ export function getPreferredTheme(): Theme {
  */
 export function applyTheme(theme: Theme): void {
   const root: HTMLHtmlElement = document.documentElement;
+  const isDarkApplied: boolean = root.classList.contains("dark");
   
-  // Add dark class
+  // If desired theme is dark and dark theme is applied, do nothing and return
+  if (theme === "dark" && isDarkApplied) {
+    localStorage.setItem("theme", theme);
+    return;
+  }
+  
+  // If desired theme is light and dark theme is not applied, do nothing and return
+  if (theme === "light" && !isDarkApplied) {
+    localStorage.setItem("theme", theme);
+    return;
+  }
+
+  // If we reach here, theme needs to be changed
   if (theme === "dark") {
     root.classList.add("dark");
   } else {
