@@ -1,13 +1,13 @@
 /**
- * Mystic Dev Website (https://thedevmystic.github.io
- *                     && https://mystic-dev.eu org)
- *
  * @file variables.css
  *
  * @desc This CSS file declare all variables.
  */
 
-/* Light Theme */
+/**
+ * Component: Light theme variables.
+ * This section defines color variables for light theme.
+ */
 :root {
   /* Backgrounds */
   /* Background: off white greenish */
@@ -38,6 +38,8 @@
   --color-focus: #2c6975;
   /* Caption: dim gray */
   --color-caption: #6b6b6b;
+  /* Button text: subtle off white */
+  --color-button-text: #f8f8f8;
   
   /* Code Styling */
   /* Comments: warm gray */
@@ -81,7 +83,10 @@
   --color-black: #000000;
 }
 
-/* Dark Theme */
+/**
+ * Component: Dark theme variables.
+ * This section defines color variables for dark theme.
+ */
 :root.dark {
   /* Backgrounds */
   /* Background: jungle green (dark teal) */
@@ -112,6 +117,8 @@
   --color-focus: #4fb3b3;
   /* Caption: medium gray */
   --color-caption: #9a9a9a;
+  /* Button text: dark charcoal */
+  --color-button-text: #121212;
 
   /* Code Styling */
   /* Comments: cool gray */
@@ -155,13 +162,19 @@
   --color-black: #000000;
 }
 
-/* Our typography scales are -
+/**
+ * Our typography scales are -
  * Min VW    - 320px    Max VW    - 1440px
  * Font size - 16px     Font Size - 20px
  * Scale     - 1.200    Scale     - 1.333
  */
 
-/* Type scale */
+/**
+ * Component: Type scale variables.
+ * This section defines tokens for type scale.
+ *
+ * From smallest to largest => --step--2 -> --step-5.
+ */
 :root {
   /* Step -2: 11.1111px → 11.2556px */
   --step--2: clamp(0.6944rem, 0.6919rem + 0.0129vw, 0.7035rem);
@@ -181,7 +194,13 @@
   --step-5: clamp(2.4883rem, 1.6962rem + 3.9608vw, 5.2609rem);
 }
 
-/* Space scale */
+/**
+ * Component: Space scale variables.
+ * This section defines tokens for space scale.
+ *
+ * From smallest to largest => --space-3xs -> --space-3xl.
+ * Also defines one-up pairs and s-l token for grid calc.
+ */
 :root {
   /* Space 3xs: 4px → 5px */
   --space-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);

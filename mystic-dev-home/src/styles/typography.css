@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-block-end: var(--space-stack);
   
   /* Slight tight the heading */
-  letter-spacing: -0.05em;
+  letter-spacing: -0.025em;
 
   /* ensure headings never exceed container width by text wrapping naturally */
   hyphens: auto;
