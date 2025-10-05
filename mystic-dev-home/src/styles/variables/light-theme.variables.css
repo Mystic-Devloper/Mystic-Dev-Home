@@ -1,0 +1,86 @@
+/**
+ * @file src/styles/variables/light-theme.variables.css
+ *
+ * @description Variables file for light theme.
+ */
+
+/**
+ * Variables: Light Theme
+ *
+ * @description Variables for default light theme.
+ * Directly defines variables in :root.
+ */
+:root {
+  /* Backgrounds */
+  /* Background: off white greenish */
+  --color-background: #f9fbf9;
+  /* Code background: light beige */
+  --color-code-background: #f9f5d7;
+  /* Feature background: off white cyanish */
+  --color-feature-background: #f1f8f5;
+
+  /* Theming */
+  /* Accent: deep teal */
+  --color-accent: #2c6975;
+  /* Banner: pale blue-green */
+  --color-banner:  #d6ece7;
+
+  /* Texts */
+  /* Heading: blueish gray */
+  --color-heading: #1f3b4d;
+  /* Body: dark charcoal */
+  --color-body: #2e2e2e;
+  /* Paragraph: dark gray */
+  --color-paragraph: #4a4a4a;
+  /* Link: deep teal */
+  --color-link: #2c6975;
+  /* Hover: aqua */
+  --color-hover: #4fb3b3;
+  /* Focus: deep teal */
+  --color-focus: #2c6975;
+  /* Caption: dim gray */
+  --color-caption: #6b6b6b;
+  /* Button text: dark charcoal */
+  --color-button-text: #121212;
+  
+  /* Code Styling */
+  /* Comments: warm gray */
+  --color-comment: #7c6f64;
+  /* Punctuations: brown gray */
+  --color-punctuations: #665c54;
+  /* Tags: dark cyan */
+  --color-tag: #458588;
+  /* Selectors: dark green */
+  --color-selector: #689d6a;
+  /* Property: dark red */
+  --color-property: #9d0006;
+  /* Attribute: dark yellow */
+  --color-attribute: #b57614;
+  /* Numeric/boolean values: dark purple */
+  --color-numeric: #8f3f71;
+  /* String/char other related values: dark yellow */
+  --color-string: #b57614;
+  /* Keywords: dark red */
+  --color-keyword: #9d0006;
+  /* Operator: dark yellow */
+  --color-operator: #b57614;
+  /* Function: dark aqua */
+  --color-function: #458588;
+  /* Classes/pre defs: dark purple */
+  --color-class: #8f3f71;
+
+  /* Line highlight: slight dark beige */
+  --color-line-hightlight: #fbf1c7;
+  /* Line number text and seperator: warm gray */
+  --color-line-number: #7c6f64;
+  /* Toolbar background: blue-green */
+  --color-toolbar-background: #d6ece7;
+  /* Language label: dark charcoal */
+  --color-language-label: #2e2e2e;
+
+  /* Pure colors */
+  /* White */
+  --color-white: #ffffff;
+  /* Black */
+  --color-black: #000000;
+}
