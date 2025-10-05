@@ -1,0 +1,47 @@
+/**
+ * @file src/styles/variables/semantic-font-size.variables.css
+ *
+ * @description Variables file for sematic font sizes derived from --step-* from
+ * type-scale.variables.css .
+ */
+
+/**
+ * Typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * Variables: Semantic Font Sizes
+ *
+ * @description Variables for semantic font sizes.
+ * Uses --step-* from type scale, declared in type-scale.variables.css .
+ */
+:root {
+  /* Body Text */
+  /* Tiny fontsize: Used for inline captions & labels */
+  --font-tiny:  var(--step--2);
+  /* Small fontsize: Used for captions & labels */
+  --font-small: var(--step--1);
+  /* Body fontsize: Used for body and paragraph text */
+  --font-body:  var(--step-0);
+  /* Code fontsize: Used for code blocks (Same as --font-body but be explicit) */
+  --font-code:  var(--step-0);
+  /* Large fontsize: Used for text larger than body */
+  --font-large: var(--step-1);
+
+  /* Heading Text */
+  /* Heading level 1 */
+  --font-h1: var(--step-5);
+  /* Heading level 2 */
+  --font-h2: var(--step-4);
+  /* Heading level 3 */
+  --font-h3: var(--step-3);
+  /* Heading level 4 */
+  --font-h4: var(--step-2);
+  /* Heading level 5 (Same as --font-large) */
+  --font-h5: var(--step-1);
+  /* Heading level 6 (Same as --font-body) */
+  --font-h6: var(--step-0);
+}
