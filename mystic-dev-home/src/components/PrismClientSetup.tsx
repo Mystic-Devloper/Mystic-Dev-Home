@@ -1,7 +1,7 @@
 "use client"
 
 /**
- * @file prismClientSetup.tsx
+ * @file src/components/PrismClientSetup.tsx
  * @description Sets up prism on client (important for SSG).
  *
  * @author TheDevMystic (Surya)

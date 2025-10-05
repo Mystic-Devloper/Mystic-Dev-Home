@@ -1,5 +1,5 @@
 /**
- * @file prismSetup.ts
+ * @file src/library/prismSetup.ts
  * @description Configures PrismJS.
  * 
  * @remarks
