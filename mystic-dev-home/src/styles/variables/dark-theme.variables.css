@@ -31,7 +31,7 @@
   /* Body: light gray */
   --color-body: #e0e0e0;
   /* Paragraph: medium light gray */
-  --color-paragraph: #c4c4c4;
+  --color-paragraph: #c8c8c8;
   /* Link: aqua */
   --color-link: #4fb3b3;
   /* Hover: aquamarine */
@@ -39,9 +39,9 @@
   /* Focus: aqua */
   --color-focus: #4fb3b3;
   /* Caption: medium gray */
-  --color-caption: #9a9a9a;
+  --color-caption: #b0b0b0;
   /* Button text: subtle off white */
-  --color-button-text: #f8f8f8;
+  --color-button-text: #e3e3e3;
 
   /* Code Styling */
   /* Comments: cool gray */
