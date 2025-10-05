@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * @file CodeBlock.tsx
+ * @file src/components/CodeBlock.tsx
  * @description Code block for writing source code and highlighting.
  *
  * @author TheDevMystic (Surya)

@@ -1,5 +1,5 @@
 /**
- * @file theme.ts
+ * @file src/library/theme.ts
  * @description Theme helper function for useTheme react hook.
  *
  * @author TheDevMystic (Surya)
