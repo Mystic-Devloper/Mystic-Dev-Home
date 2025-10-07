@@ -1,5 +1,5 @@
 /**
- * @file src/styles/variables/type-scale.variables.css
+ * @file src/styles/variables/primitives/type-scale.variables.css
  *
  * @description Variables file for modular type scale.
  */
@@ -12,7 +12,20 @@
  */
 
 /**
- * Variables: Type Scale
+ * Fontsize Type :-
+ * The scales are in moderate contrast and moderately dramatic.
+ * This is due to, in long-format blog-alike content, text
+ * should not become more ingaging than content itself. This
+ * can be severely distracting, and can hurt users' opinion about
+ * the website.
+ *
+ * License :-
+ * This type scale primitives along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Type Scale Primitives
  *
  * @description Variables for fluid type scale.
  * Uses clamp() for fluid typography.

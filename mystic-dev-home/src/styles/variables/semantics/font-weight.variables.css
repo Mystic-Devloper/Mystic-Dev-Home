@@ -1,0 +1,49 @@
+/**
+ * @file src/styles/variables/font-weight.variables.css
+ *
+ * @description Variables file for different font weight.
+ */
+
+/**
+ * Font weight :-
+ * In a standard system, font weight are distributed as 100 (Thin) -> 900 (Black).
+ * Using variable fonts can display weights in any number between 100 to 1000.
+ * But for normal font, the weight is incremented in multiple of 100.
+ * Like 100, 200, ... , 900.
+ *
+ * License :-
+ * This font weigth tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Font weights
+ *
+ * @description Variables for font weights from 100 to 900.
+ */
+:root {
+  /* Extra thin weight: 50 ( Best for legal notices, isn't it?. ) */
+  --weight-extra-thin: 50;
+  /* Thin weight: 100 */
+  --weight-thin: 100;
+  /* Extra light weight: 200 */
+  --weight-extra-light: 200;
+  /* Light weight: 300 */
+  --weight-light: 300;
+  /* Regular weight: 400 */
+  --weight-regular: 400;
+  /* Medium weight: 500 */
+  --weight-medium: 500;
+  /* Semi bold weight: 600 */
+  --weight-semi-bold: 600;
+  /* Bold weight: 700 */
+  --weight-bold: 700;
+  /* Extra bold weight: 800 */
+  --weight-extra-bold: 800;
+  /* Black weight: 900 */
+  --weight-black: 900;
+  /* Extra black weight: 950 */
+  --weight-extra-black: 950;
+  /* Extreme black weight: 1000 */
+  --weight-extreme-black: 1000;
+}

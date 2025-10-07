@@ -1,7 +1,24 @@
 /**
- * @file src/styles/variables/dark-theme.variables.css
+ * @file src/styles/variables/semantics/dark-theme.variables.css
  *
  * @description Variables file for dark theme.
+ */
+
+/**
+ * Standard :-
+ * Theme is properly WCAG AA Standard Compilant.
+ * With, Primary texts (i.e., Heading, body and paragraph)
+ * being WCAG AAA Standard Compilant.
+ *
+ * Aesthetics :-
+ * Color palette is designed to maintain a nature derived theme.
+ * This is same as light theme, which maintains lighter but similar vision.
+ * This is because nature-derived themes are better for eye and reduce
+ * eye strain in long-format blog-alike contents.
+ *
+ * License :-
+ * This color palette along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
  */
 
 /**
@@ -25,13 +42,24 @@
   /* Banner: muted cyan/teal */
   --color-banner:  #1c2e2b;
 
+  /* Feedback/Status color */
+  /* Success: soft seafoam green */
+  --color-code-success: #8fbc8f;
+  /* Warning: soft gold/mustard */
+  --color-code-warning: #ffcc66;
+  /* Error: soft coral red */
+  --color-code-error: #ff6b6b;
+
+  /* Shadow Color: dark void */
+  --color-shadow-rgb: 8, 12, 11;
+
   /* Texts */
   /* Heading: pale light blue-gray */
   --color-heading: #e6f1f3;
   /* Body: light gray */
   --color-body: #e0e0e0;
   /* Paragraph: medium light gray */
-  --color-paragraph: #c8c8c8;
+  --color-paragraph: #c4c4c4;
   /* Link: aqua */
   --color-link: #4fb3b3;
   /* Hover: aquamarine */
@@ -39,9 +67,9 @@
   /* Focus: aqua */
   --color-focus: #4fb3b3;
   /* Caption: medium gray */
-  --color-caption: #b0b0b0;
+  --color-caption: #9a9a9a;
   /* Button text: subtle off white */
-  --color-button-text: #e3e3e3;
+  --color-button-text: #f8f8f8;
 
   /* Code Styling */
   /* Comments: cool gray */

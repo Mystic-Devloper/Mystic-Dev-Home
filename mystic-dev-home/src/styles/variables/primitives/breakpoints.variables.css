@@ -1,0 +1,39 @@
+/**
+ * @file src/styles/variables/primitives/breakpoints.variables.css
+ *
+ * @description Variables file for breakpoints.
+ */
+
+/**
+ * Typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * Breakpoints :-
+ * These where used extensively back in the day, but for today's standard these are obselete.
+ * But hither-and-thither (just flexing my vocab, it means here-and-there), we have to use them.
+ * So, defining consistent breakpoints don't hurt.
+ *
+ * License :-
+ * This breakpoint tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Breakpoint tokens
+ *
+ * @description Variables for breakpoints.
+ */
+:root {
+  /* Small breakpoint: 48rem (768px) */
+  --breakpoint-sm: 48rem;
+  /* Medium breakpoint: 64rem (1024px) */
+  --breakpoint-md: 64rem;
+  /* Large breakpoint: 80rem (1280px) */
+  --breakpoint-lg: 80rem;
+  /* Extra large breakpoint: 90rem (1440px) */
+  --breakpoint-xl: 90rem;
+}

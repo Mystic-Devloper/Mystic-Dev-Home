@@ -1,0 +1,35 @@
+/**
+ * @file src/styles/variables/semantics/layering.variables.css
+ *
+ * @description Variables file for layering.
+ */
+
+/**
+ * Layering :-
+ * While often overlooked, layering makes a huge difference when there are overlapping
+ * elements. Like navigation bar should always hover over every thing (excpet modals).
+ * And paragraphs should always be at lowest. So using consistent layerings for these
+ * are as crucial as responsive typography.
+ *
+ * License :-
+ * This layering tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Layering semantics
+ *
+ * @description Variables for Layerings.
+ */
+:root {
+  /* Base Layering: for paragraphs and other text related things */
+  --layering-base: var(--z-scale-base);
+  /* Sticky Layering: for headers and sidebars */
+  --layering-sticky: var(--z-scale-sticky);
+  /* Overlay Layering: for modal backgrounds and overlays */
+  --layering-overlay: var(--z-scale-overlay);
+  /* Modal Layering: for modals and high priority popovers */
+  --layering-modal: var(--z-scale-modal);
+  /* Override Layering: for overriding entire layering */
+  --layering-override: var(--z-scale-override);
+}

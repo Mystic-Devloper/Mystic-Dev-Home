@@ -1,0 +1,45 @@
+/**
+ * @file src/styles/variables/primitives/grid.variables.css
+ *
+ * @description Variables file for grid layout primitives.
+ */
+
+/**
+ * Typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * 12-Column Grid System :-
+ * The choice of 12 columns in grid is not arbitary.
+ * This is because 12 is highly composite number, and can
+ * be easily divided into many equal parts that are,
+ * 1, 2, 3, 4, 6, 12. 
+ *
+ * Why not other number :-
+ * For example say 10-Column Grid System, while 10 columns
+ * will be easy for calculation, we can't even divide it into
+ * three equal parts (33.333). This will be very inconvenient
+ * for typography.
+ *
+ * License :-
+ * This grid primitives along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Grid Layout Primitives
+ *
+ * @description Variables for grid layout.
+ * Uses --space-s-l from space scale, declared in space-scale.variables.css .
+ */
+:root {
+  /* Max grid width: 1440px / 16 = 90rem */
+  --grid-max-width: 90rem;
+  /* Gutter width: 16px -> 40px */
+  --grid-width: var(--space-s-l, clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem));
+  /* Number of columns: 12 */
+  --grid-columns: 12;
+}

@@ -1,0 +1,42 @@
+/**
+ * @file src/styles/variables/semantics/space-alias.variables.css
+ *
+ * @description Variables file for sematic space sizes derived from --space-* from
+ * space-scale.variable.css
+ */
+
+/**
+ * Typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * Semantic Space :-
+ * Using semantic names for primitive space scale tokens, is more
+ * viable for block and inline level of elements. As --space-stack-major is more
+ * intutive than --space-l.
+ *
+ * License :-
+ * This semantic space sizes along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Semantic Space Sizes
+ *
+ * @description Variables for semantic space sizes.
+ * Uses --space-* from type scale, declared in space-scale.variables.css .
+ */
+:root {
+  /* Inline space minor: --space-xs ( 12px -> 15px) */
+  --space-inline-minor: var(--space-xs);
+  /* Inline space major: --space-s (16px -> 20px) */
+  --space-inline-major: var(--space-s);
+
+  /* Stack space minor: --space-m (24px -> 30px) */
+  --space-stack-minor: var(--space-m);
+  /* Stack space major: --space-l (32px -> 40px) */
+  --space-stack-major: var(--space-l);
+}

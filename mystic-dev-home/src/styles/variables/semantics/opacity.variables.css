@@ -1,0 +1,34 @@
+/**
+ * @file src/styles/variables/semantics/opacity.variables.css
+ *
+ * @description Variables file for opacity.
+ */
+
+/**
+ * Opacity :-
+ * Maintaining consistent opacity, is like maintaining clothes,
+ * if you reveal too much, it is inappropriate and if you cloth like a jute bag
+ * it's akward. So using appropriate opacity at correct place is essential for web dev.
+ *
+ * License :-
+ * This opacity tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Opacity tokens
+ *
+ * @description Variables for Opacity.
+ */
+:root {
+  /* Opaque opacity: 1.0 */
+  --opacity-opaque: 1.0;
+  /* Subtle opacity: 0.7 (Used for captions and less important text) */
+  --opacity-subtle: 0.7;
+  /* Disabled opacity: 0.5 (Used for disabled buttons and related elements) */
+  --opacity-disabled: 0.5;
+  /* Faded opacity: 0.3 (Used for decorative backgrounds and low-key dividers.) */
+  --opacity-faded: 0.3; /* Can be used for legal texts, ha! */
+  /* Invisible opacity: 0.0 */
+  --opacity-invisible: 0.0; /* If they were allowed, they would certainly use this one for legal texts! */
+}

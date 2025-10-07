@@ -1,0 +1,43 @@
+/**
+ * @file src/styles/variables/semantics/font-style.variables.css
+ *
+ * @description Variables file for different font style.
+ */
+
+/**
+ * Font style :-
+ * Fonts are generally styled as normal, italic and oblique.
+ * Defining them in a consistent manner is important for single source of truth.
+ *
+ * License :-
+ * This font style tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Font styles
+ *
+ * @description Variables for font styles.
+ */
+:root {
+  /* Normal style */
+  --style-normal: normal;
+  /* Italic style */
+  --style-italic: italic;
+  /* Oblique style */
+  --style-oblique: oblique;
+
+  /* Oblique degree shortcuts */
+  /* Oblique 5 degree */
+  --style-oblique-5: oblique 5deg;
+  /* Oblique 10 degree */
+  --style-oblique-10: oblique 10deg;
+  /* Oblique 14 degree */
+  --style-oblique-14: oblique 14deg;
+  /* Oblique 16 degree */
+  --style-oblique-16: oblique 16deg;
+  /* Oblique 20 degree */
+  --style-oblique-20: oblique 20deg;
+  /* Oblique 24 degree */
+  --style-oblique-24: oblique 24deg;
+}

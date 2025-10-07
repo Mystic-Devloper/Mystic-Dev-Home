@@ -1,0 +1,35 @@
+/**
+ * @file src/styles/variables/semantics/transition.variables.css
+ *
+ * @description Variables file for transitions.
+ */
+
+/**
+ * Transition :-
+ * Transitions! Transitions! Transition! They are essential for a modern website.
+ * REMEMBER!!!!
+ *
+ * License :-
+ * This transition tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Transition tokens
+ *
+ * @description Variables for Tansition.
+ */
+:root {
+  /* transition none: effectively turning off the transition (Used for acessiblity ) */
+  --transition-none: var(--duration-none);
+  /* Short transition: 150ms (hovers and focus states) */
+  --transition-short: var(--duration-small);
+  /* Medium transition: 300ms (component transitions) */
+  --transition-medium: var(--duration-medium);
+  /* Long transition: 500ms (page/layout shifts) */
+  --transition-long: var(--duration-long);
+
+  /* Defaults */
+  --transition-default: var(--transition-small);
+  --transtion-style: var(--ease-in-out);
+}

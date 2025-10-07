@@ -1,0 +1,45 @@
+/**
+ * @file src/styles/variables/primitives/duration.variables.css
+ *
+ * @description Variables file for durations.
+ */
+
+/**
+ * Transition Duration :-
+ * These are backbone of any sleek and modern website, so ensuring consistency
+ * in them are also very important.
+ *
+ * License :-
+ * This transition tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Transition duration tokens
+ *
+ * @description Variables for transitions durations.
+ */
+:root {
+  /* Duration none: effectively turning off the transition (Used for acessiblity ) */
+  --duration-none: none;
+  /* Short duration: 150ms (hovers and focus states) */
+  --duration-short: 150ms;
+  /* Medium duration: 300ms (component transitions) */
+  --duration-medium: 300ms;
+  /* Long duration: 500ms (page/layout shifts) */
+  --duration-long: 500ms;
+
+  /* Normal ease */
+  --ease-normal: ease;
+  /* Linear */
+  --ease-linear: linear;
+  /* Ease in */
+  --ease-in: ease-in;
+  /* Ease out */
+  --ease-out: ease-out;
+  /* Easing in and out */
+  --ease-in-out: ease-in-out;
+  
+  /* Use ease in out as default */
+  --ease-default: var(--ease-in-out);
+}

@@ -1,0 +1,31 @@
+/**
+ * @file src/styles/variables/primitives/shadow.variables.css
+ *
+ * @description Variables file for box shadow primitives (elevation).
+ */
+
+/**
+ * Shadow Primitives :-
+ * Shadows can make difference between elements being alienated and elements being
+ * made for it. So, always use consistent shadow, kids!
+ * The shadow color itself is defined in the theme files (light-theme/dark-theme) 
+ * to ensure theme-specific application.
+ *
+ * License :-
+ * This shadow tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Shadow Primitives
+ *
+ * @description Variables for box shadow structures.
+ */
+:root {
+  /* Level 1 Shadow: Subtle lift, used for interactive elements */
+  --shadow-level-1: 0 1px 3px 0, 0 1px 2px -1px;
+  /* Level 2 Shadow: Moderate lift, used for cards and containers */
+  --shadow-level-2: 0 4px 6px -1px, 0 2px 4px -2px;
+  /* Level 3 Shadow: High lift, used for modals and persistent banners */
+  --shadow-level-3: 0 10px 15px -3px, 0 4px 6px -4px;
+}

@@ -1,5 +1,5 @@
 /**
- * @file src/styles/variables/space-scale.variables.css
+ * @file src/styles/variables/primitives/space-scale.variables.css
  *
  * @description Variables file for modular type scale.
  */
@@ -12,7 +12,20 @@
  */
 
 /**
- * Variables: Space Scale
+ * Space Scale Type :-
+ * The scales are in moderate contrast and moderately dramatic.
+ * This is due to, in long-format blog-alike content, large spaces
+ * between content can break the flow of content. This can be very
+ * irritating for end-user. It can be severely distracting, and 
+ * can hurt users' opinion about the website.
+ *
+ * License :-
+ * This space scale along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Space Scale Primitives
  *
  * @description Variables for fluid space scale.
  * Uses clamp() for fluid typography.

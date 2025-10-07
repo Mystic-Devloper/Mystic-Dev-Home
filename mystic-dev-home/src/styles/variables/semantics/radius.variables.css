@@ -1,0 +1,35 @@
+/**
+ * @file src/styles/variables/semantics/radius.variables.css
+ *
+ * @description Variables file for border radius semantics.
+ */
+
+/**
+ * Radius Primitives :-
+ * Consistent radius for rounding is very necessary, otherwise the components will look
+ * like they don't belong with each other. Like a button with radius 4px and another button
+ * with radius 5px will look out of the place, if but together.
+ *
+ * License :-
+ * This radius tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Radius Semantics
+ *
+ * @description Variables for fluid border radius.
+ * Uses --space-* from space scale, declared in space-scale.variables.css .
+ */
+:root {
+  /* Extra Small radius: 4px → 5px (Subtle component rounding) */
+  --radius-xs: var(--space-3xs);
+  /* Small radius: 8px → 10px (Input fields, buttons) */
+  --radius-sm: var(--space-2xs);
+  /* Medium radius: 12px → 15px (Card rounding, containers) */
+  --radius-md: var(--space-xs);
+  /* Large radius: 16px → 20px (Modal rounding) */
+  --radius-lg: var(--space-s);
+  /* Full radius: 9999px (Pill shapes) */
+  --radius-full: 9999px;
+}

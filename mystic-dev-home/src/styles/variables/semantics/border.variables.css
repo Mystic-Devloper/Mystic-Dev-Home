@@ -1,0 +1,41 @@
+/**
+ * @file src/styles/variables/semantics/border.variables.css
+ *
+ * @description Variables file for border width and style semantics.
+ */
+
+/**
+ * Border Semantics :-
+ * Consistent border width, styles and seperators are essential for both vertical and
+ * horizontal rhythms, they are often the things easily overlooked but they plays a vital
+ * role for user's perception for website.
+ *
+ * License :-
+ * This border tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Border Semantics
+ *
+ * @description Variables for border width and style.
+ */
+:root {
+  /* Widths */
+  /* Extra small border width: 1px (for subtle dividers) */
+  --border-width-xs: var(--size-unit-2xs);
+  /* Small border width: 2px (for secondary buttons and outlines) */
+  --border-width-sm: var(--size-unit-xs);
+  /* Medium border width: 4px (for focus rings and primary borders) */
+  --border-width-md: var(--size-unit-sm);
+  /* Large border width: 8px (for heavy separators) */
+  --border-width-lg: var(--size-unit-md);
+
+  /* Styles */
+  /* Solid border style */
+  --border-style-solid: solid;
+  /* Dashed border style */
+  --border-style-dashed: dashed;
+  /* Double border style */
+  --border-style-double: double;
+}

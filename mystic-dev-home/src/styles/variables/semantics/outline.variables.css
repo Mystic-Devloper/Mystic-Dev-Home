@@ -1,0 +1,49 @@
+/**
+ * @file src/styles/variables/semantics/outline.variables.css
+ *
+ * @description Variables file for outline width and style semantics.
+ */
+
+/**
+ * Outline :-
+ * Outlines are important as border for a website. Using consistent outlines looks
+ * cool, trust me.
+ *
+ * License :-
+ * This outline tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Outline Semantics
+ *
+ * @description Variables for outline width and style.
+ * Just re-routing existing border tokens.
+ */
+:root {
+  /* Outline offset extra small: 1px */
+  --outline-offset-xs: var(--border-width-xs);
+  /* Outline offset small: 2px */
+  --outline-offset-sm: var(--border-width-sm);
+  /* Outline offset medium: 4px */
+  --outline-offset-md: var(--border-width-md);
+  /* Outline offset large: 8px */
+  --outline-offset-lg: var(--border-width-lg);
+
+  /* Styles */
+  /* Solid outline style */
+  --outline-style-solid: var(--border-style-solid);
+  /* Dashed outline style */
+  --outline-style-dashed: var(--border-style-dashed);
+  /* Double outline style */
+  --outline-style-double: var(--border-style-double);
+
+  /* Defaults */
+  --outline-offset-default: var(--outline-offset-sm);
+  --outline-style-default: var(--outline-style-solid);
+
+  /* Focus ring: for acessiblity */
+  --focus-ring-width: var(--border-width-md);
+  --focus-ring-style: var(--outline-style-default);
+  --focus-ring-offset: var(--outline-offest-default);
+}

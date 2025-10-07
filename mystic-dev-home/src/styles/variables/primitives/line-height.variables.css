@@ -1,0 +1,44 @@
+/**
+ * @file src/styles/variables/primitives/line-height.variables.css
+ *
+ * @description Variables file for line heights.
+ */
+
+/**
+ * Typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * Line Height :-
+ * It refers to the height of characters in a font.
+ * Different fonts uses different line heights for different
+ * purposes.
+ * Line height should be used for maximum reading capablity.
+ * Because wrong line heights can make content difficult to be
+ * read.
+ *
+ * Standard :-
+ * Line heights are designed for optimal reading capability in respect
+ * of WCAG AA Standard. So, in a sense, they are WCAG AA Standard Compilant.
+ *
+ * License :-
+ * This line heights along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Line heights
+ *
+ * @description Variables for line heights.
+ */
+:root {
+  /* Body line height */
+  --line-height-body: 1.55;
+  /* Code line height */
+  --line-height-code: 1.4;
+  /* Heading line height */
+  --line-height-heading: 1.2;
+}

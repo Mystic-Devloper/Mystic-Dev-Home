@@ -1,0 +1,62 @@
+/**
+ * @file src/styles/variables/semantics/motion.variables.css
+ *
+ * @description Variables file for semantic motion and easing curves.
+ */
+
+/**
+ * Motion :-
+ * Motion tokens define the semantic easing curves (speed and style) of animation.
+ * They abstract complex cubic-bezier() functions into easy-to-use variables.
+ *
+ * License :-
+ * This motion tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Motion tokens
+ *
+ * @description Variables for Motion and Easing Curves.
+ */
+:root {
+  /*
+   * Easing Curves (Cubic Bezier Functions)
+   * These define the "style" of the movement, mapping to primitives like --ease-in-out.
+   */
+
+  /* Standard Ease-in-out: Most common, gradual start and end. */
+  --motion-ease-standard: var(--ease-in-out);
+
+  /* Linear: Constant speed, used for continuous movement or progress bars. */
+  --motion-ease-linear: var(--ease-linear);
+
+  /* Quick-in, Slow-out: For elements appearing on screen, fast initial speed. */
+  --motion-ease-accelerate: var(--ease-in);
+
+  /* Slow-in, Quick-out: For elements disappearing from screen, fast exit speed. */
+  --motion-ease-decelerate: var(--ease-out);
+
+  /* Snappy/Bouncy: For interactive elements that need a fun, energetic feel. */
+  --motion-ease-snappy: cubic-bezier(0.42, 0, 0.58, 1.25); /* Example bouncy/overshoot curve */
+
+  /*
+   * Complex Motion Definitions (Using Durations and Easings)
+   * These combine duration and ease for a specific semantic effect.
+   */
+
+  /* General fade effect, often used for content loading/unloading */
+  --motion-fade-in: opacity var(--duration-medium) var(--motion-ease-decelerate);
+
+  /* Micro-interaction/snappy animation for button click feedback */
+  --motion-interact-snappy: transform var(--duration-small) var(--motion-ease-snappy);
+
+  /* Layout shift animation for navigation or full-screen changes */
+  --motion-layout-shift: transform var(--duration-long) var(--motion-ease-standard);
+
+  /*
+   * Defaults (Referencing transition.variables.css and a standard ease)
+   */
+  --motion-default-duration: var(--transition-medium);
+  --motion-default-style: var(--motion-ease-standard);
+}

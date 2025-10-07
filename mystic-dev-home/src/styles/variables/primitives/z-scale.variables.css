@@ -1,0 +1,35 @@
+/**
+ * @file src/styles/variables/primitives/z-scale.variables.css
+ *
+ * @description Variables file for z scale / layering.
+ */
+
+/**
+ * Z Scale :-
+ * While often overlooked, z scale makes a huge difference when there are overlapping
+ * elements. Like navigation bar should always hover over every thing (excpet modals).
+ * And paragraphs should always be at lowest. So using consistent z-scales for these
+ * are as crucial as responsive typography.
+ *
+ * License :-
+ * This z-scale tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Z Scale primitives
+ *
+ * @description Variables for Z Scales.
+ */
+:root {
+  /* Base Z Scale: for paragraphs and other text related things */
+  --z-scale-base: 1;
+  /* Sticky Z Scale: for headers and sidebars */
+  --z-scale-sticky: 100;
+  /* Overlay Z Scale: for modal backgrounds and overlays */
+  --z-scale-overlay: 1000;
+  /* Modal Z Scale: for modals and high priority popovers */
+  --z-scale-modal: 1100;
+  /* Override Z Scale: for overriding entire z scale */
+  --z-scale-override: 9999;
+}

@@ -1,7 +1,24 @@
 /**
- * @file src/styles/variables/light-theme.variables.css
+ * @file src/styles/variables/semantics/light-theme.variables.css
  *
  * @description Variables file for light theme.
+ */
+
+/**
+ * Standard :-
+ * Theme is properly WCAG AA Standard Compilant.
+ * With, Primary texts (i.e., Heading, body and paragraph)
+ * being WCAG AAA Standard Compilant.
+ *
+ * Aesthetics :-
+ * Color palette is designed to maintain a nature derived theme.
+ * This is same as dark theme, which maintains darker but similar vision.
+ * This is because nature-derived themes are better for eye and reduce
+ * eye strain in long-format blog-alike contents.
+ *
+ * License :-
+ * This color palette along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
  */
 
 /**
@@ -24,6 +41,17 @@
   --color-accent: #2c6975;
   /* Banner: pale blue-green */
   --color-banner:  #d6ece7;
+  
+  /* Feedback/Status color */
+  /* Success: forest green */
+  --color-code-success: #4c7f53;
+  /* Warning: soft warm amber */
+  --color-code-warning: #d49a37;
+  /* Error: dark maroon */
+  --color-code-error: #8b3a3a;
+  
+  /* Shadow Color: soft charcoal */
+  --color-shadow-rgb: 33, 43, 50;
 
   /* Texts */
   /* Heading: blueish gray */

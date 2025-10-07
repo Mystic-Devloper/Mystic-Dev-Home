@@ -1,5 +1,5 @@
 /**
- * @file src/styles/variables/semantic-font-size.variables.css
+ * @file src/styles/variables/semantics/font-size.variables.css
  *
  * @description Variables file for sematic font sizes derived from --step-* from
  * type-scale.variables.css .
@@ -10,6 +10,19 @@
  * Min VW    - 320px    Max VW    - 1440px
  * Font size - 16px     Font Size - 20px
  * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * Semantic Fonts :-
+ * As a wise person once, said "Use Semantics!!".
+ * Jokes aside, the raw type scale tokens are here
+ * asigned semantic meanings, so that it can be more
+ * intutive. For example, --text-body is way more intutive
+ * than --step-0.
+ *
+ * License :-
+ * This semantic fontsizes along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
  */
 
 /**
