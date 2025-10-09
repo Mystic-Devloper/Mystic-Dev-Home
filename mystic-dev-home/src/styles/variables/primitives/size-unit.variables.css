@@ -1,0 +1,39 @@
+/**
+ * @file src/styles/variables/primitives/size-unit.variables.css
+ *
+ * @description Variables file for size unit primitives.
+ */
+
+/**
+ * Typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * Size unit :-
+ * Using a even numbered size unit is easy as it can easily be divided into
+ * further smaller parts giving consistency and clariry.
+ *
+ * License :-
+ * This grid primitives along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Size Unit Primitives
+ *
+ * @description Variables for size units.
+ */
+:root {
+  /* Smallest 1px -> Largest 96px */
+  --size-unit-3xs: 1px;
+  --size-unit-2xs: 2px;
+  --size-unit-xs:  4px;
+  --size-unit-sm:  8px;
+  --size-unit-md:  16px;
+  --size-unit-xl:  32px;
+  --size-unit-2xl: 64px;
+  --size-unit-3xl: 96px;
+}

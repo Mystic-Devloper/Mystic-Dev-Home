@@ -52,67 +52,61 @@
   /* Warning: soft warm amber */
   --color-code-warning: var(--color-code-warning-light);
   /* Error: dark maroon */
-  --color-code-error: var(--;
+  --color-code-error: var(--color-code-error-light);
   
   /* Shadow Color: soft charcoal */
-  --color-shadow-rgb: 33, 43, 50;
+  --color-shadow-rgb: var(--color-shadow-rgb-light);
 
   /* Texts */
   /* Heading: blueish gray */
-  --color-heading: #1f3b4d;
+  --color-heading: var(--color-heading-light);
   /* Body: dark charcoal */
-  --color-body: #2e2e2e;
+  --color-body: var(--color-body-light);
   /* Paragraph: dark gray */
-  --color-paragraph: #4a4a4a;
+  --color-paragraph: var(--color-paragraph-light);
   /* Link: deep teal */
-  --color-link: #2c6975;
+  --color-link: var(--color-link-light);
   /* Hover: aqua */
-  --color-hover: #4fb3b3;
+  --color-hover: var(--color-hover-light);
   /* Focus: deep teal */
-  --color-focus: #2c6975;
+  --color-focus: var(--color-focus-light);
   /* Caption: dim gray */
-  --color-caption: #6b6b6b;
+  --color-caption: var(--color-caption-light);
   /* Button text: dark charcoal */
-  --color-button-text: #121212;
+  --color-button-text: var(--color-button-text-light);
   
   /* Code Styling */
   /* Comments: warm gray */
-  --color-comment: #7c6f64;
+  --color-comment: var(--color-comment-light);
   /* Punctuations: brown gray */
-  --color-punctuations: #665c54;
+  --color-punctuations: var(--color-punctuations-light);
   /* Tags: dark cyan */
-  --color-tag: #458588;
+  --color-tag: var(--color-tag-light);
   /* Selectors: dark green */
-  --color-selector: #689d6a;
+  --color-selector: var(--color-selector-light);
   /* Property: dark red */
-  --color-property: #9d0006;
+  --color-property: var(--color-property-light);
   /* Attribute: dark yellow */
-  --color-attribute: #b57614;
+  --color-attribute: var(--color-attribute-light);
   /* Numeric/boolean values: dark purple */
-  --color-numeric: #8f3f71;
+  --color-numeric: var(--color-numeric-light);
   /* String/char other related values: dark yellow */
-  --color-string: #b57614;
+  --color-string: var(--color-string-light);
   /* Keywords: dark red */
-  --color-keyword: #9d0006;
+  --color-keyword: var(--color-keyword-light);
   /* Operator: dark yellow */
-  --color-operator: #b57614;
+  --color-operator: var(--color-operator-light);
   /* Function: dark aqua */
-  --color-function: #458588;
+  --color-function: var(--color-function-light);
   /* Classes/pre defs: dark purple */
-  --color-class: #8f3f71;
+  --color-class: var(--color-class-light);
 
   /* Line highlight: slight dark beige */
-  --color-line-hightlight: #fbf1c7;
+  --color-line-highlight: var(--color-highlight-light);
   /* Line number text and seperator: warm gray */
-  --color-line-number: #7c6f64;
+  --color-line-number: var(--color-line-number-light);
   /* Toolbar background: blue-green */
-  --color-toolbar-background: #d6ece7;
+  --color-toolbar-background: var(--color-toolbar-background-light);
   /* Language label: dark charcoal */
-  --color-language-label: #2e2e2e;
-
-  /* Pure colors */
-  /* White */
-  --color-white: #ffffff;
-  /* Black */
-  --color-black: #000000;
+  --color-language-label: var(--color-language-label-light);
 }

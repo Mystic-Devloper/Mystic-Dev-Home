@@ -23,7 +23,7 @@
   /* transition none: effectively turning off the transition (Used for acessiblity ) */
   --transition-none: var(--duration-none);
   /* Short transition: 150ms (hovers and focus states) */
-  --transition-short: var(--duration-small);
+  --transition-short: var(--duration-short);
   /* Medium transition: 300ms (component transitions) */
   --transition-medium: var(--duration-medium);
   /* Long transition: 500ms (page/layout shifts) */
@@ -31,5 +31,5 @@
 
   /* Defaults */
   --transition-default: var(--transition-small);
-  --transtion-style: var(--ease-in-out);
+  --transition-style: var(--ease-in-out);
 }

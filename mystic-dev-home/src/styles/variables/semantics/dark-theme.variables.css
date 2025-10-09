@@ -22,6 +22,10 @@
  */
 
 /**
+ * Quick Note: Actual color variables are defined in primitves/color-palette.variables.css .
+ */
+
+/**
  * Variables: Dark Theme
  *
  * @description Variables for dark theme override.
@@ -30,85 +34,79 @@
 :root.dark {
   /* Backgrounds */
   /* Background: jungle green (dark teal) */
-  --color-background: #0f1917;
+  --color-background: var(--color-background-dark);
   /* Code background: dire wolf (dark gray) */
-  --color-code-background: #282828;
+  --color-code-background: var(--color-code-background-dark);
   /* Feature background: pine green (dark teal) */
-  --color-feature-background: #162422;
+  --color-feature-background: var(--color-feature-background-dark);
 
   /* Theming */
   /* Accent: aqua */
-  --color-accent: #4fb3b3;
+  --color-accent: var(--color-accent-dark);
   /* Banner: muted cyan/teal */
-  --color-banner:  #1c2e2b;
+  --color-banner: var(--color-banner-dark);
 
   /* Feedback/Status color */
   /* Success: soft seafoam green */
-  --color-code-success: #8fbc8f;
+  --color-code-success: var(--color-code-success-dark);
   /* Warning: soft gold/mustard */
-  --color-code-warning: #ffcc66;
+  --color-code-warning: var(--color-code-warning-dark);
   /* Error: soft coral red */
-  --color-code-error: #ff6b6b;
+  --color-code-error: var(--color-code-error-dark);
 
   /* Shadow Color: dark void */
-  --color-shadow-rgb: 8, 12, 11;
+  --color-shadow-rgb: var(--color-shadow-rgb-dark);
 
   /* Texts */
   /* Heading: pale light blue-gray */
-  --color-heading: #e6f1f3;
+  --color-heading: var(--color-heading-dark);
   /* Body: light gray */
-  --color-body: #e0e0e0;
+  --color-body: var(--color-body-dark);
   /* Paragraph: medium light gray */
-  --color-paragraph: #c4c4c4;
+  --color-paragraph: var(--color-paragraph-dark);
   /* Link: aqua */
-  --color-link: #4fb3b3;
+  --color-link: var(--color-link-dark);
   /* Hover: aquamarine */
-  --color-hover: #7fd9d9;
+  --color-hover: var(--color-hover-dark);
   /* Focus: aqua */
-  --color-focus: #4fb3b3;
+  --color-focus: var(--color-focus-dark);
   /* Caption: medium gray */
-  --color-caption: #9a9a9a;
+  --color-caption: var(--color-caption-dark);
   /* Button text: subtle off white */
-  --color-button-text: #f8f8f8;
+  --color-button-text: var(--color-button-text-dark);
 
   /* Code Styling */
   /* Comments: cool gray */
-  --color-comment: #928374;
+  --color-comment: var(--color-comment-dark);
   /* Punctuations: off white */
-  --color-punctuations: #ebdbb2;
+  --color-punctuations: var(--color-punctuations-dark);
   /* Tags: bright cyan */
-  --color-tag: #83a598;
+  --color-tag: var(--color-tag-dark);
   /* Selectors: bright green */
-  --color-selector: #b8bb26;
+  --color-selector: var(--color-selector-dark);
   /* Property: bright red */
-  --color-property: #fb4934;
+  --color-property: var(--color-property-dark);
   /* Attribute: bright yellow */
-  --color-attribute: #d65d0e;
+  --color-attribute: var(--color-attribute-dark);
   /* Numeric/boolean values: bright purple */
-  --color-numeric: #d3869b;
+  --color-numeric: var(--color-numeric-dark);
   /* String/char other related values: bright yellow */
-  --color-string: #fabd2f;
+  --color-string: var(--color-string-dark);
   /* Keywords: bright red */
-  --color-keyword: #fb4934;
+  --color-keyword: var(--color-keyword-dark);
   /* Operator: bright yellow */
-  --color-operator: #fe8019;
+  --color-operator: var(--color-operator-dark);
   /* Function: bright aqua */
-  --color-function: #83a598;
+  --color-function: var(--color-function-dark);
   /* Classes/pre defs: light purple */
-  --color-class: #d3869b;
+  --color-class: var(--color-class-dark);
 
   /* Line highlight: slight light dire wolf */
-  --color-line-hightlight: #3c3836;
+  --color-line-hightlight: var(--color-highlight-dark);
   /* Line number text and seperator: cool gray */
-  --color-line-number: #928374;
+  --color-line-number: var(--color-line-number-dark);
   /* Toolbar background: muted cyan */
-  --color-toolbar-background: #1c2e2b;
+  --color-toolbar-background: var(--color-toolbar-background-dark);
   /* Language label: light gray */
-  --color-language-label: #e0e0e0;
-  
-  /* Pure colors */
-  /* White */
-  --color-white: #ffffff;
-  /* Black */
-  --color-black: #000000;
+  --color-language-label: var(--color-language-label-dark);
 }
