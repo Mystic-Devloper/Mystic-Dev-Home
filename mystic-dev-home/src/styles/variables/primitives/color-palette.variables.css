@@ -1,0 +1,133 @@
+/**
+ * @file src/styles/variables/primitives/color-palette.variables.css
+ *
+ * @description Central color palette to be referenced in light/dark themes.
+ */
+
+/**
+ * Color Palette :-
+ * Using consistent color palette is very important as,
+ * visitors always firstly sees colors, even before typography and content.
+ *
+ * License :-
+ * This color palette along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variable: Color Palette.
+ *
+ * @description Variables for primitive colors in our palette.
+ */
+:root {
+  /* Pure */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Backgrounds */
+  --color-background-dark: #0f1917;
+  --color-background-light: #f9fbf9;
+
+  --color-code-background-dark: #282828;
+  --color-code-background-light: #f9f5d7;
+
+  --color-feature-background-dark: #162422;
+  --color-feature-background-light: #f1f8f5;
+
+  --color-banner-dark: #1c2e2b;
+  --color-banner-light: #d6ece7;
+
+  /* Theming / Accent */
+  --color-accent-dark: #4fb3b3;
+  --color-accent-light: #2c6975;
+
+  /* Feedback / Status */
+  --color-code-success-dark: #8fbc8f;
+  --color-code-success-light: #4c7f53;
+
+  --color-code-warning-dark: #ffcc66;
+  --color-code-warning-light: #d49a37;
+
+  --color-code-error-dark: #ff6b6b;
+  --color-code-error-light: #8b3a3a;
+
+  /* Shadow */
+  --color-shadow-rgb-dark: 8, 12, 11;
+  --color-shadow-rgb-light: 33, 43, 50;
+
+  /* Texts */
+  --color-heading-dark: #e6f1f3;
+  --color-heading-light: #1f3b4d;
+
+  --color-body-dark: #e0e0e0;
+  --color-body-light: #2e2e2e;
+
+  --color-paragraph-dark: #c4c4c4;
+  --color-paragraph-light: #4a4a4a;
+
+  --color-link-dark: #4fb3b3;
+  --color-link-light: #2c6975;
+
+  --color-hover-dark: #7fd9d9;
+  --color-hover-light: #4fb3b3;
+
+  --color-focus-dark: #4fb3b3;
+  --color-focus-light: #2c6975;
+
+  --color-caption-dark: #9a9a9a;
+  --color-caption-light: #6b6b6b;
+
+  --color-button-text-dark: #f8f8f8;
+  --color-button-text-light: #121212;
+
+  /* Code Styling */
+  --color-comment-dark: #928374;
+  --color-comment-light: #7c6f64;
+
+  --color-punctuations-dark: #ebdbb2;
+  --color-punctuations-light: #665c54;
+
+  --color-tag-dark: #83a598;
+  --color-tag-light: #458588;
+
+  --color-selector-dark: #b8bb26;
+  --color-selector-light: #689d6a;
+
+  --color-property-dark: #fb4934;
+  --color-property-light: #9d0006;
+
+  --color-attribute-dark: #d65d0e;
+  --color-attribute-light: #b57614;
+
+  --color-numeric-dark: #d3869b;
+  --color-numeric-light: #8f3f71;
+
+  --color-string-dark: #fabd2f;
+  --color-string-light: #b57614;
+
+  --color-keyword-dark: #fb4934;
+  --color-keyword-light: #9d0006;
+
+  --color-operator-dark: #fe8019;
+  --color-operator-light: #b57614;
+
+  --color-function-dark: #83a598;
+  --color-function-light: #458588;
+
+  --color-class-dark: #d3869b;
+  --color-class-light: #8f3f71;
+
+  /* Line Highlight & Numbers */
+  --color-line-highlight-dark: #3c3836;
+  --color-line-highlight-light: #fbf1c7;
+
+  --color-line-number-dark: #928374;
+  --color-line-number-light: #7c6f64;
+
+  /* Toolbar & Labels */
+  --color-toolbar-background-dark: #1c2e2b;
+  --color-toolbar-background-light: #d6ece7;
+
+  --color-language-label-dark: #e0e0e0;
+  --color-language-label-light: #2e2e2e;
+}

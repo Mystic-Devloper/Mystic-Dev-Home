@@ -22,6 +22,10 @@
  */
 
 /**
+ * Quick Note: Actual color variables are defined in primitves/color-palette.variables.css .
+ */
+
+/**
  * Variables: Light Theme
  *
  * @description Variables for default light theme.
@@ -30,25 +34,25 @@
 :root {
   /* Backgrounds */
   /* Background: off white greenish */
-  --color-background: #f9fbf9;
+  --color-background: var(--color-background-light);
   /* Code background: light beige */
-  --color-code-background: #f9f5d7;
+  --color-code-background: var(--color-code-background-light);
   /* Feature background: off white cyanish */
-  --color-feature-background: #f1f8f5;
+  --color-feature-background: var(--color-feature-background-light);
 
   /* Theming */
   /* Accent: deep teal */
-  --color-accent: #2c6975;
+  --color-accent: var(--color-accent-light);
   /* Banner: pale blue-green */
-  --color-banner:  #d6ece7;
+  --color-banner:  var(--color-banner-light);
   
   /* Feedback/Status color */
   /* Success: forest green */
-  --color-code-success: #4c7f53;
+  --color-code-success: var(--color-code-success-light);
   /* Warning: soft warm amber */
-  --color-code-warning: #d49a37;
+  --color-code-warning: var(--color-code-warning-light);
   /* Error: dark maroon */
-  --color-code-error: #8b3a3a;
+  --color-code-error: var(--;
   
   /* Shadow Color: soft charcoal */
   --color-shadow-rgb: 33, 43, 50;
