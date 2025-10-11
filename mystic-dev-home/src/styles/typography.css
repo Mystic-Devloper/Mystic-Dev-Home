@@ -33,7 +33,7 @@
 
 /* Stack utility (keeps consistent vertical rhythm) */
 .stack > * + * {
-  margin-block-start: var(--space-stack);
+  margin-block-start: var(--space-stack-minor);
 }
 
 /* Base HTML */
@@ -64,7 +64,7 @@ html {
 body {
   font-family: "Open Sans", "Open Sans Fallback", system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: var(--font-body);
+  font-size: var(--text-body);
   font-weight: var(--weight-regular);
   font-style: var(--style-normal);
   line-height: var(--line-height-body);
@@ -96,7 +96,7 @@ section {
 
 /* Headings
    - small top gap to group with previous content (var(--space-s))
-   - larger bottom gap to keep rhythm (var(--space-stack))
+   - larger bottom gap to keep rhythm (var(--space-stack-minor))
    - font-size strictly from --font-h1..6
 */
 h1, h2, h3, h4, h5, h6 {
@@ -109,10 +109,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
 
   margin-block-start: var(--space-3xs);
-  margin-block-end: var(--space-stack);
+  margin-block-end: var(--space-stack-minor);
   
   /* Slight tight the heading */
-  letter-spacing: -0.025em;
+  letter-spacing: -0.05em;
 
   /* ensure headings never exceed container width by text wrapping naturally */
   hyphens: auto;
@@ -120,25 +120,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Individual heading sizes (use variables only; preserve fluid clamp) */
-h1, .aplha   { font-size: var(--font-h1); }
-h2, .beta    { font-size: var(--font-h2); }
-h3, .gamma   { font-size: var(--font-h3); }
-h4, .delta   { font-size: var(--font-h4); }
-h5, .epsilon { font-size: var(--font-h5); }
-h6, .zeta    { font-size: var(--font-h6); }
+h1, .aplha   { font-size: var(--text-h1); }
+h2, .beta    { font-size: var(--text-h2); }
+h3, .gamma   { font-size: var(--text-h3); }
+h4, .delta   { font-size: var(--text-h4); }
+h5, .epsilon { font-size: var(--text-h5); }
+h6, .zeta    { font-size: var(--text-h6); }
 
 /* Paragraphs and common blocks:
-   - default bottom margin uses --space-stack to align rhythm
+   - default bottom margin uses --space-stack-minor to align rhythm
    - top margin reset to 0 (spacing controlled by element above)
 */
 p, blockquote, ul, ol {
   margin-block-start: 0;
-  margin-block-end: var(--space-stack);
+  margin-block-end: var(--space-stack-minor);
 }
 
 /* Paragraph defaults */
 p, li {
-  font-size: var(--font-body);
+  font-size: var(--text-body);
   font-weight: var(--weight-regular);
   font-style: var(--style-normal);
   font-feature-settings: "onum", "liga", "kern";
@@ -148,8 +148,8 @@ p, li {
 }
 
 /* Small and tiny semantic tokens */
-small, .small, .eta { font-size: var(--font-small); }
-.tiny, .theta      { font-size: var(--font-tiny); }
+small, .small, .eta { font-size: var(--text-small); }
+.tiny, .theta      { font-size: var(--text-tiny); }
 
 /* Weight modifier classes (use only weight tokens) */
 .th, .thin   { font-weight: var(--weight-light); }
@@ -226,7 +226,7 @@ hr, .horizontal-rule {
 
 /* Captions */
 .caption, .cap {
-  font-size: var(--font-small);
+  font-size: var(--text-small);
   font-weight: var(--weight-regular);
   font-style: var(--style-normal);
   font-feature-settings: "onum", "liga", "kern";
@@ -246,9 +246,10 @@ h3 + .caption, .gamma + .caption {
 /* Blockquote */
 blockquote {
   margin-block-start: 0;
-  margin-block-end: var(--space-stack);
+  margin-block-end: var(--space-stack-minor);
   padding-inline-start: var(--space-s);
   border-left: var(--space-3xs) solid var(--color-link);
+  font-size: var(--text-body); 
   color: var(--color-paragraph);
   font-style: var(--style-italic);
 }
@@ -332,7 +333,7 @@ ol ol {
 /* Tables */
 table {
   font-family: inherit;
-  font-size: var(--font-small);
+  font-size: var(--text-small);
   line-height: var(--line-height-body);
   font-weight: var(--weight-regular);
   font-style: var(--style-normal);
@@ -347,7 +348,7 @@ table {
 thead th {
   font-family: "Montserrat", "Montserrat Fallback", system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: var(--font-body);
+  font-size: var(--text-body);
   line-height: var(--line-height-body);
   font-weight: var(--weight-bold);
   font-style: var(--style-normal);
@@ -359,7 +360,7 @@ thead th {
 
 tbody td {
   font-family: inherit;
-  font-size: var(--font-small);
+  font-size: var(--text-small);
   line-height: var(--line-height-body);
   font-weight: var(--weight-regular);
   font-style: var(--style-normal);
@@ -465,13 +466,13 @@ tbody td {
 .column--trio p,
 .column--quad p,
 .column--sidebar p {
-  font-size: var(--font-small);
+  font-size: var(--text-small);
   line-height: var(--line-height-body);
 }
 .column--trio li,
 .column--quad li,
 .column--sidebar li {
-  font-size: var(--font-small);
+  font-size: var(--text-small);
   line-height: var(--line-height-body);
 }
 
@@ -488,7 +489,7 @@ pre, pre[class*="language-"], pre[class*="lang-"] {
   line-height: var(--line-height-code);
   font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "Ubuntu Mono", "Consolas", 
                "Monaco", "Melno", "Roboto Mono", "Courier New", "Courier", monospace;
-  font-size: var(--font-code);
+  font-size: var(--text-code);
   font-weight: var(--weight-regular);
   font-style: var(--style-regular);
   position: relative;
@@ -596,7 +597,7 @@ pre[class*="lang-"].line-numbers {
 /* Line rows spaning */
 .line-numbers-rows > span:before {
   color: var(--color-line-number);
-  font-size: var(--font-small);
+  font-size: var(--text-small);
 }
 
 /* Line highlight */
@@ -624,7 +625,7 @@ div.code-toolbar > .toolbar {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
   z-index: 2;
-  font-size: var(--font-small);
+  font-size: var(--text-small);
   font-weight: var(--weight-bold);
 
   border-bottom: 1px solid color-mix(in srgb, var(--color-black) 15%, transparent);

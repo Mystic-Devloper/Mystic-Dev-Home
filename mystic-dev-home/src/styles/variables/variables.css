@@ -1,0 +1,46 @@
+/**
+ * @file src/styles/variables.css
+ * @description
+ * Central entry point that bundles all design tokens.
+ * Import this once in your global CSS (e.g., in _app.tsx or layout.tsx).
+ *
+ * Order matters — primitives load first, then semantic mappings,
+ * then theme overrides.
+ */
+
+/* =========================================================
+   1. PRIMITIVE TOKENS (raw values and scales)
+   --------------------------------------------------------- */
+@import './primitives/type-scale.variables.css';
+@import './primitives/space-scale.variables.css';
+@import './primitives/grid.variables.css';
+@import './primitives/breakpoints.variables.css';
+@import './primitives/color-palette.variables.css';
+@import './primitives/duration.variables.css';
+@import './primitives/line-height.variables.css';
+@import './primitives/shadow.variables.css';
+@import './primitives/size-unit.variables.css';
+@import './primitives/z-scale.variables.css';
+
+
+/* =========================================================
+   2. SEMANTIC TOKENS (design decisions built on primitives)
+   --------------------------------------------------------- */
+@import './semantics/border.variables.css';
+@import './semantics/font-size.variables.css';
+@import './semantics/font-stack.variables.css';
+@import './semantics/font-weight.variables.css';
+@import './semantics/font-style.variables.css';
+@import './semantics/layering.variables.css';
+@import './semantics/transition.variables.css';
+@import './semantics/motion.variables.css';
+@import './semantics/opacity.variables.css';
+@import './semantics/outline.variables.css';
+@import './semantics/space-alias.variables.css';
+@import './semantics/radius.variables.css';
+
+/* =========================================================
+   3. THEMES (light / dark overrides)
+   --------------------------------------------------------- */
+@import './semantics/light-theme.variables.css';
+@import './semantics/dark-theme.variables.css';
