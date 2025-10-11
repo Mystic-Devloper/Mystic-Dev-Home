@@ -477,7 +477,7 @@ tbody td {
 
 /* Code Styling: Uses Prism.js */
 /* Pre block */
-pre[class*="language-"], pre[class*="lang-"] {
+pre, pre[class*="language-"], pre[class*="lang-"] {
   background: var(--color-code-background);
   padding-inline: var(--space-s);
   padding-block: calc(var(--space-3xs) * 0.8);
@@ -501,9 +501,15 @@ pre[class*="language-"], pre[class*="lang-"] {
 }
 
 /* Code block */
-code[class*="language-"], code[class*="lang-"] {
+code, code[class*="language-"], code[class*="lang-"] {
   background: none;
   color: var(--color-body);
+  line-height: var(--line-height-code);
+  font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "Ubuntu Mono", "Consolas", 
+               "Monaco", "Melno", "Roboto Mono", "Courier New", "Courier", monospace;
+  font-size: var(--font-code);
+  font-weight: var(--weight-regular);
+  font-style: var(--style-regular);
 }
 
 /* Comments */

@@ -33,14 +33,12 @@
  */
 :root {
   /* Body Text */
-  /* Tiny fontsize: Used for inline captions & labels */
-  --text-tiny:  var(--step--2);
   /* Small fontsize: Used for captions & labels */
-  --text-small: var(--step--1);
+  --text-small: var(--step--2);
+  /* Code fontsize: Used for code blocks */
+  --text-code:  var(--step--1);
   /* Body fontsize: Used for body and paragraph text */
   --text-body:  var(--step-0);
-  /* Code fontsize: Used for code blocks (Same as --font-body but be explicit) */
-  --text-code:  var(--step-0);
   /* Large fontsize: Used for text larger than body */
   --text-large: var(--step-1);
 
