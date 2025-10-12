@@ -3,21 +3,29 @@
  * 
  * @description Modified version of Normalize.css.
  *
+ * Intention :-
+ * To ensure maximum compatiblity, majorly in older browsers.
+ *
+ * License :- 
+ * This border tokens along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ *
+ * Words of Gratitude :-
  * Orignal version is wholeheartedly credited to Necolas.
  * Orginal Work: https://github.com/necolas/normalize.css
  * Again Thanks Necolas for your amazing groundwork.
  */
+
+/* Document
+ * ========================================= */
 
 /**
  * @description Common HTML element fixes.
  * 1. Sets default font family to sans-serif in all browsers.
  * 2. Sets default line height to ensure proper rendering.
  * 3. Prevents adjustments to font sizes in iOS and IE.
- * 4. Sets height, width and font size to 100% for consistency.
- * 5. Sets padding and margin to 0 for consistency.
- * 6. Global box sizing to border box.
- * 7. Remove border.
- * 8. Vertical align to baseline.
+ * 4. Sets font size to 100% for consistency.
+ * 5. Global box sizing to border box.
  */
 html {
   font-family: sans-serif; /* 1 */
@@ -27,18 +35,8 @@ html {
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
 
-  min-height: 100%; /* 4 */
-  height: 100%; /* 4 */
-  min-width: 100%; /* 4 */
-  width: 100%; /* 4 */
   font-size: 100%; /* 4 */
-  
-  margin: 0; /* 5 */
-  padding: 0; /* 5 */
-
-  box-sizing: border-box; /* 6 */
-  border: 0; /* 7 */
-  vertical-align: baseline; /* 8 */
+  box-sizing: border-box; /* 5 */
 }
 
 /**
@@ -49,21 +47,16 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 /**
  * @description Common Body element fixes.
- * 1. Set margin to zero in all browsers.
- * 2. Set padding to 0.75rem (12px) in all browsers.
- * 3. Remove border.
- * 4. Vertical align to baseline.
+ * 1. Set margin and padding to zero in all browsers.
  */
 body {
   margin: 0; /* 1 */
-  padding: 0.75rem; /* 2 */
-  border: 0; /* 3 */
-  vertical-align: baseline; /* 4 */
+  padding: 0; /* 1 */
 }
 
 /* HTML5 Displays
@@ -132,7 +125,7 @@ template, /* 1 */
  * 2. Remove gaps in link underlines in iOS and Safari.
  */
 a {
-  background-color: none; /* 1 */
+  background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
 }
 
@@ -290,5 +283,192 @@ figure {
  * 2. Show overflow in Edge and IE.
  */
 hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
 
+/* Forms
+ * ========================================= */
+
+/**
+ * @description Form elements fixes.
+ * 1. Change font family to inherit in all browsers.
+ * 2. Font size to 100%.
+ * 3. Line height to match HTML.
+ * 4. Remove margin in Safari and Firefox.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 2 */
+  line-height: 1.55; /* 3 */
+  margin: 0; /* 4 */
+}
+
+/**
+ * @description Restore font weight unset by previous rule.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * @description Show overflows.
+ * 1. In IE.
+ * 2. In Edge.
+ */
+button, /* 1 */
+input /* 2 */ {
+  overflow: visible;
+}
+
+/**
+ * @description Remove text transform inheritence.
+ * 1. In Edge, IE and Firefox.
+ * 2. In Firefox.
+ */
+button, /* 1 */
+select /* 2 */ {
+  text-transform: none;
+}
+
+/**
+ * @description Prevent common bugs.
+ * 1. Bug in WebKit that destroys native audio and video controls in Android 4.
+ * 2. Correct instablity to style in iOS and Safari.
+ */
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * @description Remove border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * @description Restore focus style unset by previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * @description Change border, margin and padding in all browsers.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * @description Common legend fixes.
+ * 1. Add correct text wrapping in Edge and IE.
+ * 2. Correct text inheritamce from fieldset.
+ * 3. Remove padding.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * @description Remove vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * @description Common fixes in IE 10-.
+ * 1. Correct Box sizing.
+ * 2. Correct padding.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * @description Correct height styling in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * @description Search input fixes.
+ * 1. Odd appearance in Chrome and Safari.
+ * 2. Outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * @description Remove inner padding of search buttons in Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * @description Correct textstyle of placeholders in Chrome, Safari and Edge.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * @description Upload button fixes.
+ * 1. Correct the instablity of style in iOS and Safari.
+ * 2. Correct font property to inherit in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * @description Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * @description Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
 }

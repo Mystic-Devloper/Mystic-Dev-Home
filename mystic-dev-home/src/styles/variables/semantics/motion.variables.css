@@ -20,6 +20,9 @@
  * @description Variables for Motion and Easing Curves.
  */
 :root {
+  /* No animation */
+  --motion-none: var(--transition-none);
+
   /*
    * Easing Curves (Cubic Bezier Functions)
    * These define the "style" of the movement, mapping to primitives like --ease-in-out.
