@@ -1,0 +1,69 @@
+/**
+ * @file src/styles/variables/semantics/font-size.variables.css
+ *
+ * @description Variables file for sematic font sizes derived from --step-* from
+ * type-scale.variables.css .
+ */
+
+/**
+ * Typography scales are -
+ * Min VW    - 320px    Max VW    - 1440px
+ * Font size - 16px     Font Size - 20px
+ * Scale     - 1.200    Scale     - 1.333
+ */
+
+/**
+ * Semantic Fonts :-
+ * As a wise person once, said "Use Semantics!!".
+ * Jokes aside, the raw type scale tokens are here
+ * asigned semantic meanings, so that it can be more
+ * intutive. For example, --text-body is way more intutive
+ * than --step-0.
+ *
+ * License :-
+ * This semantic fontsizes along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Variables: Semantic Font Sizes
+ *
+ * @description Variables for semantic font sizes.
+ * Uses --step-* from type scale, declared in type-scale.variables.css .
+ */
+:root {
+  /* Body Text */
+<<<<<<< HEAD
+  /* Small fontsize: Used for captions & labels */
+  --text-small: var(--step--2);
+  /* Code fontsize: Used for code blocks */
+  --text-code:  var(--step--1);
+  /* Body fontsize: Used for body and paragraph text */
+  --text-body:  var(--step-0);
+  /* Large fontsize: Used for text larger than body */
+  --text-large: var(--step-1);
+=======
+  /* Caption fontsize: Used for captions & labels */
+  --text-caption: var(--step--2);
+  /* Secondary fontsize: Used for secondary elements like code blocks, asides, etc  */
+  --text-secondary:  var(--step--1);
+  /* Body fontsize: Used for body and paragraph text */
+  --text-body:  var(--step-0);
+  /* Lead fontsize: Used for text larger than body */
+  --text-lead: var(--step-1);
+>>>>>>> 0a4129256ad49b9c535d59fdc14dc845dce8ffb8
+
+  /* Heading Text */
+  /* Heading level 1 */
+  --text-h1: var(--step-5);
+  /* Heading level 2 */
+  --text-h2: var(--step-4);
+  /* Heading level 3 */
+  --text-h3: var(--step-3);
+  /* Heading level 4 */
+  --text-h4: var(--step-2);
+  /* Heading level 5 */
+  --text-h5: var(--step-1);
+  /* Heading level 6 */
+  --text-h6: var(--step-0);
+}
