@@ -1,25 +1,29 @@
-// next.config.ts
+/**
+ * @file /next.config.ts
+ * @description Next.js Configuration file.
+ *
+ * @author TheDevMystic (Surya)
+ */
+
 import type { NextConfig } from "next";
 import withSerwistInit from "@serwist/next";
 
 // To determine whether it is dev build or production
 const isProd = process.env.NODE_ENV === "production";
 
-// Repo name
-const repoName = "/Mystic-Dev-Home";
+// Offline Revision
+const OFFLINE_REVISION = "1.0.0";
 
 // Serwist configurations
 const withSerwist = withSerwistInit({
   // Service worker source
   swSrc: "app/sw.ts",
   // Service worker destination
-  swDest: "public/sw.js",
+  swDest: "/sw.js",
   // Disable for developement & enable for production
-  disable: isProd,
-  // Register worker automatically
-  register: true,
-  // Scope of worker
-  scope: isProd ? repoName : "",
+  disable: !isProd,
+  // Register worker manually
+  register: false,
   // Cache on Navigation
   cacheOnNavigation: true,
   // Reload when network comes back
@@ -32,7 +36,11 @@ const withSerwist = withSerwistInit({
       revision: OFFLINE_REVISION,
     },
     {
-      url: "/offline/offline-image.png",
+      url: "/~offline/offline-placeholder-image.png",
+      revision: OFFLINE_REVISION,
+    },
+    {
+      url: "/~offline/offline-placeholder-video.mp4",
       revision: OFFLINE_REVISION,
     },
   ],
@@ -43,14 +51,8 @@ const withSerwist = withSerwistInit({
     /\.map$/, // Exclude source maps
   ],
 
-  // Public Directory
-  publicDir: "public",
-  // Destination Directory
-  destDir: ".next",
   // Always minify
   minify: true,
-  // Explictly set worker url
-  swUrl: "public/sw.ts",
 });
 
 
@@ -64,10 +66,10 @@ const nextConfig: NextConfig = {
   },
 
   // Base repo path
-  basePath: isProd ? repoName : "",
+  basePath: "",
 
   // Assets prefix
-  assetPrefix: isProd ? `${repoName}/` : "",
+  assetPrefix: "",
 
   // We'll use react strict mode for safety
   reactStrictMode: true,
