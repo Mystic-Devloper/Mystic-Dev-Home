@@ -1,0 +1,60 @@
+/**
+ * @file src/styles/fonts/jetbrains-mono.font.css
+ *
+ * @description JetBrains Mono font declaration.
+ */
+
+/**
+ * License :-
+ * This file along with all other pieces of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+
+/**
+ * Structure:
+ * 1. Heading => Montserrat     (Geometric Sans Font)
+ * 2. Body    => Open Sans      (Humanist Sans Font)
+ * 3. Code    => JetBrains Mono (Ligatures Monospace Font)
+ */
+
+/**
+ * Font: JetBrains Mono
+ * Feature: Humanist Sans, high legiblity.
+ *
+ * @description Font face declaration of JetBrains Mono.
+ */
+
+/* Normal */
+@font-face {
+  /* Font family name */
+  font-family: "JetBrains Mono";
+  /* Variable Font */
+  font-weight: 400 700;
+  /* Style */
+  font-style: normal;
+  /* Modern preferred display, priortizing UX via FOUT. */ 
+  font-display: swap;
+  
+  /* Font files */
+  src: url("/fonts/jetbrains-mono/jetbrains-mono-normal-vf.woff2") format("woff2-variations"),    /* Modern preferred, least size. */
+       url("/fonts/jetbrains-mono/jetbrains-mono-normal-vf.woff")  format("woff-variations"),     /* Stable and widely supported.  */
+       url("/fonts/jetbrains-mono/jetbrains-mono-normal-vf.ttf")   format("truetype-variations"); /* Least preferred, high size.   */
+}
+
+/* Italic */
+@font-face {
+  /* Font family name */
+  font-family: "JetBrains Mono";
+  /* Variable Font */
+  font-weight: 400 700;
+  /* Style */
+  font-style: italic;
+  /* Modern preferred display, priortizing UX via FOUT. */ 
+  font-display: swap;
+  
+  /* Font files */
+  src: url("/fonts/jetbrains-mono/jetbrains-mono-italic-vf.woff2") format("woff2-variations"),    /* Modern preferred, least size. */
+       url("/fonts/jetbrains-mono/jetbrains-mono-italic-vf.woff")  format("woff-variations"),     /* Stable and widely supported.  */
+       url("/fonts/jetbrains-mono/jetbrains-mono-italic-vf.ttf")   format("truetype-variations"); /* Least preferred, high size.   */
+}
