@@ -1,0 +1,112 @@
+/**
+ * @file src/styles/typography/html.typography.css
+ *
+ * @description Typography file for HTML.
+ */
+
+/**
+ * License :-
+ * This grid primitives along with all other peices of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Typography: HTML Element
+ *
+ * @description Typography for HTML.
+ */
+html {
+  /* Global border box */
+  box-sizing: border-box;
+  /* Set font size to 100%. As variable calculations are based on 1rem = 16px. */
+  font-size: 100%;
+  /* Text side adjustment (1rem = 16px, by default) */
+  text-size-adjust: 100%;
+  /* Default line height */
+  line-height: var(--line-height-body);
+
+  /* Font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Default backgroud color & color*/
+  background-color: var(--color-background);
+  color: var(--color-body);
+  
+  /* Turn off ligratures, we'll turn it on for elements using monospace font. */
+  font-variant-ligatures: none;
+  /* Turn font kerning to normal as default */
+  font-kerning: normal;
+  /* Ensures long words wrap correctly to prevent horizontal scrolling when users zoom text */
+  overflow-wrap: break-word;
+  /* A widely supported property that complements overflow-wrap */
+  word-break: break-word;
+  
+  /* Prevents unwanted scroll chaining (background scrolling) */
+  overscroll-behavior-y: none;
+  /* Set touch action to auto, we'll override it for mobile */
+  touch-action: auto;
+
+  /* Scroll behavior */
+  scroll-behavior: smooth;
+  /* Remove touch highlight color on Safari & Firefox */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/**
+ * @description Reduce overall motion for people preferring "reduce motion".
+ */
+@media (prefers-reduced-motion: reduce) {
+  /* Turn off scroll behavior auto */
+  html { scroll-behavior: auto !important; }
+
+  /* Minimize transitions and animations. */
+  *,
+  *::before,
+  *::after {
+    transition: var(--transition-none) !important;
+    animation:  var(--motion-none) !important;
+  }
+}
+
+/**
+ * @description Global focus reset.
+ */
+*::focus, *::focus-visible {
+  /* Outline property */
+  outline: var(--focus-ring-width)
+           var(--focus-ring-style)
+	   var(--color-focus);
+  
+  /* Focus ring offset */
+  outline-offset: var(--focus-ring-offset);
+}
+
+/**
+ * @description Adjustments for operating systems using "Forced Colors" mode (e.g., Windows High Contrast Mode - WHCM).
+ * This ensures focus rings and borders remain visible when custom colors are overridden by the system.
+ */
+@media (forced-colors: active) {
+  /* Use the system's focus color for guaranteed visibility of the outline */
+  *::focus,
+  *::focus-visible {
+    outline-color: Highlight !important;
+    /* Force background and border to transparent/system colors to prevent weird color blocks */
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+
+  /* Use system link colors to ensure they stand out */
+  a {
+    color: LinkText;
+  }
+}
+
+/**
+ * @description Override touch action for mobile.
+ */
+@media (max-width: var(--breakpoint-sm)) {
+  html {
+    touch-action: manipulation;
+  }
+}

@@ -9,9 +9,9 @@
  * @author TheDevMystic (Surya)
  */
 
-// --------------------------
-// Imports.
-// --------------------------
+/* =====================================
+   Imports.
+   ------------------------------------- */
 
 // PrismJS Core
 import * as Prism from "prismjs";
@@ -25,9 +25,9 @@ import "prismjs/plugins/match-braces/prism-match-braces";
 import "prismjs/plugins/toolbar/prism-toolbar";
 import "prismjs/plugins/show-language/prism-show-language";
 
-// --------------------------
-// Configuration.
-// --------------------------
+/* =====================================
+   Configuration.
+   ------------------------------------- */
 
 /**
  * Current PrismJS version.

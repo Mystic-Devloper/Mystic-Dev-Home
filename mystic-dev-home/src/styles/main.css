@@ -8,58 +8,51 @@
  */
 
 /**
- * Include all TailwindCSS files.
- */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/**
  * Include Variables.
  */
-@import "@styles/variables.css";
+@import url("./variables.css");
 
 /**
  * Include custom font file.
  */
-@import "@styles/font.css";
+@import url("./font.css");
 
 /**
  * Include typography.
  */
-@import "@styles/typography.css";
+@import url("./typography.css");
 
 /**
  * Include all section wrappers.
  */
 
 /* Header Wrapper */
-@import "@styles/wrappers/header.css";
+@import url("./wrappers/header.css");
 
 /* Body Wrapper */
-@import "@styles/wrappers/body.css";
+@import url("./wrappers/body.css");
 
 /* Footer Wrapper */
-@import "@styles/wrappers/footer.css";
+@import url("./wrappers/footer.css");
 
 /**
  * Include all components.
  */
 
 /* Navigation Bar */
-@import "@styles/components/navbar.css";
+@import url("./components/navbar.css");
 
 /* Button */
-@import "@styles/components/button.css";
+@import url("./components/button.css");
 
 /* Pill Bar */
-@import "@styles/components/pillbar.css";
+@import url("./components/pillbar.css");
 
 /* Card */
-@import "@styles/components/card.css";
+@import url("./components/card.css");
 
 /* Pagination / Pages */
-@import "@styles/components/pagination.css";
+@import url("./components/pagination.css");
 
 /* Search Bar & Utils */
-@import "@styles/components/search.css";
+@import url("./components/search.css");

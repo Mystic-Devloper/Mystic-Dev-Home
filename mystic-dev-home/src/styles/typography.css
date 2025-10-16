@@ -508,7 +508,7 @@ code, code[class*="language-"], code[class*="lang-"] {
   line-height: var(--line-height-code);
   font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "Ubuntu Mono", "Consolas", 
                "Monaco", "Melno", "Roboto Mono", "Courier New", "Courier", monospace;
-  font-size: var(--font-code);
+  font-size: var(--text-secondary);
   font-weight: var(--weight-regular);
   font-style: var(--style-regular);
 }
@@ -604,6 +604,9 @@ pre[class*="lang-"].line-numbers {
 pre[class*="language-"] > code .line-highlight {
   background: var(--color-line-hightlight);
   border-left: 3px solid var(--color--accent);
+  line-height: var(--line-height-code);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
   margin-left: -var(--space-s);
   margin-right: -var(--space-s);
   padding-left: var(--space-s);
