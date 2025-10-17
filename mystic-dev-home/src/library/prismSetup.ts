@@ -30,10 +30,8 @@ import "prismjs/plugins/show-language/prism-show-language";
    ------------------------------------- */
 
 /**
- * Current PrismJS version.
- * @type {string}
- * @constant
- * @default
+ * @constant PRISM_VERSION
+ * @description Current PrismJS version to use.
  */
 const PRISM_VERSION: string = "1.30.0" 
 

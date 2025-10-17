@@ -8,7 +8,7 @@
  */
 
 import React, { useEffect, useRef } from 'react';
-import Prism from 'prismjs';
+import * as Prism from 'prismjs';
 
 /**
  * @interface CodeBlockProps

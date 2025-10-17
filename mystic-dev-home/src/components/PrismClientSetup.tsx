@@ -9,16 +9,15 @@
 
 import { useEffect } from "react";
 import * as Prism from "prismjs";
-import "@library/prismSetup.ts";
+import "@library/prismSetup";
 
 /**
  * @function PrismClientSetup
- * @description Sets up prism on client.
- * This interacts with Prism API.
+ * @description Sets up PrismJS on client.
  *
  * @returns N/A or null.
  */
-export default function PrismClientSetup() {
+export default function PrismClientSetup(): void {
   useEffect(() => {
     registerPrismCopyButton();
     Prism.highlightAll(); // Call after mount.
