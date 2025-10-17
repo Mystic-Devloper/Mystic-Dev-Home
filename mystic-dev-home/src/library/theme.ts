@@ -58,11 +58,7 @@ export function applyTheme(theme: Theme): void {
   }
 
   // If we reach here, theme needs to be changed
-  if (theme === "dark") {
-    root.classList.add("dark");
-  } else {
-    root.classList.remove("dark");
-  }
+  root.classList.toggle("dark");
 
   // Save theme to local storage
   localStorage.setItem("theme", theme);
