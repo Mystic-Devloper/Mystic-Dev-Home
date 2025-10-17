@@ -6,6 +6,7 @@
  */
 
 /**
+ * @type Theme
  * @description Type aliases.
  */
 export type Theme = "light" | "dark";

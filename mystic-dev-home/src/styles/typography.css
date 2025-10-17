@@ -508,7 +508,7 @@ code, code[class*="language-"], code[class*="lang-"] {
   line-height: var(--line-height-code);
   font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "Ubuntu Mono", "Consolas", 
                "Monaco", "Melno", "Roboto Mono", "Courier New", "Courier", monospace;
-  font-size: var(--text-code);
+  font-size: var(--text-secondary);
   font-weight: var(--weight-regular);
   font-style: var(--style-regular);
 }
