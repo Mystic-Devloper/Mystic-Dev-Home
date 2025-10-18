@@ -1,0 +1,61 @@
+/**
+ * @file src/styles/typography/body.typography.css
+ *
+ * @description Typography file for Body.
+ *
+ * @sa styles/layouts/body.layout.css
+ */
+
+/**
+ * License :-
+ * This Body typography along with all other pieces of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Typography: Body Element
+ *
+ * @description Typography for Body.
+ */
+body {
+  /* Font family */
+  font-family: var(--font-stack-body);
+  /* Font size */
+  font-size: var(--text-body);
+  /* Font weight */
+  font-weight: var(--weight-regular);
+  /* Style */
+  font-style: var(--style-normal);
+  /* Line height */
+  line-height: var(--line-height-body);
+
+  /* Font features */
+  /* Numeric features */
+  font-variant-numeric: oldstyle-nums /* Old style numericals with asce/desc */
+                        proportional-nums /* Proportianal/variable spacing */
+			slashed-zero /* Slashed zero to distinguish 0 and O */
+			ordinal /* Ordinal numbers has a raised glyph */
+                        stacked-fractions; /* Stacked fractions for readiblity */
+  /* Capitalization */
+  font-variant-caps: normal;
+  /* Positioning */
+  font-variant-position: normal;
+  /* Kerning */
+  font-kerning: normal; /* Enables kerning for natural width between characters */
+
+  /* Overflow & word break */
+  /* Break words */
+  word-break: break-word; /* Breaks word when necessary to fit container */
+  /* Overflow wrap */
+  overflow-wrap: break-word; /* Modern alias, ensure compatiblity */
+  /* Word wrap */
+  word-wrap: break-word; /* Legacy alias, ensure works on older browsers */
+  /* Hyphens */
+  hyphens: auto; /* Enables automatic hyphenation for optimal text flow */
+  /* Overflow */
+  overflow: hidden; /* Don't allow scroll if container overflows */
+
+  /* Background & Text colors */
+  background-color: var(--color-background);
+  color: var(--color-body);
+}

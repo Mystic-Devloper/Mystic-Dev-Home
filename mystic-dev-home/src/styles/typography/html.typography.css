@@ -6,7 +6,7 @@
 
 /**
  * License :-
- * This grid primitives along with all other peices of code (HTML, TS, TSX and CSS)
+ * This HTML typography along with all other pieces of code (HTML, TS, TSX and CSS)
  * are published under MIT. For full license see /LICENSE.
  */
 
@@ -20,21 +20,31 @@ html {
   box-sizing: border-box;
   /* Set font size to 100%. As variable calculations are based on 1rem = 16px. */
   font-size: 100%;
-  /* Text side adjustment (1rem = 16px, by default) */
+  /* Text size adjustment (1rem = 16px, by default) */
   text-size-adjust: 100%;
   /* Default line height */
   line-height: var(--line-height-body);
 
   /* Font smoothing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /* macOS/iOS smooth rendering */
+  -moz-osx-font-smoothing: grayscale;  /* Firefox/linux crisp rendering */
 
-  /* Default backgroud color & color*/
+  /* Default background color & color*/
   background-color: var(--color-background);
   color: var(--color-body);
   
-  /* Turn off ligratures, we'll turn it on for elements using monospace font. */
-  font-variant-ligatures: none;
+  /* Turn default numeric property to maximum clarity and readiblity */
+  font-variant-numeric: oldstyle-nums /* Old style numericals with asce/desc */
+                        proportional-nums /* Proportianal/variable spacing */
+			slashed-zero /* Slashed zero to distinguish 0 and O */
+			ordinal /* Ordinal numbers has a raised glyph */
+                        stacked-fractions; /* Stacked fractions for readiblity */
+  /* Turn normal capitalization, override for headings (optionated) */
+  font-variant-caps: normal;
+  /* Turn on liga, clig and calt ligatures by default */
+  font-variant-ligatures: normal;
+  /* Turn on default positioning */
+  font-variant-position: normal;
   /* Turn font kerning to normal as default */
   font-kerning: normal;
   /* Ensures long words wrap correctly to prevent horizontal scrolling when users zoom text */
@@ -42,6 +52,14 @@ html {
   /* A widely supported property that complements overflow-wrap */
   word-break: break-word;
   
+  /* Default font family, font weight & styles */
+  /* Sans serif */
+  font-family: sans-serif;
+  /* Regular: 400 */
+  font-weight: var(--weight-regular);
+  /* Normal */
+  font-style:  var(--style-normal);
+
   /* Prevents unwanted scroll chaining (background scrolling) */
   overscroll-behavior-y: none;
   /* Set touch action to auto, we'll override it for mobile */
@@ -51,6 +69,15 @@ html {
   scroll-behavior: smooth;
   /* Remove touch highlight color on Safari & Firefox */
   -webkit-tap-highlight-color: transparent;
+}
+
+/**
+ * @description Global box sizing.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /**
@@ -72,7 +99,7 @@ html {
 /**
  * @description Global focus reset.
  */
-*::focus, *::focus-visible {
+*:focus, *:focus-visible {
   /* Outline property */
   outline: var(--focus-ring-width)
            var(--focus-ring-style)
@@ -88,8 +115,9 @@ html {
  */
 @media (forced-colors: active) {
   /* Use the system's focus color for guaranteed visibility of the outline */
-  *::focus,
-  *::focus-visible {
+  *:focus,
+  *:focus-visible {
+    forced-color-adjust: none;
     outline-color: Highlight !important;
     /* Force background and border to transparent/system colors to prevent weird color blocks */
     background-color: transparent !important;
@@ -105,7 +133,7 @@ html {
 /**
  * @description Override touch action for mobile.
  */
-@media (max-width: var(--breakpoint-sm)) {
+@media screen and (max-width: var(--breakpoint-sm)) {
   html {
     touch-action: manipulation;
   }

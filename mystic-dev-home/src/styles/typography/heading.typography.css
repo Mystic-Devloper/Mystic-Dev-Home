@@ -1,0 +1,141 @@
+/**
+ * @file src/styles/typography/heading.typography.css
+ *
+ * @description Typography file for Heading.
+ *
+ * @sa styles/layouts/heading.layout.css
+ */
+
+/**
+ * License :-
+ * This Heading typography along with all other pieces of code (HTML, TS, TSX and CSS)
+ * are published under MIT. For full license see /LICENSE.
+ */
+
+/**
+ * Typography: Heading Element
+ *
+ * @description Typography for Heading.
+ */
+h1, h2, h3,
+h4, h5, h6,
+.alpha, .beta, .gamma,
+.delta, .epsilon, .zeta {
+  /* Font family */
+  font-family: var(--font-stack-heading);
+  /* Style */
+  font-style: var(--style-normal);
+  /* Line height */
+  line-height: var(--line-height-heading);
+
+  /* Font features */
+  /* Numeric features */
+  font-variant-numeric: lining-nums /* Lining style numericals with consistent height*/
+                        proportional-nums /* Proportianal/variable spacing */
+			slashed-zero /* Slashed zero to distinguish 0 and O */
+			ordinal /* Ordinal numbers has a raised glyph */
+                        stacked-fractions; /* Stacked fractions for readiblity */
+  /* Positioning */
+  font-variant-position: normal;
+  /* Kerning */
+  font-kerning: normal; /* Enables kerning for natural width between characters */
+
+  /* Overflow & word break */
+  /* Break words */
+  word-break: break-word; /* Breaks word when necessary to fit container */
+  /* Overflow wrap */
+  overflow-wrap: break-word; /* Modern alias, ensure compatiblity */
+  /* Word wrap */
+  word-wrap: break-word; /* Legacy alias, ensure works on older browsers */
+  /* Hyphens */
+  hyphens: auto; /* Enables automatic hyphenation for optimal text flow */
+  /* Overflow */
+  overflow: hidden; /* Don't allow scroll if container overflows */
+
+  /* Background & Text colors */
+  color: var(--color-heading);
+}
+
+/**
+ * @description H1 specific styles.
+ */
+h1, .alpha {
+  /* Font size */
+  font-size: var(--text-h1);
+  /* Font weight */
+  font-weight: var(--weight-bold);
+  /* Capitalization */
+  font-variant-caps: small-caps; /* Small caps for formal look */
+  /* Letter spacing */
+  letter-spacing: 0.1em; /* Add some space */
+}
+
+/**
+ * @description H2 specific styles.
+ */
+h2, .beta {
+  /* Font size */
+  font-size: var(--text-h2);
+  /* Font weight */
+  font-weight: var(--weight-bold);
+  /* Capitalization */
+  font-variant-caps: small-caps; /* Small caps for formal look */
+  /* Letter spacing */
+  letter-spacing: 0.08em; /* Add some space */
+}
+
+/**
+ * @description H3 specific styles.
+ */
+h3, .gamma {
+  /* Font size */
+  font-size: var(--text-h3);
+  /* Font weight */
+  font-weight: var(--weight-semi-bold);
+  /* Capitalization */
+  font-variant-caps: small-caps; /* Small caps for formal look */
+  /* Letter spacing */
+  letter-spacing: 0.05em; /* Tighten space */
+}
+
+/**
+ * @description H4 specific styles.
+ */
+h4, .delta {
+  /* Font size */
+  font-size: var(--text-h4);
+  /* Font weight */
+  font-weight: var(--weight-semi-bold);
+  /* Capitalization */
+  font-variant-caps: normal; /* Normal capitalization for smaller headings */
+  /* Letter spacing */
+  letter-spacing: normal; /* Don't add space */
+}
+
+/**
+ * @description H5 specific styles.
+ */
+h5, .epsilon {
+  /* Font size */
+  font-size: var(--text-h5);
+  /* Font weight */
+  font-weight: var(--weight-medium);
+  /* Capitalization */
+  font-variant-caps: normal; /* Normal capitalization for smaller headings */
+  /* Letter spacing */
+  letter-spacing: normal; /* Don't add space */
+}
+
+/**
+ * @description H6 specific styles.
+ */
+h6, .zeta {
+  /* Font size */
+  font-size: var(--text-h6);
+  /* Font weight */
+  font-weight: var(--weight-medium);
+  /* Capitalization */
+  font-variant-caps: normal; /* Normal capitalization for smaller headings */
+  /* Letter spacing */
+  letter-spacing: normal; /* Don't add space */
+}
